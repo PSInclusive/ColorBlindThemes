@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="swatch" viewBox="0 0 900 346" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace">
+<rect x="0" y="0" width="900" height="346" rx="6" fill="#0B0D10"/>
+<rect x="232.0" y="26" width="117.0" height="46" rx="4" fill="#F5793A"/>
+<text x="238.0" y="65" font-size="9.5" fill="#FFFFFF" opacity="0.92">#F5793A</text>
+<text x="290.5" y="86" font-size="9" fill="#9aa3ab" text-anchor="middle">orange</text>
+<rect x="356.0" y="26" width="117.0" height="46" rx="4" fill="#A95AA1"/>
+<text x="362.0" y="65" font-size="9.5" fill="#FFFFFF" opacity="0.92">#A95AA1</text>
+<text x="414.5" y="86" font-size="9" fill="#9aa3ab" text-anchor="middle">purple</text>
+<rect x="480.0" y="26" width="117.0" height="46" rx="4" fill="#85C0F9"/>
+<text x="486.0" y="65" font-size="9.5" fill="#000000" opacity="0.92">#85C0F9</text>
+<text x="538.5" y="86" font-size="9" fill="#9aa3ab" text-anchor="middle">sky</text>
+<rect x="604.0" y="26" width="117.0" height="46" rx="4" fill="#0F2080"/>
+<text x="610.0" y="65" font-size="9.5" fill="#FFFFFF" opacity="0.92">#0F2080</text>
+<text x="662.5" y="86" font-size="9" fill="#9aa3ab" text-anchor="middle">navy</text>
+<text x="8" y="127.0" font-size="11" fill="#9aa3ab">Normal</text>
+<rect x="232.0" y="100" width="117.0" height="46" rx="4" fill="#F5793A"/>
+<rect x="356.0" y="100" width="117.0" height="46" rx="4" fill="#A95AA1"/>
+<rect x="480.0" y="100" width="117.0" height="46" rx="4" fill="#85C0F9"/>
+<rect x="604.0" y="100" width="117.0" height="46" rx="4" fill="#0F2080"/>
+<text x="8" y="181.0" font-size="11" fill="#9aa3ab">Deuteranopia</text>
+<rect x="232.0" y="154" width="117.0" height="46" rx="4" fill="#BAA737"/>
+<rect x="356.0" y="154" width="117.0" height="46" rx="4" fill="#6D7B9F"/>
+<rect x="480.0" y="154" width="117.0" height="46" rx="4" fill="#9AB6F8"/>
+<rect x="604.0" y="154" width="117.0" height="46" rx="4" fill="#00287E"/>
+<text x="8" y="235.0" font-size="11" fill="#9aa3ab">Protanopia</text>
+<rect x="232.0" y="208" width="117.0" height="46" rx="4" fill="#9C8B32"/>
+<rect x="356.0" y="208" width="117.0" height="46" rx="4" fill="#5770A3"/>
+<rect x="480.0" y="208" width="117.0" height="46" rx="4" fill="#A9C1FC"/>
+<rect x="604.0" y="208" width="117.0" height="46" rx="4" fill="#003383"/>
+<text x="8" y="289.0" font-size="11" fill="#9aa3ab">Tritanopia</text>
+<rect x="232.0" y="262" width="117.0" height="46" rx="4" fill="#FF5E6C"/>
+<rect x="356.0" y="262" width="117.0" height="46" rx="4" fill="#AF6076"/>
+<rect x="480.0" y="262" width="117.0" height="46" rx="4" fill="#52CDD3"/>
+<rect x="604.0" y="262" width="117.0" height="46" rx="4" fill="#003C4E"/>
+<text x="8" y="334" font-size="9" fill="#a8a8a8">Simulated: Machado, Oliveira &amp; Fernandes (2009), severity 100% &#183; doi:10.1109/TVCG.2009.113</text>
+</svg>

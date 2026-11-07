@@ -1,0 +1,9 @@
+name = "Jackfield"
+license = "MIT"
+description = "Dark instrument docs theme; state by stroke pattern, never hue. CVD-legible by construction."
+homepage = "https://github.com/PSInclusive/ColorBlindThemes"
+tags = ["docs", "dark", "accessible", "colorblind", "monospace"]
+min_version = "0.100.0"
+
+[author]
+  name = "Jake Hildreth"

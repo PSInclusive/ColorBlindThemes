@@ -1,0 +1,12 @@
+baseURL = "https://psinclusive.github.io/ColorBlindThemes/"
+title = "Color Themes Designed for Colorblind Users"
+theme = "jackfield"
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  tagline = "A researched catalog of color themes built for color-vision-deficient users — with links, real hexes, and computed verification."

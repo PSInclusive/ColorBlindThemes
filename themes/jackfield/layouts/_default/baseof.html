@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
+<link rel="stylesheet" href="{{ "css/jackfield.css" | relURL }}">
+</head>
+<body>
+<!--
+  THESIS: a colorblind-theme reference that is itself hue-independent — a dark instrument
+  where state is drawn by stroke pattern (unbroken/tick/gap/doubled), never by color.
+  OWN-WORLD: black glass #0b0d10, panel #12151a, one signal amber #f5a623, steel text.
+  FORM: Normalled Jackfield (challenger, user-chosen). Seed cbt-1793973248.
+  FINISH: ends with finish review, verdict, DESIGN.md, raster provenance.
+-->
+<input type="checkbox" id="navtoggle" class="navtoggle" aria-hidden="true">
+<button class="themeswitch" id="themeswitch" aria-label="Toggle light and dark"><span class="dot"></span><span id="themelabel">dark</span></button>
+<script>
+(function(){
+  var root = document.documentElement;
+  var saved = null;
+  try { saved = localStorage.getItem('cvd-theme'); } catch(e) {}
+  if (saved) root.setAttribute('data-theme', saved);
+  var btn = document.getElementById('themeswitch');
+  var lbl = document.getElementById('themelabel');
+  function paint(){ if(lbl) lbl.textContent = root.getAttribute('data-theme')==='light' ? 'light' : 'dark'; }
+  paint();
+  if (btn) btn.addEventListener('click', function(){
+    var next = root.getAttribute('data-theme')==='light' ? 'dark' : 'light';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('cvd-theme', next); } catch(e) {}
+    paint();
+  });
+})();
+</script>
+<label for="navtoggle" class="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></label>
+<label for="navtoggle" class="scrim" aria-hidden="true"></label>
+<nav class="lanes" aria-label="Sections">
+  <div class="brand">CVD/REF<br><span class="sub">colorblind themes</span></div>
+  <a href="{{ "/" | relURL }}" class="lane {{ if .IsHome }}cur{{ end }}">
+    <span class="ln">00</span><span class="rail"></span><span class="lbl">Overview</span>
+  </a>
+  {{ $cur := . }}
+  {{ range .Site.Pages.ByWeight }}
+    {{ if and (ne .Kind "home") (eq .Kind "page") }}
+    <a href="{{ .RelPermalink }}" class="lane {{ if eq $cur.RelPermalink .RelPermalink }}cur{{ end }}">
+      <span class="ln">{{ .Params.lane }}</span><span class="rail"></span><span class="lbl">{{ .Title }}</span>
+    </a>
+    {{ end }}
+  {{ end }}
+</nav>
+<main class="field">
+  <div class="crumb">LANE {{ .Params.lane | default "00" }} / {{ upper (.Params.laneName | default "OVERVIEW") }} · NORMALLED</div>
+  {{ block "main" . }}{{ end }}
+</main>
+</body>
+</html>

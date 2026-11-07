@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="swatch" viewBox="0 0 900 346" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace">
+<rect x="0" y="0" width="900" height="346" rx="6" fill="#0B0D10"/>
+<rect x="118.0" y="26" width="65.4" height="46" rx="4" fill="#0173B2"/>
+<text x="124.0" y="65" font-size="9.5" fill="#FFFFFF" opacity="0.92">#0173B2</text>
+<text x="150.7" y="86" font-size="9" fill="#9aa3ab" text-anchor="middle">blue</text>
+<rect x="190.4" y="26" width="65.4" height="46" rx="4" fill="#DE8F05"/>
+<text x="196.4" y="65" font-size="9.5" fill="#000000" opacity="0.92">#DE8F05</text>
+<text x="223.1" y="86" font-size="9" fill="#9aa3ab" text-anchor="middle">orange</text>
+<rect x="262.8" y="26" width="65.4" height="46" rx="4" fill="#029E73"/>
+<text x="268.8" y="65" font-size="9.5" fill="#FFFFFF" opacity="0.92">#029E73</text>
+<text x="295.5" y="86" font-size="9" fill="#9aa3ab" text-anchor="middle">green</text>
+<rect x="335.2" y="26" width="65.4" height="46" rx="4" fill="#D55E00"/>
+<text x="341.2" y="65" font-size="9.5" fill="#FFFFFF" opacity="0.92">#D55E00</text>
+<text x="367.9" y="86" font-size="9" fill="#9aa3ab" text-anchor="middle">vermilion</text>
+<rect x="407.6" y="26" width="65.4" height="46" rx="4" fill="#CC78BC"/>
+<text x="413.6" y="65" font-size="9.5" fill="#FFFFFF" opacity="0.92">#CC78BC</text>
+<text x="440.3" y="86" font-size="9" fill="#9aa3ab" text-anchor="middle">purple</text>
+<rect x="480.0" y="26" width="65.4" height="46" rx="4" fill="#CA9161"/>
+<text x="486.0" y="65" font-size="9.5" fill="#FFFFFF" opacity="0.92">#CA9161</text>
+<text x="512.7" y="86" font-size="9" fill="#9aa3ab" text-anchor="middle">tan</text>
+<rect x="552.4" y="26" width="65.4" height="46" rx="4" fill="#FBAFE4"/>
+<text x="558.4" y="65" font-size="9.5" fill="#000000" opacity="0.92">#FBAFE4</text>
+<text x="585.1" y="86" font-size="9" fill="#9aa3ab" text-anchor="middle">pink</text>
+<rect x="624.8" y="26" width="65.4" height="46" rx="4" fill="#949494"/>
+<text x="630.8" y="65" font-size="9.5" fill="#FFFFFF" opacity="0.92">#949494</text>
+<text x="657.5" y="86" font-size="9" fill="#9aa3ab" text-anchor="middle">grey</text>
+<rect x="697.2" y="26" width="65.4" height="46" rx="4" fill="#ECE133"/>
+<text x="703.2" y="65" font-size="9.5" fill="#000000" opacity="0.92">#ECE133</text>
+<text x="729.9" y="86" font-size="9" fill="#9aa3ab" text-anchor="middle">yellow</text>
+<rect x="769.6" y="26" width="65.4" height="46" rx="4" fill="#56B4E9"/>
+<text x="775.6" y="65" font-size="9.5" fill="#000000" opacity="0.92">#56B4E9</text>
+<text x="802.3" y="86" font-size="9" fill="#9aa3ab" text-anchor="middle">sky</text>
+<text x="8" y="127.0" font-size="11" fill="#9aa3ab">Normal</text>
+<rect x="118.0" y="100" width="65.4" height="46" rx="4" fill="#0173B2"/>
+<rect x="190.4" y="100" width="65.4" height="46" rx="4" fill="#DE8F05"/>
+<rect x="262.8" y="100" width="65.4" height="46" rx="4" fill="#029E73"/>
+<rect x="335.2" y="100" width="65.4" height="46" rx="4" fill="#D55E00"/>
+<rect x="407.6" y="100" width="65.4" height="46" rx="4" fill="#CC78BC"/>
+<rect x="480.0" y="100" width="65.4" height="46" rx="4" fill="#CA9161"/>
+<rect x="552.4" y="100" width="65.4" height="46" rx="4" fill="#FBAFE4"/>
+<rect x="624.8" y="100" width="65.4" height="46" rx="4" fill="#949494"/>
+<rect x="697.2" y="100" width="65.4" height="46" rx="4" fill="#ECE133"/>
+<rect x="769.6" y="100" width="65.4" height="46" rx="4" fill="#56B4E9"/>
+<text x="8" y="181.0" font-size="11" fill="#9aa3ab">Deuteranopia</text>
+<rect x="118.0" y="154" width="65.4" height="46" rx="4" fill="#3D67B1"/>
+<rect x="190.4" y="154" width="65.4" height="46" rx="4" fill="#BCA80F"/>
+<rect x="262.8" y="154" width="65.4" height="46" rx="4" fill="#8A8676"/>
+<rect x="335.2" y="154" width="65.4" height="46" rx="4" fill="#9E8C00"/>
+<rect x="407.6" y="154" width="65.4" height="46" rx="4" fill="#8E99BA"/>
+<rect x="480.0" y="154" width="65.4" height="46" rx="4" fill="#B0A262"/>
+<rect x="552.4" y="154" width="65.4" height="46" rx="4" fill="#C3CBE2"/>
+<rect x="624.8" y="154" width="65.4" height="46" rx="4" fill="#949494"/>
+<rect x="697.2" y="154" width="65.4" height="46" rx="4" fill="#F9E042"/>
+<rect x="769.6" y="154" width="65.4" height="46" rx="4" fill="#87A4E8"/>
+<text x="8" y="235.0" font-size="11" fill="#9aa3ab">Protanopia</text>
+<rect x="118.0" y="208" width="65.4" height="46" rx="4" fill="#5475B5"/>
+<rect x="190.4" y="208" width="65.4" height="46" rx="4" fill="#AA9500"/>
+<rect x="262.8" y="208" width="65.4" height="46" rx="4" fill="#9A9271"/>
+<rect x="335.2" y="208" width="65.4" height="46" rx="4" fill="#817100"/>
+<rect x="407.6" y="208" width="65.4" height="46" rx="4" fill="#788DBE"/>
+<rect x="480.0" y="208" width="65.4" height="46" rx="4" fill="#A2955D"/>
+<rect x="552.4" y="208" width="65.4" height="46" rx="4" fill="#B1C0E6"/>
+<rect x="624.8" y="208" width="65.4" height="46" rx="4" fill="#949494"/>
+<rect x="697.2" y="208" width="65.4" height="46" rx="4" fill="#F5D900"/>
+<rect x="769.6" y="208" width="65.4" height="46" rx="4" fill="#9BB3EC"/>
+<text x="8" y="289.0" font-size="11" fill="#9aa3ab">Tritanopia</text>
+<rect x="118.0" y="262" width="65.4" height="46" rx="4" fill="#00838A"/>
+<rect x="190.4" y="262" width="65.4" height="46" rx="4" fill="#F37B7A"/>
+<rect x="262.8" y="262" width="65.4" height="46" rx="4" fill="#009E92"/>
+<rect x="335.2" y="262" width="65.4" height="46" rx="4" fill="#EB4050"/>
+<rect x="407.6" y="262" width="65.4" height="46" rx="4" fill="#D37C92"/>
+<rect x="480.0" y="262" width="65.4" height="46" rx="4" fill="#DA8585"/>
+<rect x="552.4" y="262" width="65.4" height="46" rx="4" fill="#FFB1C2"/>
+<rect x="624.8" y="262" width="65.4" height="46" rx="4" fill="#949494"/>
+<rect x="697.2" y="262" width="65.4" height="46" rx="4" fill="#FED1C1"/>
+<rect x="769.6" y="262" width="65.4" height="46" rx="4" fill="#00C2C6"/>
+<text x="8" y="334" font-size="9" fill="#a8a8a8">Simulated: Machado, Oliveira &amp; Fernandes (2009), severity 100% &#183; doi:10.1109/TVCG.2009.113</text>
+</svg>

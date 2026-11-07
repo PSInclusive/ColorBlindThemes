@@ -1,0 +1,353 @@
+/* Normalled Jackfield — dark instrument, one signal amber, state by stroke pattern not hue.
+   CVD-legible by construction: every state is a shape/label, never a color alone. */
+
+:root {
+  --glass: #0b0d10;
+  --panel: #12151a;
+  --panel2: #1a1f26;
+  --edge: #1d232b;
+  --edge2: #232a33;
+  --amber: #f5a623;
+  --ink: #e8eef4;
+  --text: #c4ced8;
+  --muted: #7a8896;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --idle: #3a4450;
+  --code: #ffd28a;
+  --link-under: #6b4a12;
+  --imgwell: #ffffff;
+}
+
+/* Light mode: same grammar (amber accent, pattern-over-hue), light surface. */
+[data-theme="light"] {
+  --glass: #f4f1ea;
+  --panel: #ffffff;
+  --panel2: #efece4;
+  --edge: #d9d2c2;
+  --edge2: #cfc7b6;
+  --amber: #b06a00;
+  --ink: #1c1a15;
+  --text: #33383d;
+  --muted: #6b7280;
+  --idle: #c3bcab;
+  --code: #8a4a00;
+  --link-under: #d8b06a;
+  --imgwell: #ffffff;
+}
+
+/* the toggle button (top-right, fixed) */
+.themeswitch {
+  position: fixed;
+  top: 14px;
+  right: 16px;
+  z-index: 40;
+  font: 600 11px var(--mono);
+  letter-spacing: 0.08em;
+  color: var(--text);
+  background: var(--panel);
+  border: 1px solid var(--edge2);
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.themeswitch:hover { color: var(--amber); border-color: var(--amber); }
+.themeswitch .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--amber); display: inline-block; }
+@media (max-width: 860px) { .themeswitch { top: 14px; right: 16px; } }
+
+* { box-sizing: border-box; }
+html {
+  -webkit-text-size-adjust: 100%;
+  overflow-y: scroll;   /* always show the scrollbar gutter so layout width is constant page-to-page */
+}
+body {
+  margin: 0;
+  background: var(--glass);
+  color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* ---- left legend strip: lane-numbered nav, state via rail stroke pattern ---- */
+.lanes {
+  width: 224px;
+  background: var(--panel);
+  border-right: 1px solid var(--edge);
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 22px 0;
+  z-index: 10;
+  /* hug the right edge of the left half, so the nav sits directly against the content column */
+  left: 0;
+}
+@media (min-width: 861px) {
+  /* Center the nav+content unit. When the window is at least 1004px wide, the unit is
+     centered (block center at 50%). When narrower, the unit is left-pinned at 0 and the
+     content column shrinks to fit — so the nav never goes off-screen and the seam holds. */
+  .lanes { left: max(0px, calc(50% - 502px)); transform: none; }
+}
+.brand {
+  font: 700 12px var(--mono);
+  letter-spacing: 0.18em;
+  color: var(--amber);
+  padding: 0 20px 18px;
+  border-bottom: 1px solid var(--edge);
+  line-height: 1.5;
+}
+.brand .sub { color: var(--muted); font-weight: 400; letter-spacing: 0.1em; font-size: 10px; }
+
+/* Each lane is a fixed-height row; the three cells are pinned to absolute x offsets
+   that never move regardless of font load, glyph count, or engine. No reflow possible. */
+.lane {
+  position: relative;
+  display: block;
+  height: 36px;
+  color: #aeb9c4;
+  text-decoration: none;
+  font-size: 13.5px;
+}
+.lane .ln, .lane .rail, .lane .lbl { position: absolute; top: 50%; transform: translateY(-50%); }
+.lane .ln {
+  left: 16px;
+  width: 34px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--muted);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.lane .rail {
+  left: 60px;             /* 16 + 34 + 10 gap */
+  width: 26px;
+  height: 3px;
+  background: #3a4450; /* unbroken = present, idle */
+}
+.lane .lbl {
+  left: 96px;             /* 60 + 26 + 10 gap */
+  right: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.lane:hover .rail { background: repeating-linear-gradient(90deg, var(--amber) 0 5px, transparent 5px 8px); }
+.lane.cur { color: var(--amber); }
+.lane.cur .rail { /* doubled = selected */
+  background: var(--amber);
+  box-shadow: 0 5px 0 var(--amber);
+}
+
+/* ---- main field ---- */
+.field {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;           /* fallback centering (mobile/short) */
+  padding: 44px 42px 120px;
+}
+@media (min-width: 861px) {
+  /* Content sits immediately right of the nav (nav is 224 wide at max(0, 50%-502)).
+     Content left edge = nav right edge. Width = 780, but shrink if the window is narrow. */
+  .field {
+    position: relative;
+    left: max(224px, calc(50% - 502px + 224px));
+    transform: none;
+    margin: 0;
+    width: auto;
+    max-width: min(780px, calc(100vw - max(224px, calc(50% - 502px + 224px)) - 24px));
+  }
+}
+.crumb {
+  font: 11px var(--mono);
+  letter-spacing: 0.14em;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.article h1 {
+  font-size: 30px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  font-weight: 700;
+  margin: 0 0 6px;
+  line-height: 1.15;
+}
+.rule { /* amber ticked rule */
+  height: 3px;
+  background: repeating-linear-gradient(90deg, var(--amber) 0 14px, transparent 14px 20px);
+  margin: 12px 0 24px;
+}
+
+/* ---- content typography ---- */
+.article h2 {
+  font-size: 21px;
+  color: var(--amber);
+  letter-spacing: 0.01em;
+  margin: 34px 0 8px;
+  font-weight: 650;
+}
+.article h3 {
+  font-size: 16.5px;
+  color: var(--ink);
+  margin: 28px 0 6px;
+  font-weight: 650;
+}
+.article h4 { font-size: 14px; color: var(--ink); margin: 22px 0 4px; font-weight: 650; }
+.article p { margin: 12px 0; }
+.article a { color: var(--amber); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #6b4a12; }
+.article a:hover { color: #ffc95e; }
+.article strong { color: var(--ink); }
+.article ul, .article ol { padding-left: 22px; margin: 12px 0; }
+.article li { margin: 5px 0; }
+.article blockquote {
+  margin: 18px 0;
+  padding: 12px 16px;
+  border-left: 3px solid var(--amber);
+  background: var(--panel);
+  color: var(--text);
+}
+.article blockquote p { margin: 6px 0; }
+.article hr { border: 0; border-top: 1px solid var(--edge); margin: 34px 0; }
+
+/* code: amber on dark well, but always paired with text (never hue-only) */
+.article code {
+  font: 13px var(--mono);
+  background: var(--panel2);
+  border: 1px solid var(--edge2);
+  padding: 1px 6px;
+  border-radius: 3px;
+  color: #ffd28a;
+}
+.article pre {
+  background: var(--panel2);
+  border: 1px solid var(--edge2);
+  border-radius: 6px;
+  padding: 14px 16px;
+  overflow-x: auto;
+  margin: 18px 0;
+}
+.article pre code { background: none; border: 0; padding: 0; color: var(--text); }
+
+/* tables: hairline, tabular numerals, readable on black glass */
+.article table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 18px 0;
+  font-size: 14px;
+  display: block;
+  overflow-x: auto;
+}
+.article th, .article td {
+  border: 1px solid var(--edge2);
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+.article thead th {
+  font: 650 12px var(--mono);
+  letter-spacing: 0.06em;
+  color: var(--amber);
+  background: var(--panel);
+  border-bottom: 2px solid var(--amber);
+}
+.article tbody tr:hover { background: var(--panel); }
+.article td code { font-size: 12px; }
+
+/* Swatch plates carry their own mode-matched background (baked into the SVG), so the
+   img well is transparent and just frames it. Editor mocks are transparent and float. */
+.article img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 18px 0;
+  border: 1px solid var(--edge2);
+  border-radius: 6px;
+  padding: 0;
+  background: transparent; /* the SVG supplies its own surface */
+}
+.article img.editor, .article img[src*="-editor"] {
+  border-color: transparent;  /* editor mocks get no frame */
+}
+
+/* responsive: collapse the rail to a top strip on narrow frames */
+/* ---- hamburger toggle (narrow viewports) ---- */
+.navtoggle { display: none; }
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 14px;
+  left: 16px;
+  z-index: 30;
+  width: 42px;
+  height: 42px;
+  background: var(--panel);
+  border: 1px solid var(--edge2);
+  border-radius: 6px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--amber);
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+/* responsive: hamburger-reveal nav on narrow frames */
+@media (max-width: 860px) {
+  .hamburger { display: flex; }
+  .lanes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: min(280px, 84vw);
+    flex: none;
+    height: 100vh;
+    border-right: 1px solid var(--edge2);
+    border-bottom: 0;
+    display: block;
+    padding: 22px 0;
+    transform: translateX(-100%);
+    transition: transform 0.18s ease;
+    z-index: 20;
+    box-shadow: 8px 0 32px rgba(0, 0, 0, 0.5);
+  }
+  .navtoggle:checked ~ .lanes { transform: translateX(0); }
+  /* hamburger -> X when open */
+  .navtoggle:checked ~ .hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .navtoggle:checked ~ .hamburger span:nth-child(2) { opacity: 0; }
+  .navtoggle:checked ~ .hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  /* dim scrim behind the open drawer */
+  .navtoggle:checked ~ .scrim { opacity: 1; pointer-events: auto; }
+  .scrim {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.55);
+    opacity: 0; pointer-events: none; transition: opacity 0.18s ease; z-index: 15;
+  }
+  .brand { border-bottom: 1px solid var(--edge); }
+  .lane { padding: 10px 18px; }
+  .lane .rail { display: inline-block; } /* drawer is vertical again: rails come back */
+  /* current state by PATTERN, not hue: bold label + doubled rail + tick glyph */
+  .lane.cur { border-bottom: 0; }
+  .lane.cur .lbl { font-weight: 700; color: var(--ink); }
+  .lane.cur .rail { background: var(--amber); box-shadow: 0 5px 0 var(--amber); }
+  .lane.cur .ln::after { content: ""; display: inline-block; width: 6px; height: 6px; margin-left: 4px;
+    background: var(--amber); clip-path: polygon(0 55%, 35% 90%, 100% 20%, 80% 0, 35% 55%); }
+  .field { padding: 72px 20px 80px; max-width: 100%; }
+}
+
+/* ---- theme-variable wiring (overrides hardcoded accents above) ---- */
+.lane .rail { background: var(--idle); }
+.lane:hover .rail { background: repeating-linear-gradient(90deg, var(--amber) 0 5px, transparent 5px 8px); }
+.lane.cur .rail { background: var(--amber); box-shadow: 0 5px 0 var(--amber); }
+.article code { color: var(--code); }
+.article a { text-decoration-color: var(--link-under); }
+.article a:hover { color: var(--amber); }
+.article img[src*="-editor"] { background: transparent; }
+[data-theme="light"] .article img { border-color: var(--edge2); }
