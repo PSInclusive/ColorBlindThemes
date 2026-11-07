@@ -24,8 +24,8 @@ hugo --destination public   # production build
 ## Regenerate the examples and verification
 
 ```powershell
-python scripts/generate_colorblind_theme_examples.py   # rebuild all SVGs
-python scripts/verify_colorblind_themes.py             # recompute the CVD-survival table
+pwsh scripts/New-ColorblindThemeExamples.ps1   # rebuild all SVGs
+pwsh scripts/Test-ColorblindThemes.ps1             # recompute the CVD-survival table
 ```
 
 ## Deploy

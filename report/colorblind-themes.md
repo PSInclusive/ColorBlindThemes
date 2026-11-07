@@ -1050,7 +1050,7 @@ glance. A theme is only as strong as its weakest pair.
 - **ok** — closest pair ≥ 3. Usable, but the closest pair is a known tight spot.
 - **WEAK** — closest pair < 3 under at least one deficiency. Some pair collapses on hue+lightness.
 
-Reproduce every number below: `python3 scripts/verify_colorblind_themes.py` (stdlib only,
+Reproduce every number below: `pwsh scripts/Test-ColorblindThemes.ps1` (PowerShell 7,
 deterministic — it reads the same hex tables that generate the examples).
 
 | Tier | Themes (mode) |
@@ -1132,7 +1132,7 @@ from scratch, rather than remapping an existing 8-color palette, buys you.
 ## Reproducing the examples
 
 ```bash
-python3 scripts/generate_colorblind_theme_examples.py
+pwsh scripts/New-ColorblindThemeExamples.ps1
 ```
 
 Regenerates all 105 SVGs into `docs/reports/assets/colorblind-themes/` from the hex tables embedded
