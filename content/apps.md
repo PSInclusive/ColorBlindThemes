@@ -27,13 +27,13 @@ warning `#FFF899`; light success `#006F7A` / error `#FF9900` / warning `#FFEE52`
 theme-adaptive contrast — the source comment cites Wong directly and states all 8 colors are
 validated as mutually distinguishable under all three dichromacies.
 
-![Grafana colorblind dark mock](/assets/colorblind-themes/grafana-dark-editor.png)
+![Grafana colorblind dark mock](colorblind-themes/grafana-dark-editor.png)
 
-![Grafana colorblind dark strip](/assets/colorblind-themes/grafana-dark-strip.png)
+![Grafana colorblind dark strip](colorblind-themes/grafana-dark-strip.png)
 
-![Grafana colorblind light mock](/assets/colorblind-themes/grafana-light-editor.png)
+![Grafana colorblind light mock](colorblind-themes/grafana-light-editor.png)
 
-![Grafana colorblind light strip](/assets/colorblind-themes/grafana-light-strip.png)
+![Grafana colorblind light strip](colorblind-themes/grafana-light-strip.png)
 
 **coder/coder**'s `darkProtanDeuter/roles.ts` is unusually well-documented: *"Protanopia and
 deuteranopia compress the red/green channel, so semantic good/bad pairs that rely on green vs red
@@ -41,9 +41,9 @@ need a different axis. We shift destructive states onto a vermilion/orange hue (
 scale, inspired by the Okabe-Ito CVD-safe scheme), positive/active states onto sky-blue, and warning
 onto fuchsia so it does not collide with destructive states on the orange axis."*
 
-![coder colorblind mock](/assets/colorblind-themes/coder-dark-editor.png)
+![coder colorblind mock](colorblind-themes/coder-dark-editor.png)
 
-![coder colorblind strip](/assets/colorblind-themes/coder-dark-strip.png)
+![coder colorblind strip](colorblind-themes/coder-dark-strip.png)
 
 ## 20 more application-level CVD themes (merged, primary-source verified)
 
@@ -97,45 +97,45 @@ verbatim, gated by `test/suite_theme.py` which checks every token stays distingu
 listed deficiency. The first major network-analysis tool with first-party CVD themes.
 ([themes dir](https://github.com/wireshark/wireshark/tree/main/resources/themes), GPL-2.0)
 
-![Wireshark colorblind dark](/assets/colorblind-themes/wireshark-dark-editor.png)
+![Wireshark colorblind dark](colorblind-themes/wireshark-dark-editor.png)
 
-![Wireshark colorblind dark strip](/assets/colorblind-themes/wireshark-dark-strip.png)
+![Wireshark colorblind dark strip](colorblind-themes/wireshark-dark-strip.png)
 
-![Wireshark colorblind light](/assets/colorblind-themes/wireshark-light-editor.png)
+![Wireshark colorblind light](colorblind-themes/wireshark-light-editor.png)
 
-![Wireshark colorblind light strip](/assets/colorblind-themes/wireshark-light-strip.png)
+![Wireshark colorblind light strip](colorblind-themes/wireshark-light-strip.png)
 
 **Insomnia** (Kong) shipped a **Dark Colorblind core theme** in 2021 ([PR #4081](https://github.com/Kong/insomnia/pull/4081)) —
 days after GitHub's own colorblind beta, and the only API client with a first-party CVD theme.
 HTTP-method colors swap to blue/orange: POST/200 `#0080FF`, DELETE `#CC5500` (burnt orange).
 
-![Insomnia Dark Colorblind](/assets/colorblind-themes/insomnia-dark-editor.png)
+![Insomnia Dark Colorblind](colorblind-themes/insomnia-dark-editor.png)
 
-![Insomnia Dark Colorblind strip](/assets/colorblind-themes/insomnia-dark-strip.png)
+![Insomnia Dark Colorblind strip](colorblind-themes/insomnia-dark-strip.png)
 
 **Kiro** ships a built-in "Color-blind safe" theme pair (dark+light) with a simulation test that
 measures every status pair under all three dichromacies; Okabe-Ito status hues.
 ([PR #24480](https://github.com/kirodotdev/KiroCrew/pull/24480))
 
-![Kiro colorblind dark](/assets/colorblind-themes/kiro-dark-editor.png)
+![Kiro colorblind dark](colorblind-themes/kiro-dark-editor.png)
 
-![Kiro colorblind strip](/assets/colorblind-themes/kiro-dark-strip.png)
+![Kiro colorblind strip](colorblind-themes/kiro-dark-strip.png)
 
-![Kiro colorblind light](/assets/colorblind-themes/kiro-light-editor.png)
+![Kiro colorblind light](colorblind-themes/kiro-light-editor.png)
 
-![Kiro colorblind light strip](/assets/colorblind-themes/kiro-light-strip.png)
+![Kiro colorblind light strip](colorblind-themes/kiro-light-strip.png)
 
 **Google's gemini-cli** ships `github-dark-colorblind` / `github-light-colorblind` built-ins — Primer
 colorblind tokens verbatim in a Google first-party CLI.
 ([PR #15504](https://github.com/google-gemini/gemini-cli/pull/15504), Apache-2.0)
 
-![Gemini CLI colorblind dark](/assets/colorblind-themes/gemini-cli-dark-editor.png)
+![Gemini CLI colorblind dark](colorblind-themes/gemini-cli-dark-editor.png)
 
-![Gemini CLI colorblind strip](/assets/colorblind-themes/gemini-cli-dark-strip.png)
+![Gemini CLI colorblind strip](colorblind-themes/gemini-cli-dark-strip.png)
 
-![Gemini CLI colorblind light](/assets/colorblind-themes/gemini-cli-light-editor.png)
+![Gemini CLI colorblind light](colorblind-themes/gemini-cli-light-editor.png)
 
-![Gemini CLI colorblind light strip](/assets/colorblind-themes/gemini-cli-light-strip.png)
+![Gemini CLI colorblind light strip](colorblind-themes/gemini-cli-light-strip.png)
 
 More product themes:
 
@@ -178,9 +178,9 @@ grid. Teal/pink axis with yellow warnings: brand teal `#1abec2`, accent pink `#f
 yellow `#fad000`, periwinkle `#7998f2`, lilac `#a56cf5`, orange `#f38672`, bg indigo `#181036`.
 Dark only; uses the Atkinson Hyperlegible font.
 
-![Pitaya Smoothie editor mock](/assets/colorblind-themes/pitaya-dark-editor.png)
+![Pitaya Smoothie editor mock](colorblind-themes/pitaya-dark-editor.png)
 
-![Pitaya Smoothie CVD strip](/assets/colorblind-themes/pitaya-dark-strip.png)
+![Pitaya Smoothie CVD strip](colorblind-themes/pitaya-dark-strip.png)
 
 (Also in the Jupyter ecosystem: [`jupyterlab_colorblind`](https://github.com/mattwigway/jupyterlab_colorblind)
 is a Machado-2009 **simulator** extension for previewing your own plots under CVD — tooling, not a theme.)
@@ -192,9 +192,9 @@ Plasma color scheme found; the store front is bot-walled but the raw `.colors` f
 the OCS API. Author's claim: "high contrasts and at the same time eyefriendly and suitable for
 red-green colorblindness." Dark; blue-tinted neutrals, blue links `#508ED8`, neutral `#55AAFF`.
 
-![Lx Deep Sea editor mock](/assets/colorblind-themes/lxdeepsea-dark-editor.png)
+![Lx Deep Sea editor mock](colorblind-themes/lxdeepsea-dark-editor.png)
 
-![Lx Deep Sea CVD strip](/assets/colorblind-themes/lxdeepsea-dark-strip.png)
+![Lx Deep Sea CVD strip](colorblind-themes/lxdeepsea-dark-strip.png)
 
 Honest caveat: its Negative `#FF1B13` (pure red) vs Positive `#57CF1F` (green) still differ mainly
 by hue — the simulation strip shows them collapsing toward each other under deuteranopia/protanopia.

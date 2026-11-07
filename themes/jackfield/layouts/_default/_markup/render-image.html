@@ -1,12 +1,12 @@
-{{- $src := .Destination | safeURL -}}
-{{- $path := printf "static%s" $src -}}
-{{- $attrs := "" -}}
-{{- if fileExists $path -}}
-  {{- with (imageConfig $path) -}}
-    {{- $attrs = printf ` width="%d" height="%d"` .Width .Height | safeHTMLAttr -}}
-  {{- end -}}
+{{- $path := .Destination | safeURL -}}
+{{- $res := resources.Get $path -}}
+{{- if $res -}}
+  {{- $res = $res | resources.Fingerprint "sha256" -}}
+  <a href="{{ $res.RelPermalink }}" class="imgzoom" title="Click to zoom">{{- "" -}}
+  <img src="{{ $res.RelPermalink }}" alt="{{ .Text }}" width="{{ $res.Width }}" height="{{ $res.Height }}" loading="lazy">{{- "" -}}
+  </a>
+{{- else -}}
+  {{- /* fallback for non-resource images (external URLs etc.) */ -}}
+  <img src="{{ $path }}" alt="{{ .Text }}" loading="lazy">
 {{- end -}}
-<a href="{{ $src }}" class="imgzoom" title="Click to zoom">{{- "" -}}
-<img src="{{ $src }}" alt="{{ .Text }}"{{ $attrs }} loading="lazy">{{- "" -}}
-</a>
 {{- "" -}}

@@ -46,15 +46,15 @@ deterministic — it reads the same hex tables that generate the examples).
 theme under one simulated dichromacy — Normal row, then the CVD view. The WEAK pair's two chips
 collapse to near-identical tones; the STRONG pair stays apart.
 
-![Deuteranopia: GitButler (strong) vs GitHub (weak)](/assets/colorblind-themes/compare-deuteranopia.png)
+![Deuteranopia: GitButler (strong) vs GitHub (weak)](colorblind-themes/compare-deuteranopia.png)
 
 Under deuteranopia, GitHub's keyword `#ec8e2c` and warning `#d29922` become `#C1AD2D` and `#BDA928`
 — 7.5 RGB units apart, effectively one color. GitButler's addition `#99d9ff` and deletion `#ffbf66`
 stay 156 units apart.
 
-![Protanopia: Wireshark (strong) vs coder (weak)](/assets/colorblind-themes/compare-protanopia.png)
+![Protanopia: Wireshark (strong) vs coder (weak)](colorblind-themes/compare-protanopia.png)
 
-![Tritanopia: Kiro (strong) vs Gentle light (weak)](/assets/colorblind-themes/compare-tritanopia.png)
+![Tritanopia: Kiro (strong) vs Gentle light (weak)](colorblind-themes/compare-tritanopia.png)
 
 **Read this table honestly — three caveats:**
 
