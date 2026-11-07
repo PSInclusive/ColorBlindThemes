@@ -1,0 +1,13 @@
+{{- $src := .Destination | safeURL -}}
+{{- $path := printf "static%s" $src -}}
+{{- $attrs := "" -}}
+{{- if fileExists $path -}}
+  {{- $c := readFile $path -}}
+  {{- $wtoken := index (findRE `width="[0-9]+"` $c) 0 -}}
+  {{- $htoken := index (findRE `height="[0-9]+"` $c) 0 -}}
+  {{- $w := $wtoken | strings.TrimPrefix `width="` | strings.TrimSuffix `"` -}}
+  {{- $h := $htoken | strings.TrimPrefix `height="` | strings.TrimSuffix `"` -}}
+  {{- $attrs = printf ` width="%s" height="%s"` $w $h | safeHTMLAttr -}}
+{{- end -}}
+<img src="{{ $src }}" alt="{{ .Text }}"{{ $attrs }} loading="lazy">
+{{- "" -}}
