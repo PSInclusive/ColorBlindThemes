@@ -109,13 +109,13 @@ The signature move: dark-mode `fgColor-success` `#3fb950` (green) → `#58a6ff` 
 | **Dark** | `#0d1117` | `#e6edf3` | `#ec8e2c` | `#d2a8ff` | `#a5d6ff` | `#79c0ff` | `#ffa657` | `#8b949e` |
 | **Light** | `#ffffff` | `#1f2328` | `#b35900` | `#6639ba` | `#0a3069` | `#0550ae` | `#953800` | `#57606a` |
 
-![GitHub Dark Colorblind editor mock](assets/colorblind-themes/github-dark-editor.svg)
+![GitHub Dark Colorblind editor mock](assets/colorblind-themes/github-dark-editor.png)
 
-![GitHub Dark Colorblind CVD simulation strip](assets/colorblind-themes/github-dark-strip.svg)
+![GitHub Dark Colorblind CVD simulation strip](assets/colorblind-themes/github-dark-strip.png)
 
-![GitHub Light Colorblind editor mock](assets/colorblind-themes/github-light-editor.svg)
+![GitHub Light Colorblind editor mock](assets/colorblind-themes/github-light-editor.png)
 
-![GitHub Light Colorblind CVD simulation strip](assets/colorblind-themes/github-light-strip.svg)
+![GitHub Light Colorblind CVD simulation strip](assets/colorblind-themes/github-light-strip.png)
 
 Note the tritanopia row: it is the only simulation where these hues visibly shift — this theme
 pair targets red-green CVD; GitHub ships separate tritanopia themes for that axis.
@@ -136,13 +136,13 @@ semantic colors off the confused axis. Ported to
 | **Operandi (light)** | `#ffffff` | `#000000` | `#a60000` | `#006800` | `#695500` | `#0031a9` | `#721045` | `#005e8b` |
 | **Vivendi (dark)** | `#000000` | `#ffffff` | `#ff5f59` | `#44bc44` | `#cabf00` | `#2fafff` | `#feacd0` | `#00d3d0` |
 
-![Modus vivendi deuteranopia editor mock](assets/colorblind-themes/modus-dark-editor.svg)
+![Modus vivendi deuteranopia editor mock](assets/colorblind-themes/modus-dark-editor.png)
 
-![Modus vivendi deuteranopia CVD strip](assets/colorblind-themes/modus-dark-strip.svg)
+![Modus vivendi deuteranopia CVD strip](assets/colorblind-themes/modus-dark-strip.png)
 
-![Modus operandi deuteranopia editor mock](assets/colorblind-themes/modus-light-editor.svg)
+![Modus operandi deuteranopia editor mock](assets/colorblind-themes/modus-light-editor.png)
 
-![Modus operandi deuteranopia CVD strip](assets/colorblind-themes/modus-light-strip.svg)
+![Modus operandi deuteranopia CVD strip](assets/colorblind-themes/modus-light-strip.png)
 
 ### ef-themes (Emacs) — the second CVD Emacs family, errors remapped to yellow
 
@@ -158,13 +158,13 @@ defined simply to preserve compatibility… We don't actually rely on them for a
 | **ef-deuteranopia-dark** | `#000a1f` | `#ddddee` | `#cf8560` | `#3faa26` | `#aa9f32` | `#3f90f0` | `#b379bf` |
 | **ef-deuteranopia-light** | `#f5f5ff` | `#1a1a2f` | `#d3303a` | `#217a3c` | `#805d00` | `#375cd8` | `#ba35af` |
 
-![ef-deuteranopia-dark editor mock](assets/colorblind-themes/ef-deuteranopia-dark-editor.svg)
+![ef-deuteranopia-dark editor mock](assets/colorblind-themes/ef-deuteranopia-dark-editor.png)
 
-![ef-deuteranopia-dark CVD strip](assets/colorblind-themes/ef-deuteranopia-dark-strip.svg)
+![ef-deuteranopia-dark CVD strip](assets/colorblind-themes/ef-deuteranopia-dark-strip.png)
 
-![ef-deuteranopia-light editor mock](assets/colorblind-themes/ef-deuteranopia-light-editor.svg)
+![ef-deuteranopia-light editor mock](assets/colorblind-themes/ef-deuteranopia-light-editor.png)
 
-![ef-deuteranopia-light CVD strip](assets/colorblind-themes/ef-deuteranopia-light-strip.svg)
+![ef-deuteranopia-light CVD strip](assets/colorblind-themes/ef-deuteranopia-light-strip.png)
 
 The four Ef variants ship in **WezTerm's built-in scheme index** (`Ef-Deuteranopia-Dark/Light`,
 `Ef-Tritanopia-Dark/Light`) alongside three Modus ports — making WezTerm one of the few terminals
@@ -181,13 +181,13 @@ linear-RGB and gamma-sRGB and fails the build if CIEDE2000 ΔE < 11 (diffs, merg
 red/green) or < 8 (diagnostics, core syntax). Signals remap to the preserved axis: blue↔orange for
 red-green CVD, red↔teal/cyan for tritanopia.
 
-![Pierre dark protan/deutan editor mock](assets/colorblind-themes/pierre-dark-editor.svg)
+![Pierre dark protan/deutan editor mock](assets/colorblind-themes/pierre-dark-editor.png)
 
-![Pierre dark protan/deutan CVD strip](assets/colorblind-themes/pierre-dark-strip.svg)
+![Pierre dark protan/deutan CVD strip](assets/colorblind-themes/pierre-dark-strip.png)
 
-![Pierre light protan/deutan editor mock](assets/colorblind-themes/pierre-light-editor.svg)
+![Pierre light protan/deutan editor mock](assets/colorblind-themes/pierre-light-editor.png)
 
-![Pierre light protan/deutan CVD strip](assets/colorblind-themes/pierre-light-strip.svg)
+![Pierre light protan/deutan CVD strip](assets/colorblind-themes/pierre-light-strip.png)
 
 ### datum — Okabe–Ito hues, rebuilt in OKLCH
 
@@ -201,13 +201,13 @@ Ghostty, Kitty, Alacritty, WezTerm, tmux, fzf, bat, delta, and in iTerm2-Color-S
 | **Dark** | `#0f1318` | `#ced3d9` | `#69b9f7` | `#54dcaa` | `#6ae5ec` | `#e8df69` | `#f8bd5f` | `#fa94cd` |
 | **Light** | `#f1f6fd` | `#242a30` | `#0176b8` | `#007553` | `#0d7a7f` | `#976700` | `#a24500` | `#973070` |
 
-![datum dark editor mock](assets/colorblind-themes/datum-dark-editor.svg)
+![datum dark editor mock](assets/colorblind-themes/datum-dark-editor.png)
 
-![datum dark CVD strip](assets/colorblind-themes/datum-dark-strip.svg)
+![datum dark CVD strip](assets/colorblind-themes/datum-dark-strip.png)
 
-![datum light editor mock](assets/colorblind-themes/datum-light-editor.svg)
+![datum light editor mock](assets/colorblind-themes/datum-light-editor.png)
 
-![datum light CVD strip](assets/colorblind-themes/datum-light-strip.svg)
+![datum light CVD strip](assets/colorblind-themes/datum-light-strip.png)
 
 ---
 
@@ -220,9 +220,9 @@ Romain Lafourcade, 2016 — "A dark Vim colorscheme for color blind vimmers. But
 colorblind-safe palette**, adapted to xterm-256. Dark only. bg `#080808`, fg `#D0D0D0`;
 Number `#D75F87`, Statement `#AF5FAF`, String `#AFAF00`, Type `#87D7D7`, Title `#5FAF87`.
 
-![Dichromatic editor mock](assets/colorblind-themes/dichromatic-dark-editor.svg)
+![Dichromatic editor mock](assets/colorblind-themes/dichromatic-dark-editor.png)
 
-![Dichromatic CVD strip](assets/colorblind-themes/dichromatic-dark-strip.svg)
+![Dichromatic CVD strip](assets/colorblind-themes/dichromatic-dark-strip.png)
 
 ### Blinds (VS Code) — deuteranopia
 
@@ -231,13 +231,13 @@ Tan Ka-Shing ([marketplace](https://marketplace.visualstudio.com/items?itemName=
 dark, material designed theme." Syntax roles come from **Paul Tol's "bright" scheme**
 (`#4477AA #EE6677 #228833 #CCBB44 #66CCEE #AA3377`). **Dark and light.**
 
-![Blinds dark editor mock](assets/colorblind-themes/blinds-dark-editor.svg)
+![Blinds dark editor mock](assets/colorblind-themes/blinds-dark-editor.png)
 
-![Blinds dark CVD strip](assets/colorblind-themes/blinds-dark-strip.svg)
+![Blinds dark CVD strip](assets/colorblind-themes/blinds-dark-strip.png)
 
-![Blinds light editor mock](assets/colorblind-themes/blinds-light-editor.svg)
+![Blinds light editor mock](assets/colorblind-themes/blinds-light-editor.png)
 
-![Blinds light CVD strip](assets/colorblind-themes/blinds-light-strip.svg)
+![Blinds light CVD strip](assets/colorblind-themes/blinds-light-strip.png)
 
 ### Gentle Theme (VS Code) — teal + orange, WCAG AA
 
@@ -246,13 +246,13 @@ Six variants (Light/Dark/Midnight × neutral/Warm). The source repo (`salgue441/
 longer public (404 as of 2026-11-05); the palette below was extracted from the packaged VSIX.
 Explicit rationale: "Red/green confusion → Teal + Orange palette (distinguishable by everyone)."
 
-![Gentle dark editor mock](assets/colorblind-themes/gentle-dark-editor.svg)
+![Gentle dark editor mock](assets/colorblind-themes/gentle-dark-editor.png)
 
-![Gentle dark CVD strip](assets/colorblind-themes/gentle-dark-strip.svg)
+![Gentle dark CVD strip](assets/colorblind-themes/gentle-dark-strip.png)
 
-![Gentle light editor mock](assets/colorblind-themes/gentle-light-editor.svg)
+![Gentle light editor mock](assets/colorblind-themes/gentle-light-editor.png)
 
-![Gentle light CVD strip](assets/colorblind-themes/gentle-light-strip.svg)
+![Gentle light CVD strip](assets/colorblind-themes/gentle-light-strip.png)
 
 ### Hakimi Deuteranopia Safe (Zed / VS Code / Obsidian)
 
@@ -260,13 +260,13 @@ hakimi ([Zed extension](https://zed.dev/extensions/hakimi-deuteranopia-theme),
 [repo](https://github.com/zogwosh/hakimi-theme), MIT, 2026). Every color drawn from
 deuteranopia-safe sets. **Dark and light.**
 
-![Hakimi dark editor mock](assets/colorblind-themes/hakimi-dark-editor.svg)
+![Hakimi dark editor mock](assets/colorblind-themes/hakimi-dark-editor.png)
 
-![Hakimi dark CVD strip](assets/colorblind-themes/hakimi-dark-strip.svg)
+![Hakimi dark CVD strip](assets/colorblind-themes/hakimi-dark-strip.png)
 
-![Hakimi light editor mock](assets/colorblind-themes/hakimi-light-editor.svg)
+![Hakimi light editor mock](assets/colorblind-themes/hakimi-light-editor.png)
 
-![Hakimi light CVD strip](assets/colorblind-themes/hakimi-light-strip.svg)
+![Hakimi light CVD strip](assets/colorblind-themes/hakimi-light-strip.png)
 
 ### Monokai Deuteranopia Colorblind (VS Code)
 
@@ -275,9 +275,9 @@ Felipe Zarco ([marketplace](https://marketplace.visualstudio.com/items?itemName=
 the blue–yellow axis; reuses Okabe–Ito sky blue `#56B4E9` (caret) and reddish purple `#CC79A7` (types).
 Dark only: bg `#0B1026`, fg `#D4E4FF`.
 
-![Monokai Deuteranopia editor mock](assets/colorblind-themes/monokai-deuteranopia-dark-editor.svg)
+![Monokai Deuteranopia editor mock](assets/colorblind-themes/monokai-deuteranopia-dark-editor.png)
 
-![Monokai Deuteranopia CVD strip](assets/colorblind-themes/monokai-deuteranopia-dark-strip.svg)
+![Monokai Deuteranopia CVD strip](assets/colorblind-themes/monokai-deuteranopia-dark-strip.png)
 
 ### More verified editor themes
 
@@ -326,21 +326,21 @@ Exactly three CVD plugins exist on the JetBrains marketplace
   keyword-green separated from orange control-flow by hue *and* bold weight, with checked-in
   VS Code ↔ Sublime converters.
 
-![Goofygoobers editor mock](assets/colorblind-themes/goofygoobers-dark-editor.svg)
+![Goofygoobers editor mock](assets/colorblind-themes/goofygoobers-dark-editor.png)
 
-![Goofygoobers CVD strip](assets/colorblind-themes/goofygoobers-dark-strip.svg)
+![Goofygoobers CVD strip](assets/colorblind-themes/goofygoobers-dark-strip.png)
 
-![One Dark Pro Colorblind editor mock](assets/colorblind-themes/onedarkpro-cb-dark-editor.svg)
+![One Dark Pro Colorblind editor mock](assets/colorblind-themes/onedarkpro-cb-dark-editor.png)
 
-![One Dark Pro Colorblind CVD strip](assets/colorblind-themes/onedarkpro-cb-dark-strip.svg)
+![One Dark Pro Colorblind CVD strip](assets/colorblind-themes/onedarkpro-cb-dark-strip.png)
 
-![morimo editor mock](assets/colorblind-themes/morimo-dark-editor.svg)
+![morimo editor mock](assets/colorblind-themes/morimo-dark-editor.png)
 
-![morimo CVD strip](assets/colorblind-themes/morimo-dark-strip.svg)
+![morimo CVD strip](assets/colorblind-themes/morimo-dark-strip.png)
 
-![vision.nvim editor mock](assets/colorblind-themes/vision-dark-editor.svg)
+![vision.nvim editor mock](assets/colorblind-themes/vision-dark-editor.png)
 
-![vision.nvim CVD strip](assets/colorblind-themes/vision-dark-strip.svg)
+![vision.nvim CVD strip](assets/colorblind-themes/vision-dark-strip.png)
 
 ---
 
@@ -352,13 +352,13 @@ Exactly three CVD plugins exist on the JetBrains marketplace
 scheme for deuteranopia and protanopia." Ghostty, iTerm2, lazygit, CSS. 16-color ANSI palettes where
 red/green/blue slots are luminance- and hue-separated under both dichromacies. **Dark and light.**
 
-![Dalton dark editor mock](assets/colorblind-themes/dalton-dark-editor.svg)
+![Dalton dark editor mock](assets/colorblind-themes/dalton-dark-editor.png)
 
-![Dalton dark CVD strip](assets/colorblind-themes/dalton-dark-strip.svg)
+![Dalton dark CVD strip](assets/colorblind-themes/dalton-dark-strip.png)
 
-![Dalton bright editor mock](assets/colorblind-themes/dalton-light-editor.svg)
+![Dalton bright editor mock](assets/colorblind-themes/dalton-light-editor.png)
 
-![Dalton bright CVD strip](assets/colorblind-themes/dalton-light-strip.svg)
+![Dalton bright CVD strip](assets/colorblind-themes/dalton-light-strip.png)
 
 ### hakarune/colorblind-terminal-themes
 
@@ -371,9 +371,9 @@ Alacritty) plus CVD remixes of Dracula, Nord, Solarized, Tokyo Night, Catppuccin
 repaired dichromatic port (`dichromatic-fixed` fixes a real deuteranopia collision between the
 original's color9/color10).
 
-![dracula-colorblind editor mock](assets/colorblind-themes/hakarune-dracula-dark-editor.svg)
+![dracula-colorblind editor mock](assets/colorblind-themes/hakarune-dracula-dark-editor.png)
 
-![dracula-colorblind CVD strip](assets/colorblind-themes/hakarune-dracula-dark-strip.svg)
+![dracula-colorblind CVD strip](assets/colorblind-themes/hakarune-dracula-dark-strip.png)
 
 ### iTerm2-Color-Schemes CVD entries
 
@@ -436,13 +436,13 @@ Raycast, Figma tokens, Adobe ASE, CSS, and more) — the widest platform spread 
 Light (primary), Dark, and a WCAG-AAA High Contrast variant. Notably it remaps ANSI green to **teal**
 (`#33a397`) rather than pure blue.
 
-![Opo dark editor mock](assets/colorblind-themes/opo-dark-editor.svg)
+![Opo dark editor mock](assets/colorblind-themes/opo-dark-editor.png)
 
-![Opo dark CVD strip](assets/colorblind-themes/opo-dark-strip.svg)
+![Opo dark CVD strip](assets/colorblind-themes/opo-dark-strip.png)
 
-![Opo light editor mock](assets/colorblind-themes/opo-light-editor.svg)
+![Opo light editor mock](assets/colorblind-themes/opo-light-editor.png)
 
-![Opo light CVD strip](assets/colorblind-themes/opo-light-strip.svg)
+![Opo light CVD strip](assets/colorblind-themes/opo-light-strip.png)
 
 ### Shroom Space — three dichromacy variants, CI-enforced
 
@@ -454,9 +454,9 @@ competing token categories**, and linear-RGB CVD simulation — all in CI (`npm 
 with an explicit note that simulation is "a worst-case collision detector, not a picture of what
 anyone sees," plus a user-testing protocol.
 
-![Shroom Space deuteranopia editor mock](assets/colorblind-themes/shroom-dark-editor.svg)
+![Shroom Space deuteranopia editor mock](assets/colorblind-themes/shroom-dark-editor.png)
 
-![Shroom Space CVD strip](assets/colorblind-themes/shroom-dark-strip.svg)
+![Shroom Space CVD strip](assets/colorblind-themes/shroom-dark-strip.png)
 
 ### ColorSafe Themes (JetBrains) — measured axes
 
@@ -467,9 +467,9 @@ color + squiggly + bold) and **Tritan Dark** (hot pink `#FF216A` / cyan `#01D4F9
 under tritanopia they sit at opposite ends of the preserved L–M axis). Rare rigor: the `.icls`
 source headers contain per-color WCAG contrast tables computed against the editor background.
 
-![ColorSafe Pro-Deutan editor mock](assets/colorblind-themes/colorsafe-dark-editor.svg)
+![ColorSafe Pro-Deutan editor mock](assets/colorblind-themes/colorsafe-dark-editor.png)
 
-![ColorSafe CVD strip](assets/colorblind-themes/colorsafe-dark-strip.svg)
+![ColorSafe CVD strip](assets/colorblind-themes/colorsafe-dark-strip.png)
 
 ### Cindervale Accessible — CVD-measured dark + light pair
 
@@ -480,9 +480,9 @@ about its failures (`docs/accessibility.md` records where the accessible palette
 than the original). Design rule: "pairs that share a hue family under a color vision deficiency are
 kept a full lightness tier apart"; red never needs to be told from green.
 
-![Cindervale Accessible dark editor mock](assets/colorblind-themes/cindervale-dark-editor.svg)
+![Cindervale Accessible dark editor mock](assets/colorblind-themes/cindervale-dark-editor.png)
 
-![Cindervale CVD strip](assets/colorblind-themes/cindervale-dark-strip.svg)
+![Cindervale CVD strip](assets/colorblind-themes/cindervale-dark-strip.png)
 
 ### More recent entries
 
@@ -524,13 +524,13 @@ warning `#FFF899`; light success `#006F7A` / error `#FF9900` / warning `#FFEE52`
 theme-adaptive contrast — the source comment cites Wong directly and states all 8 colors are
 validated as mutually distinguishable under all three dichromacies.
 
-![Grafana colorblind dark mock](assets/colorblind-themes/grafana-dark-editor.svg)
+![Grafana colorblind dark mock](assets/colorblind-themes/grafana-dark-editor.png)
 
-![Grafana colorblind dark strip](assets/colorblind-themes/grafana-dark-strip.svg)
+![Grafana colorblind dark strip](assets/colorblind-themes/grafana-dark-strip.png)
 
-![Grafana colorblind light mock](assets/colorblind-themes/grafana-light-editor.svg)
+![Grafana colorblind light mock](assets/colorblind-themes/grafana-light-editor.png)
 
-![Grafana colorblind light strip](assets/colorblind-themes/grafana-light-strip.svg)
+![Grafana colorblind light strip](assets/colorblind-themes/grafana-light-strip.png)
 
 **coder/coder**'s `darkProtanDeuter/roles.ts` is unusually well-documented: *"Protanopia and
 deuteranopia compress the red/green channel, so semantic good/bad pairs that rely on green vs red
@@ -538,9 +538,9 @@ need a different axis. We shift destructive states onto a vermilion/orange hue (
 scale, inspired by the Okabe-Ito CVD-safe scheme), positive/active states onto sky-blue, and warning
 onto fuchsia so it does not collide with destructive states on the orange axis."*
 
-![coder colorblind mock](assets/colorblind-themes/coder-dark-editor.svg)
+![coder colorblind mock](assets/colorblind-themes/coder-dark-editor.png)
 
-![coder colorblind strip](assets/colorblind-themes/coder-dark-strip.svg)
+![coder colorblind strip](assets/colorblind-themes/coder-dark-strip.png)
 
 #### 20 more application-level CVD themes (merged, primary-source verified)
 
@@ -594,45 +594,45 @@ verbatim, gated by `test/suite_theme.py` which checks every token stays distingu
 listed deficiency. The first major network-analysis tool with first-party CVD themes.
 ([themes dir](https://github.com/wireshark/wireshark/tree/main/resources/themes), GPL-2.0)
 
-![Wireshark colorblind dark](assets/colorblind-themes/wireshark-dark-editor.svg)
+![Wireshark colorblind dark](assets/colorblind-themes/wireshark-dark-editor.png)
 
-![Wireshark colorblind dark strip](assets/colorblind-themes/wireshark-dark-strip.svg)
+![Wireshark colorblind dark strip](assets/colorblind-themes/wireshark-dark-strip.png)
 
-![Wireshark colorblind light](assets/colorblind-themes/wireshark-light-editor.svg)
+![Wireshark colorblind light](assets/colorblind-themes/wireshark-light-editor.png)
 
-![Wireshark colorblind light strip](assets/colorblind-themes/wireshark-light-strip.svg)
+![Wireshark colorblind light strip](assets/colorblind-themes/wireshark-light-strip.png)
 
 **Insomnia** (Kong) shipped a **Dark Colorblind core theme** in 2021 ([PR #4081](https://github.com/Kong/insomnia/pull/4081)) —
 days after GitHub's own colorblind beta, and the only API client with a first-party CVD theme.
 HTTP-method colors swap to blue/orange: POST/200 `#0080FF`, DELETE `#CC5500` (burnt orange).
 
-![Insomnia Dark Colorblind](assets/colorblind-themes/insomnia-dark-editor.svg)
+![Insomnia Dark Colorblind](assets/colorblind-themes/insomnia-dark-editor.png)
 
-![Insomnia Dark Colorblind strip](assets/colorblind-themes/insomnia-dark-strip.svg)
+![Insomnia Dark Colorblind strip](assets/colorblind-themes/insomnia-dark-strip.png)
 
 **Kiro** ships a built-in "Color-blind safe" theme pair (dark+light) with a simulation test that
 measures every status pair under all three dichromacies; Okabe-Ito status hues.
 ([PR #24480](https://github.com/kirodotdev/KiroCrew/pull/24480))
 
-![Kiro colorblind dark](assets/colorblind-themes/kiro-dark-editor.svg)
+![Kiro colorblind dark](assets/colorblind-themes/kiro-dark-editor.png)
 
-![Kiro colorblind strip](assets/colorblind-themes/kiro-dark-strip.svg)
+![Kiro colorblind strip](assets/colorblind-themes/kiro-dark-strip.png)
 
-![Kiro colorblind light](assets/colorblind-themes/kiro-light-editor.svg)
+![Kiro colorblind light](assets/colorblind-themes/kiro-light-editor.png)
 
-![Kiro colorblind light strip](assets/colorblind-themes/kiro-light-strip.svg)
+![Kiro colorblind light strip](assets/colorblind-themes/kiro-light-strip.png)
 
 **Google's gemini-cli** ships `github-dark-colorblind` / `github-light-colorblind` built-ins — Primer
 colorblind tokens verbatim in a Google first-party CLI.
 ([PR #15504](https://github.com/google-gemini/gemini-cli/pull/15504), Apache-2.0)
 
-![Gemini CLI colorblind dark](assets/colorblind-themes/gemini-cli-dark-editor.svg)
+![Gemini CLI colorblind dark](assets/colorblind-themes/gemini-cli-dark-editor.png)
 
-![Gemini CLI colorblind strip](assets/colorblind-themes/gemini-cli-dark-strip.svg)
+![Gemini CLI colorblind strip](assets/colorblind-themes/gemini-cli-dark-strip.png)
 
-![Gemini CLI colorblind light](assets/colorblind-themes/gemini-cli-light-editor.svg)
+![Gemini CLI colorblind light](assets/colorblind-themes/gemini-cli-light-editor.png)
 
-![Gemini CLI colorblind light strip](assets/colorblind-themes/gemini-cli-light-strip.svg)
+![Gemini CLI colorblind light strip](assets/colorblind-themes/gemini-cli-light-strip.png)
 
 More product themes:
 
@@ -675,9 +675,9 @@ grid. Teal/pink axis with yellow warnings: brand teal `#1abec2`, accent pink `#f
 yellow `#fad000`, periwinkle `#7998f2`, lilac `#a56cf5`, orange `#f38672`, bg indigo `#181036`.
 Dark only; uses the Atkinson Hyperlegible font.
 
-![Pitaya Smoothie editor mock](assets/colorblind-themes/pitaya-dark-editor.svg)
+![Pitaya Smoothie editor mock](assets/colorblind-themes/pitaya-dark-editor.png)
 
-![Pitaya Smoothie CVD strip](assets/colorblind-themes/pitaya-dark-strip.svg)
+![Pitaya Smoothie CVD strip](assets/colorblind-themes/pitaya-dark-strip.png)
 
 (Also in the Jupyter ecosystem: [`jupyterlab_colorblind`](https://github.com/mattwigway/jupyterlab_colorblind)
 is a Machado-2009 **simulator** extension for previewing your own plots under CVD — tooling, not a theme.)
@@ -689,9 +689,9 @@ Plasma color scheme found; the store front is bot-walled but the raw `.colors` f
 the OCS API. Author's claim: "high contrasts and at the same time eyefriendly and suitable for
 red-green colorblindness." Dark; blue-tinted neutrals, blue links `#508ED8`, neutral `#55AAFF`.
 
-![Lx Deep Sea editor mock](assets/colorblind-themes/lxdeepsea-dark-editor.svg)
+![Lx Deep Sea editor mock](assets/colorblind-themes/lxdeepsea-dark-editor.png)
 
-![Lx Deep Sea CVD strip](assets/colorblind-themes/lxdeepsea-dark-strip.svg)
+![Lx Deep Sea CVD strip](assets/colorblind-themes/lxdeepsea-dark-strip.png)
 
 Honest caveat: its Negative `#FF1B13` (pure red) vs Positive `#57CF1F` (green) still differ mainly
 by hue — the simulation strip shows them collapsing toward each other under deuteranopia/protanopia.
@@ -744,7 +744,7 @@ Designed to be unambiguous under **all three** dichromacies: no yellow-green ran
 `palette.colors("Okabe-Ito")`, underlies seaborn's default, and inspired datum, Blinds, and half the
 editor themes above. Free with attribution.
 
-![Okabe-Ito palette under CVD simulation](assets/colorblind-themes/dataviz-okabe-ito.svg)
+![Okabe-Ito palette under CVD simulation](assets/colorblind-themes/dataviz-okabe-ito.png)
 
 Designed for white backgrounds (print); the pure yellow `#F0E442` is nearly invisible on white —
 base R substitutes amber `#F5C710` in its default variant. Not a dark-mode palette.
@@ -756,13 +756,13 @@ base R substitutes amber `#F5C710` in its default variant. Not a dark-mode palet
 deuteranopia simulations using CIEDE2000 differences, with the simulations published on the page.
 Highlights:
 
-![Tol bright](assets/colorblind-themes/dataviz-tol-bright.svg)
+![Tol bright](assets/colorblind-themes/dataviz-tol-bright.png)
 
-![Tol vibrant](assets/colorblind-themes/dataviz-tol-vibrant.svg)
+![Tol vibrant](assets/colorblind-themes/dataviz-tol-vibrant.png)
 
-![Tol muted](assets/colorblind-themes/dataviz-tol-muted.svg)
+![Tol muted](assets/colorblind-themes/dataviz-tol-muted.png)
 
-![Tol high-contrast](assets/colorblind-themes/dataviz-tol-high-contrast.svg)
+![Tol high-contrast](assets/colorblind-themes/dataviz-tol-high-contrast.png)
 
 Also: `medium-contrast` (pairs survive grayscale), `dark` (every color ≥4.5:1 on white — the one to
 use when WCAG text contrast matters), `pale`/`light` (fills behind black text), diverging `sunset`,
@@ -786,9 +786,9 @@ Okabe–Ito — this paper is why the life-sciences call it the "Wong palette". 
   neighbor contrast, monochromatic sequential ramps used inverted on dark themes, theme-agnostic
   diverging ramps. **Explicitly supports light and dark.**
 
-![IBM v1 colorblind-safe](assets/colorblind-themes/dataviz-ibm-v1.svg)
+![IBM v1 colorblind-safe](assets/colorblind-themes/dataviz-ibm-v1.png)
 
-![IBM Carbon categorical](assets/colorblind-themes/dataviz-carbon-categorical.svg)
+![IBM Carbon categorical](assets/colorblind-themes/dataviz-carbon-categorical.png)
 
 ### cividis (2018) — uniform *under CVD simulation itself*
 
@@ -797,7 +797,7 @@ Okabe–Ito — this paper is why the life-sciences call it the "Wong palette". 
 normal and CVD-simulated vision alike** — a deuteranope reads the same data values as anyone else.
 In matplotlib since 2.2.2; also R, Bokeh, Plotly.
 
-![cividis endpoints under CVD simulation](assets/colorblind-themes/dataviz-cividis.svg)
+![cividis endpoints under CVD simulation](assets/colorblind-themes/dataviz-cividis.png)
 
 Note how little the five sampled stops move across the simulation rows. That invariance is the point.
 
@@ -808,7 +808,7 @@ Note how little the five sampled stops move across the simulation rows. That inv
 (monotonic luminance degrades gracefully), with the caveat that its uniformity is computed for normal
 vision — cividis exists precisely to close that gap. viridis / magma / inferno / plasma all qualify.
 
-![viridis endpoints under CVD simulation](assets/colorblind-themes/dataviz-viridis.svg)
+![viridis endpoints under CVD simulation](assets/colorblind-themes/dataviz-viridis.png)
 
 ### seaborn "colorblind" & matplotlib "tableau-colorblind10"
 
@@ -818,9 +818,9 @@ vision — cividis exists precisely to close that gap. viridis / magma / inferno
   [source](https://github.com/matplotlib/matplotlib/blob/main/lib/matplotlib/mpl-data/stylelib/tableau-colorblind10.mplstyle);
   blue/orange-led with graded lightness so the grey pairs stay separable.
 
-![seaborn colorblind](assets/colorblind-themes/dataviz-seaborn-colorblind.svg)
+![seaborn colorblind](assets/colorblind-themes/dataviz-seaborn-colorblind.png)
 
-![tableau-colorblind10](assets/colorblind-themes/dataviz-tableau-colorblind10.svg)
+![tableau-colorblind10](assets/colorblind-themes/dataviz-tableau-colorblind10.png)
 
 ### Petroff accessible color cycles (2021) — in matplotlib as built-in styles
 
@@ -830,9 +830,9 @@ and CVD simulation to generate 6/8/10-color cycles that are **both accessible an
 evaluated under all three dichromacies. Ships in matplotlib as the built-in styles `petroff6`,
 `petroff8`, `petroff10`; code at [mpetroff/accessible-color-cycles](https://github.com/mpetroff/accessible-color-cycles) (MIT).
 
-![Petroff 6 under CVD simulation](assets/colorblind-themes/dataviz-petroff6.svg)
+![Petroff 6 under CVD simulation](assets/colorblind-themes/dataviz-petroff6.png)
 
-![Petroff 10 under CVD simulation](assets/colorblind-themes/dataviz-petroff10.svg)
+![Petroff 10 under CVD simulation](assets/colorblind-themes/dataviz-petroff10.png)
 
 ### Qualpal (2025) — the newest peer-reviewed CVD palette generator
 
@@ -856,9 +856,9 @@ Both ship a verified CVD-safe palette:
 - **Bokeh `Colorblind`** — `Colorblind8` in [`bokeh/palettes.py`](https://github.com/bokeh/bokeh/blob/main/src/bokeh/palettes.py)
   is Okabe–Ito reordered (blue first), plus Tol's `Bright`/`HighContrast`/`Vibrant`/`Muted` groups.
 
-![Plotly Safe (CARTO / Tol muted) under CVD simulation](assets/colorblind-themes/dataviz-plotly-safe.svg)
+![Plotly Safe (CARTO / Tol muted) under CVD simulation](assets/colorblind-themes/dataviz-plotly-safe.png)
 
-![Bokeh Colorblind8 (Okabe–Ito) under CVD simulation](assets/colorblind-themes/dataviz-bokeh-colorblind.svg)
+![Bokeh Colorblind8 (Okabe–Ito) under CVD simulation](assets/colorblind-themes/dataviz-bokeh-colorblind.png)
 
 ### ggpubfigs / pypubfigs — journal-published, actively maintained
 
@@ -869,9 +869,9 @@ publication-oriented bundle re-exporting the canonical CVD sets (Tol bright/mute
 Okabe–Ito `ito_seven`, Wong `wong_eight`, IBM `ibm_five`) plus two claimed-CVD-safe originals,
 `zesty_four` and `retro_four`:
 
-![ggpubfigs zesty_four](assets/colorblind-themes/dataviz-zesty-four.svg)
+![ggpubfigs zesty_four](assets/colorblind-themes/dataviz-zesty-four.png)
 
-![ggpubfigs retro_four](assets/colorblind-themes/dataviz-retro-four.svg)
+![ggpubfigs retro_four](assets/colorblind-themes/dataviz-retro-four.png)
 
 **Correction:** their `tableau_ten` is the stock Tableau 10 (`#4E79A7 #F28E2B …`), which is **not**
 the Tableau Color Blind 10 and is not CVD-verified — don't confuse the two.
@@ -910,7 +910,7 @@ schemes "colorblind safe". Verified flag list from RColorBrewer source: divergin
 PuOr, RdBu, RdYlBu**; qualitative **Dark2, Paired, Set2**; **all 18 sequential** schemes. Not flagged:
 RdGy, RdYlGn, Spectral, Accent, Pastel1/2, Set1, Set3.
 
-![ColorBrewer Set2](assets/colorblind-themes/dataviz-colorbrewer-set2.svg)
+![ColorBrewer Set2](assets/colorblind-themes/dataviz-colorbrewer-set2.png)
 
 ### Fabio Crameri's Scientific colour maps (2018–2023)
 
@@ -922,7 +922,7 @@ Companion manifesto: [Crameri, Shephard & Heron 2020, *The misuse of colour in s
 communication*](https://www.nature.com/articles/s41467-020-19160-7) (Nat. Comms, DOI
 10.1038/s41467-020-19160-7). MIT; available via Zenodo, cmasher, GMT ≥6.0, R `scico`/`khroma`.
 
-![batlow endpoints under CVD simulation](assets/colorblind-themes/dataviz-crameri-batlow.svg)
+![batlow endpoints under CVD simulation](assets/colorblind-themes/dataviz-crameri-batlow.png)
 
 ### David Nichols — Coloring for Colorblindness
 
@@ -930,7 +930,7 @@ communication*](https://www.nature.com/articles/s41467-020-19160-7) (Nat. Comms,
 renders any palette under protanopia, deuteranopia, tritanopia, and monochrome. His recommended
 4-color default and 8 pre-verified safe **pairs** (e.g. `#1A85FF`/`#D41159`):
 
-![Nichols default 4](assets/colorblind-themes/dataviz-nichols-default.svg)
+![Nichols default 4](assets/colorblind-themes/dataviz-nichols-default.png)
 
 ### Krzywinski's 15-color palette
 
@@ -938,7 +938,7 @@ Martin Krzywinski's [mkweb.bcgsc.ca/biovis2012](http://mkweb.bcgsc.ca/biovis2012
 preserved in the CRAN [colorBlindness](https://cran.r-project.org/web/packages/colorBlindness/vignettes/colorBlindness.html)
 package as `paletteMartin`:
 
-![Krzywinski 15-color palette](assets/colorblind-themes/dataviz-krzywinski-15.svg)
+![Krzywinski 15-color palette](assets/colorblind-themes/dataviz-krzywinski-15.png)
 
 ### R packages collecting the above
 
@@ -1063,15 +1063,15 @@ deterministic — it reads the same hex tables that generate the examples).
 theme under one simulated dichromacy — Normal row, then the CVD view. The WEAK pair's two chips
 collapse to near-identical tones; the STRONG pair stays apart.
 
-![Deuteranopia: GitButler (strong) vs GitHub (weak)](assets/colorblind-themes/compare-deuteranopia.svg)
+![Deuteranopia: GitButler (strong) vs GitHub (weak)](assets/colorblind-themes/compare-deuteranopia.png)
 
 Under deuteranopia, GitHub's keyword `#ec8e2c` and warning `#d29922` become `#C1AD2D` and `#BDA928`
 — 7.5 RGB units apart, effectively one color. GitButler's addition `#99d9ff` and deletion `#ffbf66`
 stay 156 units apart.
 
-![Protanopia: Wireshark (strong) vs coder (weak)](assets/colorblind-themes/compare-protanopia.svg)
+![Protanopia: Wireshark (strong) vs coder (weak)](assets/colorblind-themes/compare-protanopia.png)
 
-![Tritanopia: Kiro (strong) vs Gentle light (weak)](assets/colorblind-themes/compare-tritanopia.svg)
+![Tritanopia: Kiro (strong) vs Gentle light (weak)](assets/colorblind-themes/compare-tritanopia.png)
 
 **Read this table honestly — three caveats:**
 

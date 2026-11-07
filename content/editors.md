@@ -13,9 +13,9 @@ Romain Lafourcade, 2016 — "A dark Vim colorscheme for color blind vimmers. But
 colorblind-safe palette**, adapted to xterm-256. Dark only. bg `#080808`, fg `#D0D0D0`;
 Number `#D75F87`, Statement `#AF5FAF`, String `#AFAF00`, Type `#87D7D7`, Title `#5FAF87`.
 
-![Dichromatic editor mock](/assets/colorblind-themes/dichromatic-dark-editor.svg)
+![Dichromatic editor mock](/assets/colorblind-themes/dichromatic-dark-editor.png)
 
-![Dichromatic CVD strip](/assets/colorblind-themes/dichromatic-dark-strip.svg)
+![Dichromatic CVD strip](/assets/colorblind-themes/dichromatic-dark-strip.png)
 
 ## Blinds (VS Code) — deuteranopia
 
@@ -24,13 +24,13 @@ Tan Ka-Shing ([marketplace](https://marketplace.visualstudio.com/items?itemName=
 dark, material designed theme." Syntax roles come from **Paul Tol's "bright" scheme**
 (`#4477AA #EE6677 #228833 #CCBB44 #66CCEE #AA3377`). **Dark and light.**
 
-![Blinds dark editor mock](/assets/colorblind-themes/blinds-dark-editor.svg)
+![Blinds dark editor mock](/assets/colorblind-themes/blinds-dark-editor.png)
 
-![Blinds dark CVD strip](/assets/colorblind-themes/blinds-dark-strip.svg)
+![Blinds dark CVD strip](/assets/colorblind-themes/blinds-dark-strip.png)
 
-![Blinds light editor mock](/assets/colorblind-themes/blinds-light-editor.svg)
+![Blinds light editor mock](/assets/colorblind-themes/blinds-light-editor.png)
 
-![Blinds light CVD strip](/assets/colorblind-themes/blinds-light-strip.svg)
+![Blinds light CVD strip](/assets/colorblind-themes/blinds-light-strip.png)
 
 ## Gentle Theme (VS Code) — teal + orange, WCAG AA
 
@@ -39,13 +39,13 @@ Six variants (Light/Dark/Midnight × neutral/Warm). The source repo (`salgue441/
 longer public (404 as of 2026-11-05); the palette below was extracted from the packaged VSIX.
 Explicit rationale: "Red/green confusion → Teal + Orange palette (distinguishable by everyone)."
 
-![Gentle dark editor mock](/assets/colorblind-themes/gentle-dark-editor.svg)
+![Gentle dark editor mock](/assets/colorblind-themes/gentle-dark-editor.png)
 
-![Gentle dark CVD strip](/assets/colorblind-themes/gentle-dark-strip.svg)
+![Gentle dark CVD strip](/assets/colorblind-themes/gentle-dark-strip.png)
 
-![Gentle light editor mock](/assets/colorblind-themes/gentle-light-editor.svg)
+![Gentle light editor mock](/assets/colorblind-themes/gentle-light-editor.png)
 
-![Gentle light CVD strip](/assets/colorblind-themes/gentle-light-strip.svg)
+![Gentle light CVD strip](/assets/colorblind-themes/gentle-light-strip.png)
 
 ## Hakimi Deuteranopia Safe (Zed / VS Code / Obsidian)
 
@@ -53,13 +53,13 @@ hakimi ([Zed extension](https://zed.dev/extensions/hakimi-deuteranopia-theme),
 [repo](https://github.com/zogwosh/hakimi-theme), MIT, 2026). Every color drawn from
 deuteranopia-safe sets. **Dark and light.**
 
-![Hakimi dark editor mock](/assets/colorblind-themes/hakimi-dark-editor.svg)
+![Hakimi dark editor mock](/assets/colorblind-themes/hakimi-dark-editor.png)
 
-![Hakimi dark CVD strip](/assets/colorblind-themes/hakimi-dark-strip.svg)
+![Hakimi dark CVD strip](/assets/colorblind-themes/hakimi-dark-strip.png)
 
-![Hakimi light editor mock](/assets/colorblind-themes/hakimi-light-editor.svg)
+![Hakimi light editor mock](/assets/colorblind-themes/hakimi-light-editor.png)
 
-![Hakimi light CVD strip](/assets/colorblind-themes/hakimi-light-strip.svg)
+![Hakimi light CVD strip](/assets/colorblind-themes/hakimi-light-strip.png)
 
 ## Monokai Deuteranopia Colorblind (VS Code)
 
@@ -68,9 +68,9 @@ Felipe Zarco ([marketplace](https://marketplace.visualstudio.com/items?itemName=
 the blue–yellow axis; reuses Okabe–Ito sky blue `#56B4E9` (caret) and reddish purple `#CC79A7` (types).
 Dark only: bg `#0B1026`, fg `#D4E4FF`.
 
-![Monokai Deuteranopia editor mock](/assets/colorblind-themes/monokai-deuteranopia-dark-editor.svg)
+![Monokai Deuteranopia editor mock](/assets/colorblind-themes/monokai-deuteranopia-dark-editor.png)
 
-![Monokai Deuteranopia CVD strip](/assets/colorblind-themes/monokai-deuteranopia-dark-strip.svg)
+![Monokai Deuteranopia CVD strip](/assets/colorblind-themes/monokai-deuteranopia-dark-strip.png)
 
 ## More verified editor themes
 
@@ -119,20 +119,20 @@ Exactly three CVD plugins exist on the JetBrains marketplace
   keyword-green separated from orange control-flow by hue *and* bold weight, with checked-in
   VS Code ↔ Sublime converters.
 
-![Goofygoobers editor mock](/assets/colorblind-themes/goofygoobers-dark-editor.svg)
+![Goofygoobers editor mock](/assets/colorblind-themes/goofygoobers-dark-editor.png)
 
-![Goofygoobers CVD strip](/assets/colorblind-themes/goofygoobers-dark-strip.svg)
+![Goofygoobers CVD strip](/assets/colorblind-themes/goofygoobers-dark-strip.png)
 
-![One Dark Pro Colorblind editor mock](/assets/colorblind-themes/onedarkpro-cb-dark-editor.svg)
+![One Dark Pro Colorblind editor mock](/assets/colorblind-themes/onedarkpro-cb-dark-editor.png)
 
-![One Dark Pro Colorblind CVD strip](/assets/colorblind-themes/onedarkpro-cb-dark-strip.svg)
+![One Dark Pro Colorblind CVD strip](/assets/colorblind-themes/onedarkpro-cb-dark-strip.png)
 
-![morimo editor mock](/assets/colorblind-themes/morimo-dark-editor.svg)
+![morimo editor mock](/assets/colorblind-themes/morimo-dark-editor.png)
 
-![morimo CVD strip](/assets/colorblind-themes/morimo-dark-strip.svg)
+![morimo CVD strip](/assets/colorblind-themes/morimo-dark-strip.png)
 
-![vision.nvim editor mock](/assets/colorblind-themes/vision-dark-editor.svg)
+![vision.nvim editor mock](/assets/colorblind-themes/vision-dark-editor.png)
 
-![vision.nvim CVD strip](/assets/colorblind-themes/vision-dark-strip.svg)
+![vision.nvim CVD strip](/assets/colorblind-themes/vision-dark-strip.png)
 
 ---

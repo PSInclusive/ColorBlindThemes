@@ -20,13 +20,13 @@ Raycast, Figma tokens, Adobe ASE, CSS, and more) — the widest platform spread 
 Light (primary), Dark, and a WCAG-AAA High Contrast variant. Notably it remaps ANSI green to **teal**
 (`#33a397`) rather than pure blue.
 
-![Opo dark editor mock](/assets/colorblind-themes/opo-dark-editor.svg)
+![Opo dark editor mock](/assets/colorblind-themes/opo-dark-editor.png)
 
-![Opo dark CVD strip](/assets/colorblind-themes/opo-dark-strip.svg)
+![Opo dark CVD strip](/assets/colorblind-themes/opo-dark-strip.png)
 
-![Opo light editor mock](/assets/colorblind-themes/opo-light-editor.svg)
+![Opo light editor mock](/assets/colorblind-themes/opo-light-editor.png)
 
-![Opo light CVD strip](/assets/colorblind-themes/opo-light-strip.svg)
+![Opo light CVD strip](/assets/colorblind-themes/opo-light-strip.png)
 
 ## Shroom Space — three dichromacy variants, CI-enforced
 
@@ -38,9 +38,9 @@ competing token categories**, and linear-RGB CVD simulation — all in CI (`npm 
 with an explicit note that simulation is "a worst-case collision detector, not a picture of what
 anyone sees," plus a user-testing protocol.
 
-![Shroom Space deuteranopia editor mock](/assets/colorblind-themes/shroom-dark-editor.svg)
+![Shroom Space deuteranopia editor mock](/assets/colorblind-themes/shroom-dark-editor.png)
 
-![Shroom Space CVD strip](/assets/colorblind-themes/shroom-dark-strip.svg)
+![Shroom Space CVD strip](/assets/colorblind-themes/shroom-dark-strip.png)
 
 ## ColorSafe Themes (JetBrains) — measured axes
 
@@ -51,9 +51,9 @@ color + squiggly + bold) and **Tritan Dark** (hot pink `#FF216A` / cyan `#01D4F9
 under tritanopia they sit at opposite ends of the preserved L–M axis). Rare rigor: the `.icls`
 source headers contain per-color WCAG contrast tables computed against the editor background.
 
-![ColorSafe Pro-Deutan editor mock](/assets/colorblind-themes/colorsafe-dark-editor.svg)
+![ColorSafe Pro-Deutan editor mock](/assets/colorblind-themes/colorsafe-dark-editor.png)
 
-![ColorSafe CVD strip](/assets/colorblind-themes/colorsafe-dark-strip.svg)
+![ColorSafe CVD strip](/assets/colorblind-themes/colorsafe-dark-strip.png)
 
 ## Cindervale Accessible — CVD-measured dark + light pair
 
@@ -64,9 +64,9 @@ about its failures (`docs/accessibility.md` records where the accessible palette
 than the original). Design rule: "pairs that share a hue family under a color vision deficiency are
 kept a full lightness tier apart"; red never needs to be told from green.
 
-![Cindervale Accessible dark editor mock](/assets/colorblind-themes/cindervale-dark-editor.svg)
+![Cindervale Accessible dark editor mock](/assets/colorblind-themes/cindervale-dark-editor.png)
 
-![Cindervale CVD strip](/assets/colorblind-themes/cindervale-dark-strip.svg)
+![Cindervale CVD strip](/assets/colorblind-themes/cindervale-dark-strip.png)
 
 ## More recent entries
 

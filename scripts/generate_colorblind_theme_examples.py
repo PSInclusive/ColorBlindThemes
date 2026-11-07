@@ -98,7 +98,7 @@ def swatch_plate(colors, labels, width=900, mode=None):
     plate_bg = "#0B0D10" if mode != "light" else "#F4F1EA"
     label_fg = "#9aa3ab" if mode != "light" else "#6b7280"
     foot_fg = "#a8a8a8" if mode != "light" else "#7a7060"
-    p = [f'<svg xmlns="http://www.w3.org/2000/svg" class="swatch" viewBox="0 0 {w} {h}" font-family="{FONT}">']
+    p = [f'<svg xmlns="http://www.w3.org/2000/svg" class="swatch" width="{w}" height="{h}" viewBox="0 0 {w} {h}" font-family="{FONT}">']
     p.append(f'<rect x="0" y="0" width="{w}" height="{h}" rx="6" fill="{plate_bg}"/>')
 
     # swatch cells, main strip
@@ -159,7 +159,7 @@ def editor_mock(pal, width=900):
     title_h = 30
     status_h = 24
     w = width
-    p = [f'<svg xmlns="http://www.w3.org/2000/svg" class="editor" viewBox="0 0 {w} {win_h}" font-family="{FONT}">']
+    p = [f'<svg xmlns="http://www.w3.org/2000/svg" class="editor" width="{w}" height="{win_h}" viewBox="0 0 {w} {win_h}" font-family="{FONT}">']
 
     # window frame
     p.append(f'<rect x="1" y="1" width="{w - 2}" height="{win_h - 2}" rx="10" fill="{bg}" stroke="{chrome}" stroke-width="1.5"/>')
@@ -637,7 +637,7 @@ def compare_plate(themeA, colorsA, labelsA, themeB, colorsB, labelsB, cvd, width
     sh = 56
     block_h = sh * 2 + 46
     h = 40 + block_h * 2 + 60
-    p = [f'<svg xmlns="http://www.w3.org/2000/svg" class="swatch" viewBox="0 0 {width} {h}" font-family="{FONT}">']
+    p = [f'<svg xmlns="http://www.w3.org/2000/svg" class="swatch" width="{width}" height="{h}" viewBox="0 0 {width} {h}" font-family="{FONT}">']
     cvd_name = cvd.capitalize()
     p.append(f'<text x="10" y="24" font-size="15" font-weight="bold" fill="#999">Simulated under {cvd_name} (Machado 2009, 100%) &#8212; do the signal colors stay apart?</text>')
     y = 50

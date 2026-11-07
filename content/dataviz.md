@@ -18,7 +18,7 @@ Designed to be unambiguous under **all three** dichromacies: no yellow-green ran
 `palette.colors("Okabe-Ito")`, underlies seaborn's default, and inspired datum, Blinds, and half the
 editor themes above. Free with attribution.
 
-![Okabe-Ito palette under CVD simulation](/assets/colorblind-themes/dataviz-okabe-ito.svg)
+![Okabe-Ito palette under CVD simulation](/assets/colorblind-themes/dataviz-okabe-ito.png)
 
 Designed for white backgrounds (print); the pure yellow `#F0E442` is nearly invisible on white —
 base R substitutes amber `#F5C710` in its default variant. Not a dark-mode palette.
@@ -30,13 +30,13 @@ base R substitutes amber `#F5C710` in its default variant. Not a dark-mode palet
 deuteranopia simulations using CIEDE2000 differences, with the simulations published on the page.
 Highlights:
 
-![Tol bright](/assets/colorblind-themes/dataviz-tol-bright.svg)
+![Tol bright](/assets/colorblind-themes/dataviz-tol-bright.png)
 
-![Tol vibrant](/assets/colorblind-themes/dataviz-tol-vibrant.svg)
+![Tol vibrant](/assets/colorblind-themes/dataviz-tol-vibrant.png)
 
-![Tol muted](/assets/colorblind-themes/dataviz-tol-muted.svg)
+![Tol muted](/assets/colorblind-themes/dataviz-tol-muted.png)
 
-![Tol high-contrast](/assets/colorblind-themes/dataviz-tol-high-contrast.svg)
+![Tol high-contrast](/assets/colorblind-themes/dataviz-tol-high-contrast.png)
 
 Also: `medium-contrast` (pairs survive grayscale), `dark` (every color ≥4.5:1 on white — the one to
 use when WCAG text contrast matters), `pale`/`light` (fills behind black text), diverging `sunset`,
@@ -60,9 +60,9 @@ Okabe–Ito — this paper is why the life-sciences call it the "Wong palette". 
   neighbor contrast, monochromatic sequential ramps used inverted on dark themes, theme-agnostic
   diverging ramps. **Explicitly supports light and dark.**
 
-![IBM v1 colorblind-safe](/assets/colorblind-themes/dataviz-ibm-v1.svg)
+![IBM v1 colorblind-safe](/assets/colorblind-themes/dataviz-ibm-v1.png)
 
-![IBM Carbon categorical](/assets/colorblind-themes/dataviz-carbon-categorical.svg)
+![IBM Carbon categorical](/assets/colorblind-themes/dataviz-carbon-categorical.png)
 
 ## cividis (2018) — uniform *under CVD simulation itself*
 
@@ -71,7 +71,7 @@ Okabe–Ito — this paper is why the life-sciences call it the "Wong palette". 
 normal and CVD-simulated vision alike** — a deuteranope reads the same data values as anyone else.
 In matplotlib since 2.2.2; also R, Bokeh, Plotly.
 
-![cividis endpoints under CVD simulation](/assets/colorblind-themes/dataviz-cividis.svg)
+![cividis endpoints under CVD simulation](/assets/colorblind-themes/dataviz-cividis.png)
 
 Note how little the five sampled stops move across the simulation rows. That invariance is the point.
 
@@ -82,7 +82,7 @@ Note how little the five sampled stops move across the simulation rows. That inv
 (monotonic luminance degrades gracefully), with the caveat that its uniformity is computed for normal
 vision — cividis exists precisely to close that gap. viridis / magma / inferno / plasma all qualify.
 
-![viridis endpoints under CVD simulation](/assets/colorblind-themes/dataviz-viridis.svg)
+![viridis endpoints under CVD simulation](/assets/colorblind-themes/dataviz-viridis.png)
 
 ## seaborn "colorblind" & matplotlib "tableau-colorblind10"
 
@@ -92,9 +92,9 @@ vision — cividis exists precisely to close that gap. viridis / magma / inferno
   [source](https://github.com/matplotlib/matplotlib/blob/main/lib/matplotlib/mpl-data/stylelib/tableau-colorblind10.mplstyle);
   blue/orange-led with graded lightness so the grey pairs stay separable.
 
-![seaborn colorblind](/assets/colorblind-themes/dataviz-seaborn-colorblind.svg)
+![seaborn colorblind](/assets/colorblind-themes/dataviz-seaborn-colorblind.png)
 
-![tableau-colorblind10](/assets/colorblind-themes/dataviz-tableau-colorblind10.svg)
+![tableau-colorblind10](/assets/colorblind-themes/dataviz-tableau-colorblind10.png)
 
 ## Petroff accessible color cycles (2021) — in matplotlib as built-in styles
 
@@ -104,9 +104,9 @@ and CVD simulation to generate 6/8/10-color cycles that are **both accessible an
 evaluated under all three dichromacies. Ships in matplotlib as the built-in styles `petroff6`,
 `petroff8`, `petroff10`; code at [mpetroff/accessible-color-cycles](https://github.com/mpetroff/accessible-color-cycles) (MIT).
 
-![Petroff 6 under CVD simulation](/assets/colorblind-themes/dataviz-petroff6.svg)
+![Petroff 6 under CVD simulation](/assets/colorblind-themes/dataviz-petroff6.png)
 
-![Petroff 10 under CVD simulation](/assets/colorblind-themes/dataviz-petroff10.svg)
+![Petroff 10 under CVD simulation](/assets/colorblind-themes/dataviz-petroff10.png)
 
 ## Qualpal (2025) — the newest peer-reviewed CVD palette generator
 
@@ -130,9 +130,9 @@ Both ship a verified CVD-safe palette:
 - **Bokeh `Colorblind`** — `Colorblind8` in [`bokeh/palettes.py`](https://github.com/bokeh/bokeh/blob/main/src/bokeh/palettes.py)
   is Okabe–Ito reordered (blue first), plus Tol's `Bright`/`HighContrast`/`Vibrant`/`Muted` groups.
 
-![Plotly Safe (CARTO / Tol muted) under CVD simulation](/assets/colorblind-themes/dataviz-plotly-safe.svg)
+![Plotly Safe (CARTO / Tol muted) under CVD simulation](/assets/colorblind-themes/dataviz-plotly-safe.png)
 
-![Bokeh Colorblind8 (Okabe–Ito) under CVD simulation](/assets/colorblind-themes/dataviz-bokeh-colorblind.svg)
+![Bokeh Colorblind8 (Okabe–Ito) under CVD simulation](/assets/colorblind-themes/dataviz-bokeh-colorblind.png)
 
 ## ggpubfigs / pypubfigs — journal-published, actively maintained
 
@@ -143,9 +143,9 @@ publication-oriented bundle re-exporting the canonical CVD sets (Tol bright/mute
 Okabe–Ito `ito_seven`, Wong `wong_eight`, IBM `ibm_five`) plus two claimed-CVD-safe originals,
 `zesty_four` and `retro_four`:
 
-![ggpubfigs zesty_four](/assets/colorblind-themes/dataviz-zesty-four.svg)
+![ggpubfigs zesty_four](/assets/colorblind-themes/dataviz-zesty-four.png)
 
-![ggpubfigs retro_four](/assets/colorblind-themes/dataviz-retro-four.svg)
+![ggpubfigs retro_four](/assets/colorblind-themes/dataviz-retro-four.png)
 
 **Correction:** their `tableau_ten` is the stock Tableau 10 (`#4E79A7 #F28E2B …`), which is **not**
 the Tableau Color Blind 10 and is not CVD-verified — don't confuse the two.
@@ -184,7 +184,7 @@ schemes "colorblind safe". Verified flag list from RColorBrewer source: divergin
 PuOr, RdBu, RdYlBu**; qualitative **Dark2, Paired, Set2**; **all 18 sequential** schemes. Not flagged:
 RdGy, RdYlGn, Spectral, Accent, Pastel1/2, Set1, Set3.
 
-![ColorBrewer Set2](/assets/colorblind-themes/dataviz-colorbrewer-set2.svg)
+![ColorBrewer Set2](/assets/colorblind-themes/dataviz-colorbrewer-set2.png)
 
 ## Fabio Crameri's Scientific colour maps (2018–2023)
 
@@ -196,7 +196,7 @@ Companion manifesto: [Crameri, Shephard & Heron 2020, *The misuse of colour in s
 communication*](https://www.nature.com/articles/s41467-020-19160-7) (Nat. Comms, DOI
 10.1038/s41467-020-19160-7). MIT; available via Zenodo, cmasher, GMT ≥6.0, R `scico`/`khroma`.
 
-![batlow endpoints under CVD simulation](/assets/colorblind-themes/dataviz-crameri-batlow.svg)
+![batlow endpoints under CVD simulation](/assets/colorblind-themes/dataviz-crameri-batlow.png)
 
 ## David Nichols — Coloring for Colorblindness
 
@@ -204,7 +204,7 @@ communication*](https://www.nature.com/articles/s41467-020-19160-7) (Nat. Comms,
 renders any palette under protanopia, deuteranopia, tritanopia, and monochrome. His recommended
 4-color default and 8 pre-verified safe **pairs** (e.g. `#1A85FF`/`#D41159`):
 
-![Nichols default 4](/assets/colorblind-themes/dataviz-nichols-default.svg)
+![Nichols default 4](/assets/colorblind-themes/dataviz-nichols-default.png)
 
 ## Krzywinski's 15-color palette
 
@@ -212,7 +212,7 @@ Martin Krzywinski's [mkweb.bcgsc.ca/biovis2012](http://mkweb.bcgsc.ca/biovis2012
 preserved in the CRAN [colorBlindness](https://cran.r-project.org/web/packages/colorBlindness/vignettes/colorBlindness.html)
 package as `paletteMartin`:
 
-![Krzywinski 15-color palette](/assets/colorblind-themes/dataviz-krzywinski-15.svg)
+![Krzywinski 15-color palette](/assets/colorblind-themes/dataviz-krzywinski-15.png)
 
 ## R packages collecting the above
 

@@ -12,13 +12,13 @@ weight: 6
 scheme for deuteranopia and protanopia." Ghostty, iTerm2, lazygit, CSS. 16-color ANSI palettes where
 red/green/blue slots are luminance- and hue-separated under both dichromacies. **Dark and light.**
 
-![Dalton dark editor mock](/assets/colorblind-themes/dalton-dark-editor.svg)
+![Dalton dark editor mock](/assets/colorblind-themes/dalton-dark-editor.png)
 
-![Dalton dark CVD strip](/assets/colorblind-themes/dalton-dark-strip.svg)
+![Dalton dark CVD strip](/assets/colorblind-themes/dalton-dark-strip.png)
 
-![Dalton bright editor mock](/assets/colorblind-themes/dalton-light-editor.svg)
+![Dalton bright editor mock](/assets/colorblind-themes/dalton-light-editor.png)
 
-![Dalton bright CVD strip](/assets/colorblind-themes/dalton-light-strip.svg)
+![Dalton bright CVD strip](/assets/colorblind-themes/dalton-light-strip.png)
 
 ## hakarune/colorblind-terminal-themes
 
@@ -31,9 +31,9 @@ Alacritty) plus CVD remixes of Dracula, Nord, Solarized, Tokyo Night, Catppuccin
 repaired dichromatic port (`dichromatic-fixed` fixes a real deuteranopia collision between the
 original's color9/color10).
 
-![dracula-colorblind editor mock](/assets/colorblind-themes/hakarune-dracula-dark-editor.svg)
+![dracula-colorblind editor mock](/assets/colorblind-themes/hakarune-dracula-dark-editor.png)
 
-![dracula-colorblind CVD strip](/assets/colorblind-themes/hakarune-dracula-dark-strip.svg)
+![dracula-colorblind CVD strip](/assets/colorblind-themes/hakarune-dracula-dark-strip.png)
 
 ## iTerm2-Color-Schemes CVD entries
 

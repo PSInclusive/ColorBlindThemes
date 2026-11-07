@@ -351,3 +351,23 @@ body {
 .article a:hover { color: var(--amber); }
 .article img[src*="-editor"] { background: transparent; }
 [data-theme="light"] .article img { border-color: var(--edge2); }
+
+/* ---- click-to-zoom overlay for figures ---- */
+.imgzoom { cursor: zoom-in; display: block; }
+.zoomoverlay {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(0,0,0,0.88);
+  display: none;
+  align-items: center; justify-content: center;
+  flex-direction: column;
+  cursor: zoom-out;
+  padding: 4vh 4vw;
+}
+.zoomoverlay.open { display: flex; }
+.zoomoverlay img {
+  max-width: 96vw; max-height: 88vh;
+  width: auto; height: auto;
+  border: 1px solid var(--edge2); border-radius: 6px;
+  background: var(--panel);
+}
+.zoomhint { margin-top: 12px; font: 11px var(--mono); color: var(--muted); letter-spacing: 0.1em; }

@@ -34,6 +34,24 @@
   });
 })();
 </script>
+<div class="zoomoverlay" id="zoomoverlay" aria-hidden="true"><img id="zoomimg" alt=""><div class="zoomhint">click anywhere to close</div></div>
+<script>
+(function(){
+  var ov = document.getElementById('zoomoverlay');
+  var zi = document.getElementById('zoomimg');
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a.imgzoom');
+    if (a) {
+      e.preventDefault();
+      zi.src = a.getAttribute('href');
+      ov.classList.add('open');
+      return;
+    }
+    if (ov.classList.contains('open')) { ov.classList.remove('open'); zi.src=''; }
+  });
+  document.addEventListener('keydown', function(e){ if (e.key==='Escape'){ ov.classList.remove('open'); zi.src=''; } });
+})();
+</script>
 <label for="navtoggle" class="hamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></label>
 <label for="navtoggle" class="scrim" aria-hidden="true"></label>
 <nav class="lanes" aria-label="Sections">
