@@ -1,9 +1,9 @@
 ---
 title: "Editors"
-lane: "02"
+lane: "01"
 laneName: "Editors"
 slug: "editors"
-weight: 2
+weight: 1
 ---
 
 {{< themetable type="Editor" >}}

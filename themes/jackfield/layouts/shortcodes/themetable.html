@@ -2,10 +2,10 @@
 {{- $all := eq $type "all" -}}
 {{- $rows := slice -}}
 {{- range hugo.Data.themes -}}
-  {{- if or $all (eq .type $type) -}}
+  {{- if or $all (in .types $type) -}}
     {{- $t := . -}}
     {{- range .modes -}}
-      {{- $rows = $rows | append (dict "name" $t.name "type" $t.type "url" $t.url "note" $t.note "mode" .mode "score" .score "verdict" .verdict "colors" .colors "plate" .plate "editor" .editor) -}}
+      {{- $rows = $rows | append (dict "name" $t.name "types" $t.types "url" $t.url "note" $t.note "mode" .mode "score" .score "verdict" .verdict "colors" .colors "plate" .plate "editor" .editor "terminal" .terminal) -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
@@ -26,7 +26,7 @@
   {{- if $all }}
   <div class="tt-types" role="group" aria-label="Filter by type">
     <button type="button" data-t="all" aria-pressed="true">All types <span class="n"></span></button>
-    {{- range slice "Flagship" "Editor" "Terminal" "App" "Data-viz" }}
+    {{- range slice "Editor" "Terminal" "App" "Data-viz" }}
     <button type="button" data-t="{{ . }}" aria-pressed="false">{{ . }} <span class="n"></span></button>
     {{- end }}
   </div>
@@ -39,10 +39,10 @@
 </tr></thead>
 <tbody>
 {{- range $rows }}
-{{- $id := printf "d-%s-%s-%s" (.type | urlize) (.name | urlize) .mode }}
-<tr class="main" data-type="{{ .type }}" data-mode="{{ .mode }}" data-v="{{ .score }}" data-verdict="{{ .verdict }}">
+{{- $id := printf "d-%s-%s" (.name | urlize) .mode }}
+<tr class="main" data-types="{{ delimit .types " " }}" data-mode="{{ .mode }}" data-v="{{ .score }}" data-verdict="{{ .verdict }}">
 <td class="name">{{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}{{ if .note }}<small class="note">{{ .note }}</small>{{ end }}</td>
-{{- if $all }}<td>{{ .type }}</td>{{ end }}
+{{- if $all }}<td>{{ delimit .types ", " }}</td>{{ end }}
 <td class="modecell">{{ .mode }}</td>
 <td class="score">
 <div class="sc" data-verdict="{{ .verdict }}">
@@ -60,7 +60,8 @@
   <div class="figs">
   {{- $plate := resources.Get (printf "colorblind-themes/%s" .plate) }}
   {{- if $plate }}{{ $plate = $plate | resources.Fingerprint "sha256" }}<a href="{{ $plate.RelPermalink }}" class="imgzoom"><img src="{{ $plate.RelPermalink }}" alt="Colors under each CVD type, {{ .mode }}" width="{{ $plate.Width }}" height="{{ $plate.Height }}" loading="lazy"></a>{{ end }}
-  {{- if .editor }}{{ $ed := resources.Get (printf "colorblind-themes/%s" .editor) }}{{ if $ed }}{{ $ed = $ed | resources.Fingerprint "sha256" }}<a href="{{ $ed.RelPermalink }}" class="imgzoom"><img src="{{ $ed.RelPermalink }}" alt="Editor mock, {{ .mode }}" width="{{ $ed.Width }}" height="{{ $ed.Height }}" loading="lazy"></a>{{ end }}{{ end }}
+  {{- if and .editor (or $all (ne $type "Terminal")) }}{{ $ed := resources.Get (printf "colorblind-themes/%s" .editor) }}{{ if $ed }}{{ $ed = $ed | resources.Fingerprint "sha256" }}<a href="{{ $ed.RelPermalink }}" class="imgzoom"><img src="{{ $ed.RelPermalink }}" alt="Editor mock, {{ .mode }}" width="{{ $ed.Width }}" height="{{ $ed.Height }}" loading="lazy"></a>{{ end }}{{ end }}
+  {{- if and .terminal (or $all (eq $type "Terminal")) }}{{ $tm := resources.Get (printf "colorblind-themes/%s" .terminal) }}{{ if $tm }}{{ $tm = $tm | resources.Fingerprint "sha256" }}<a href="{{ $tm.RelPermalink }}" class="imgzoom"><img src="{{ $tm.RelPermalink }}" alt="Terminal mock, {{ .mode }}" width="{{ $tm.Width }}" height="{{ $tm.Height }}" loading="lazy"></a>{{ end }}{{ end }}
   </div>
 </td>
 </tr>
@@ -77,11 +78,11 @@ document.addEventListener("DOMContentLoaded",function(){
       var vc={STRONG:0,OK:0,WEAK:0},vt=0,mc={dark:0,light:0},mt=0,tc={},tt=0;
       var vOn=Object.keys(sel).length,tOn=Object.keys(tsel).length;
       pairs().forEach(function(p){
-        var d=p[0].dataset,v=d.verdict,m=d.mode,ty=d.type;
-        var mOk=mfilter==="all"||mfilter===m,vOk=!vOn||sel[v],tOk=!tOn||tsel[ty];
+        var d=p[0].dataset,v=d.verdict,m=d.mode,tys=d.types.split(" ");
+        var mOk=mfilter==="all"||mfilter===m,vOk=!vOn||sel[v],tOk=!tOn||tys.some(function(x){return tsel[x]});
         if(mOk&&tOk){vc[v]++;vt++}
         if(vOk&&tOk){mc[m]++;mt++}
-        if(mOk&&vOk){tc[ty]=(tc[ty]||0)+1;tt++}
+        if(mOk&&vOk){tys.forEach(function(x){tc[x]=(tc[x]||0)+1});tt++}
         var show=mOk&&vOk&&tOk;
         p[0].hidden=!show;
         if(!show){p[1].hidden=true;p[0].querySelector(".thumb").setAttribute("aria-expanded","false")}

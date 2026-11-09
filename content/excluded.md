@@ -1,9 +1,9 @@
 ---
 title: "Not included, and why"
-lane: "09"
+lane: "08"
 laneName: "Excluded"
 slug: "excluded"
-weight: 9
+weight: 8
 ---
 
 | Excluded | Reason |

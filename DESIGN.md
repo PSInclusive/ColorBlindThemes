@@ -71,13 +71,13 @@ The site is about colorblindness; it must remain legible fully desaturated. Inva
 ```yaml
 ---
 title: "Visible label in nav"
-lane: "02c"        # lane number shown in nav + crumb
+lane: "01c"        # lane number shown in nav + crumb
 laneName: "Editors" # uppercased in crumb
 slug: "<name>"
 weight: 5           # nav order (Site.Pages.ByWeight)
 ---
 ```
 
-2. Lanes group by section number (`02` = Editors), sub-lettered within a group (`02a`, `02b`, …). Home is lane `00` automatically.
+2. Lanes group by section number (`01` = Editors), sub-lettered within a group (`01a`, `01b`, …). Home is lane `00` automatically.
 3. Start the body with `##` sections; the H1 and ticked rule come from the template/single layout — don't add your own H1.
 4. Reference SVGs from `/assets/…`; the white well is automatic.

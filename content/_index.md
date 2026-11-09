@@ -9,5 +9,5 @@ Published color themes and palettes built for color-vision-deficient users: sour
 values, a CVD simulation plate for every theme, and a computed [verification](verification/) score.
 
 - [All themes](all-themes/)
-- [Flagship](flagship/), [Editors](editors/), [Terminals](terminals/), [Apps](apps/), [Data-viz](dataviz/)
+- [Editors](editors/), [Terminals](terminals/), [Apps](apps/), [Data-viz](dataviz/)
 - [Tools](tools/), [Standards](standards/), [Excluded](excluded/)

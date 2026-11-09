@@ -1,7 +1,11 @@
 [
  {
   "name": "GitHub Colorblind",
-  "type": "Flagship",
+  "types": [
+   "App",
+   "Editor",
+   "Terminal"
+  ],
   "url": "https://github.com/primer/primitives",
   "note": "Primer tokens; keyword orange and warning amber collapse under deuteranopia",
   "modes": [
@@ -20,7 +24,8 @@
      "#be8fff"
     ],
     "plate": "github-dark-strip.png",
-    "editor": "github-dark-editor.png"
+    "editor": "github-dark-editor.png",
+    "terminal": "github-dark-terminal.png"
    },
    {
     "mode": "light",
@@ -37,7 +42,8 @@
      "#8250df"
     ],
     "plate": "github-light-strip.png",
-    "editor": "github-light-editor.png"
+    "editor": "github-light-editor.png",
+    "terminal": "github-light-terminal.png"
    }
   ],
   "best": 1.7,
@@ -45,7 +51,10 @@
  },
  {
   "name": "Modus (deuteranopia)",
-  "type": "Flagship",
+  "types": [
+   "Editor",
+   "Terminal"
+  ],
   "url": "https://protesilaos.com/emacs/modus-themes",
   "note": "Emacs; weakest pair is a red/green the variant deliberately stops using as a signal",
   "modes": [
@@ -62,7 +71,8 @@
      "#00d3d0"
     ],
     "plate": "modus-dark-strip.png",
-    "editor": "modus-dark-editor.png"
+    "editor": "modus-dark-editor.png",
+    "terminal": "modus-dark-terminal.png"
    },
    {
     "mode": "light",
@@ -77,7 +87,8 @@
      "#005e8b"
     ],
     "plate": "modus-light-strip.png",
-    "editor": "modus-light-editor.png"
+    "editor": "modus-light-editor.png",
+    "terminal": "modus-light-terminal.png"
    }
   ],
   "best": 1.5,
@@ -85,7 +96,10 @@
  },
  {
   "name": "ef-themes",
-  "type": "Flagship",
+  "types": [
+   "Editor",
+   "Terminal"
+  ],
   "url": "https://github.com/protesilaos/ef-themes",
   "note": "Emacs; errors remapped to yellow",
   "modes": [
@@ -102,7 +116,8 @@
      "#5faaef"
     ],
     "plate": "ef-deuteranopia-dark-strip.png",
-    "editor": "ef-deuteranopia-dark-editor.png"
+    "editor": "ef-deuteranopia-dark-editor.png",
+    "terminal": "ef-deuteranopia-dark-terminal.png"
    },
    {
     "mode": "light",
@@ -117,7 +132,8 @@
      "#1a8a9f"
     ],
     "plate": "ef-deuteranopia-light-strip.png",
-    "editor": "ef-deuteranopia-light-editor.png"
+    "editor": "ef-deuteranopia-light-editor.png",
+    "terminal": "ef-deuteranopia-light-terminal.png"
    }
   ],
   "best": 4.0,
@@ -125,7 +141,9 @@
  },
  {
   "name": "Pierre",
-  "type": "Flagship",
+  "types": [
+   "Editor"
+  ],
   "url": "https://github.com/pierrecomputer/pierre",
   "note": "Ships a build-time simulation gate",
   "modes": [
@@ -167,7 +185,10 @@
  },
  {
   "name": "datum",
-  "type": "Flagship",
+  "types": [
+   "Editor",
+   "Terminal"
+  ],
   "url": "https://datum.w0zro.com",
   "note": "Okabe-Ito hues rebuilt in OKLCH",
   "modes": [
@@ -184,7 +205,8 @@
      "#fa94cd"
     ],
     "plate": "datum-dark-strip.png",
-    "editor": "datum-dark-editor.png"
+    "editor": "datum-dark-editor.png",
+    "terminal": "datum-dark-terminal.png"
    },
    {
     "mode": "light",
@@ -199,7 +221,8 @@
      "#973070"
     ],
     "plate": "datum-light-strip.png",
-    "editor": "datum-light-editor.png"
+    "editor": "datum-light-editor.png",
+    "terminal": "datum-light-terminal.png"
    }
   ],
   "best": 4.3,
@@ -207,7 +230,9 @@
  },
  {
   "name": "Cindervale Accessible",
-  "type": "Editor",
+  "types": [
+   "Editor"
+  ],
   "url": "https://github.com/erenthedeveloper0/cindervale",
   "note": "CVD-measured dark and light pair",
   "modes": [
@@ -231,7 +256,9 @@
  },
  {
   "name": "Blinds",
-  "type": "Editor",
+  "types": [
+   "Editor"
+  ],
   "url": "https://github.com/orbulant/blinds-theme",
   "note": "VS Code, deuteranopia",
   "modes": [
@@ -271,7 +298,10 @@
  },
  {
   "name": "Opo",
-  "type": "Editor",
+  "types": [
+   "Editor",
+   "Terminal"
+  ],
   "url": "https://github.com/IschaGast/opo-theme",
   "note": "OKLCH-based, heavily engineered",
   "modes": [
@@ -288,7 +318,8 @@
      "#74acff"
     ],
     "plate": "opo-dark-strip.png",
-    "editor": "opo-dark-editor.png"
+    "editor": "opo-dark-editor.png",
+    "terminal": "opo-dark-terminal.png"
    },
    {
     "mode": "light",
@@ -303,7 +334,8 @@
      "#583500"
     ],
     "plate": "opo-light-strip.png",
-    "editor": "opo-light-editor.png"
+    "editor": "opo-light-editor.png",
+    "terminal": "opo-light-terminal.png"
    }
   ],
   "best": 8.2,
@@ -311,7 +343,9 @@
  },
  {
   "name": "Color Blind Themes",
-  "type": "Editor",
+  "types": [
+   "Editor"
+  ],
   "url": "https://github.com/goofygoobers/color-blind-vscode-theme",
   "note": "VS Code; author has CVD",
   "modes": [
@@ -337,7 +371,9 @@
  },
  {
   "name": "vim-dichromatic",
-  "type": "Editor",
+  "types": [
+   "Editor"
+  ],
   "url": "https://github.com/romainl/vim-dichromatic",
   "note": "Vim and Neovim",
   "modes": [
@@ -362,7 +398,9 @@
  },
  {
   "name": "Monokai Deuteranopia",
-  "type": "Editor",
+  "types": [
+   "Editor"
+  ],
   "url": "https://github.com/felipezarco/monokai-deuteranopia-colorblind",
   "note": "VS Code",
   "modes": [
@@ -388,7 +426,9 @@
  },
  {
   "name": "Gentle",
-  "type": "Editor",
+  "types": [
+   "Editor"
+  ],
   "url": "https://marketplace.visualstudio.com/items?itemName=carlossalguero.gentle-theme",
   "note": "VS Code; teal and orange, WCAG AA",
   "modes": [
@@ -428,7 +468,9 @@
  },
  {
   "name": "Hakimi Deuteranopia Safe",
-  "type": "Editor",
+  "types": [
+   "Editor"
+  ],
   "url": "https://github.com/zogwosh/hakimi-theme",
   "note": "Zed, VS Code, Obsidian",
   "modes": [
@@ -470,7 +512,9 @@
  },
  {
   "name": "One Dark Pro Colorblind",
-  "type": "Editor",
+  "types": [
+   "Editor"
+  ],
   "url": "https://github.com/suhaybu/OneDarkPro-Colorblind",
   "note": "VS Code, deuteranopia",
   "modes": [
@@ -495,7 +539,9 @@
  },
  {
   "name": "Shroom Space",
-  "type": "Editor",
+  "types": [
+   "Editor"
+  ],
   "url": "https://github.com/WyattAu/shroom-theme",
   "note": "CI-enforced, yet one pair still collapses under tritanopia",
   "modes": [
@@ -519,7 +565,9 @@
  },
  {
   "name": "ColorSafe Themes",
-  "type": "Editor",
+  "types": [
+   "Editor"
+  ],
   "url": "https://github.com/clementsehan/color-safe-themes-jetbrains",
   "note": "JetBrains",
   "modes": [
@@ -544,7 +592,9 @@
  },
  {
   "name": "morimo",
-  "type": "Editor",
+  "types": [
+   "Editor"
+  ],
   "url": "https://github.com/ttak0422/morimo",
   "note": "Neovim",
   "modes": [
@@ -570,7 +620,9 @@
  },
  {
   "name": "vision.nvim",
-  "type": "Editor",
+  "types": [
+   "Editor"
+  ],
   "url": "https://github.com/shrik3/vision.nvim",
   "note": "Neovim; archived",
   "modes": [
@@ -597,7 +649,9 @@
  },
  {
   "name": "Dalton",
-  "type": "Terminal",
+  "types": [
+   "Terminal"
+  ],
   "url": "https://github.com/gerchowl/dalton-colorscheme",
   "note": "Ghostty, iTerm2, lazygit",
   "modes": [
@@ -614,7 +668,8 @@
      "#56717f"
     ],
     "plate": "dalton-dark-strip.png",
-    "editor": "dalton-dark-editor.png"
+    "editor": "dalton-dark-editor.png",
+    "terminal": "dalton-dark-terminal.png"
    },
    {
     "mode": "light",
@@ -629,7 +684,8 @@
      "#3a5565"
     ],
     "plate": "dalton-light-strip.png",
-    "editor": "dalton-light-editor.png"
+    "editor": "dalton-light-editor.png",
+    "terminal": "dalton-light-terminal.png"
    }
   ],
   "best": 3.8,
@@ -637,7 +693,9 @@
  },
  {
   "name": "dracula-colorblind",
-  "type": "Terminal",
+  "types": [
+   "Terminal"
+  ],
   "url": "https://github.com/hakarune/colorblind-terminal-themes",
   "note": "From the hakarune terminal collection",
   "modes": [
@@ -654,7 +712,8 @@
      "#50fa7b"
     ],
     "plate": "hakarune-dracula-dark-strip.png",
-    "editor": "hakarune-dracula-dark-editor.png"
+    "editor": "hakarune-dracula-dark-editor.png",
+    "terminal": "hakarune-dracula-dark-terminal.png"
    }
   ],
   "best": 3.6,
@@ -662,7 +721,9 @@
  },
  {
   "name": "GitButler",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "https://github.com/gitbutlerapp/gitbutler/pull/10146",
   "note": "Strongest palette in the catalog",
   "modes": [
@@ -694,7 +755,9 @@
  },
  {
   "name": "Cura Colorblind Assist",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "https://github.com/Ultimaker/Cura/pull/5928",
   "note": "Layer-view colors; oldest first-party entry besides Jenkins",
   "modes": [
@@ -718,7 +781,9 @@
  },
  {
   "name": "Kiro",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "https://github.com/kirodotdev/KiroCrew/pull/24480",
   "note": "Built-in theme pair with a simulation test",
   "modes": [
@@ -754,7 +819,9 @@
  },
  {
   "name": "SimpleCov",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "https://github.com/simplecov-ruby/simplecov/pull/1257",
   "note": "Light mode inherits GitHub's orange/amber weakness",
   "modes": [
@@ -788,7 +855,9 @@
  },
  {
   "name": "plannotator",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "https://github.com/backnotprop/plannotator/pull/1192",
   "note": "",
   "modes": [
@@ -824,7 +893,9 @@
  },
  {
   "name": "iamb",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "https://github.com/ulyssa/iamb/pull/822",
   "note": "Okabe-Ito; encrypted indicator is blue, not green",
   "modes": [
@@ -850,7 +921,9 @@
  },
  {
   "name": "OpenFront.io",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "https://github.com/openfrontio/OpenFrontIO/pull/4150",
   "note": "Okabe-Ito team colors",
   "modes": [
@@ -876,7 +949,9 @@
  },
  {
   "name": "Jenkins Wall Display",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "https://github.com/jenkinsci/walldisplay-plugin/pull/3",
   "note": "Oldest app-level CVD theme found (2012)",
   "modes": [
@@ -899,7 +974,9 @@
  },
  {
   "name": "deepinv",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "https://github.com/deepinv/deepinv/pull/1420",
   "note": "Seaborn colorblind palette",
   "modes": [
@@ -923,7 +1000,9 @@
  },
  {
   "name": "narmi",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "https://github.com/narmi/design_system/pull/2246",
   "note": "Design-token CVD modes",
   "modes": [
@@ -946,7 +1025,9 @@
  },
  {
   "name": "Wireshark",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "https://github.com/wireshark/wireshark/tree/main/resources/themes",
   "note": "Gated by a test that checks every token under each deficiency",
   "modes": [
@@ -982,7 +1063,9 @@
  },
  {
   "name": "Insomnia",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "https://github.com/Kong/insomnia/pull/4081",
   "note": "Blue/orange HTTP method colors",
   "modes": [
@@ -1007,7 +1090,9 @@
  },
  {
   "name": "Lx Deep Sea",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "https://store.kde.org/p/1711107",
   "note": "KDE Plasma color scheme",
   "modes": [
@@ -1032,7 +1117,9 @@
  },
  {
   "name": "Pitaya Smoothie",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "https://github.com/trallard/pitaya_smoothie",
   "note": "JupyterLab",
   "modes": [
@@ -1057,7 +1144,9 @@
  },
  {
   "name": "Moira",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "https://github.com/moira-alert/web2.0/pull/668",
   "note": "Icons back up the hue",
   "modes": [
@@ -1080,7 +1169,9 @@
  },
  {
   "name": "Talishar (deuteranopia palette)",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "",
   "note": "One palette per dichromacy; each is strongest under its own target",
   "modes": [
@@ -1106,7 +1197,9 @@
  },
  {
   "name": "Talishar (protanopia palette)",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "",
   "note": "One palette per dichromacy; each is strongest under its own target",
   "modes": [
@@ -1132,7 +1225,9 @@
  },
  {
   "name": "Talishar (tritanopia palette)",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "",
   "note": "One palette per dichromacy; each is strongest under its own target",
   "modes": [
@@ -1158,7 +1253,9 @@
  },
  {
   "name": "Gitea",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "https://github.com/go-gitea/gitea/pull/30625",
   "note": "Inherits GitHub's orange/amber pair",
   "modes": [
@@ -1194,7 +1291,9 @@
  },
  {
   "name": "Gemini CLI",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "https://github.com/google-gemini/gemini-cli/pull/15504",
   "note": "Primer tokens verbatim",
   "modes": [
@@ -1232,7 +1331,9 @@
  },
  {
   "name": "Grafana Colorblind",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "https://github.com/grafana/grafana/pull/116953",
   "note": "Four UI themes plus a Wong-palette chart option",
   "modes": [
@@ -1276,7 +1377,9 @@
  },
  {
   "name": "coder",
-  "type": "App",
+  "types": [
+   "App"
+  ],
   "url": "https://github.com/coder/coder/pull/24672",
   "note": "Cites Okabe-Ito; weak pair is under protanopia and deuteranopia",
   "modes": [
@@ -1299,7 +1402,9 @@
  },
  {
   "name": "Okabe-Ito",
-  "type": "Data-viz",
+  "types": [
+   "Data-viz"
+  ],
   "url": "https://cudo.jp/?page_id=1936",
   "note": "",
   "modes": [
@@ -1326,7 +1431,9 @@
  },
  {
   "name": "Tol Bright",
-  "type": "Data-viz",
+  "types": [
+   "Data-viz"
+  ],
   "url": "https://sronpersonalpages.nl/~pault",
   "note": "",
   "modes": [
@@ -1352,7 +1459,9 @@
  },
  {
   "name": "Tol Vibrant",
-  "type": "Data-viz",
+  "types": [
+   "Data-viz"
+  ],
   "url": "https://sronpersonalpages.nl/~pault",
   "note": "",
   "modes": [
@@ -1378,7 +1487,9 @@
  },
  {
   "name": "Tol Muted",
-  "type": "Data-viz",
+  "types": [
+   "Data-viz"
+  ],
   "url": "https://sronpersonalpages.nl/~pault",
   "note": "",
   "modes": [
@@ -1406,7 +1517,9 @@
  },
  {
   "name": "Tol High Contrast",
-  "type": "Data-viz",
+  "types": [
+   "Data-viz"
+  ],
   "url": "https://sronpersonalpages.nl/~pault",
   "note": "",
   "modes": [
@@ -1428,7 +1541,9 @@
  },
  {
   "name": "IBM v1",
-  "type": "Data-viz",
+  "types": [
+   "Data-viz"
+  ],
   "url": "https://www.carbondesignsystem.com/data-visualization/color-palettes",
   "note": "",
   "modes": [
@@ -1452,7 +1567,9 @@
  },
  {
   "name": "Carbon categorical",
-  "type": "Data-viz",
+  "types": [
+   "Data-viz"
+  ],
   "url": "https://www.carbondesignsystem.com/data-visualization/color-palettes",
   "note": "",
   "modes": [
@@ -1485,7 +1602,9 @@
  },
  {
   "name": "seaborn colorblind",
-  "type": "Data-viz",
+  "types": [
+   "Data-viz"
+  ],
   "url": "https://github.com/mwaskom/seaborn/blob/master/seaborn/palettes.py",
   "note": "",
   "modes": [
@@ -1514,7 +1633,9 @@
  },
  {
   "name": "tableau-colorblind10",
-  "type": "Data-viz",
+  "types": [
+   "Data-viz"
+  ],
   "url": "https://github.com/matplotlib/matplotlib/blob/main/lib/matplotlib/mpl-data/stylelib/tableau-colorblind10.mplstyle",
   "note": "",
   "modes": [
@@ -1543,7 +1664,9 @@
  },
  {
   "name": "Nichols default",
-  "type": "Data-viz",
+  "types": [
+   "Data-viz"
+  ],
   "url": "https://davidmathlogic.com/colorblind",
   "note": "",
   "modes": [
@@ -1566,7 +1689,9 @@
  },
  {
   "name": "ColorBrewer Set2",
-  "type": "Data-viz",
+  "types": [
+   "Data-viz"
+  ],
   "url": "https://colorbrewer2.org/",
   "note": "",
   "modes": [
@@ -1593,7 +1718,9 @@
  },
  {
   "name": "Krzywinski 15",
-  "type": "Data-viz",
+  "types": [
+   "Data-viz"
+  ],
   "url": "http://mkweb.bcgsc.ca/biovis2012/",
   "note": "",
   "modes": [
@@ -1627,7 +1754,9 @@
  },
  {
   "name": "Crameri batlow",
-  "type": "Data-viz",
+  "types": [
+   "Data-viz"
+  ],
   "url": "https://www.fabiocrameri.ch/colourmaps",
   "note": "",
   "modes": [
@@ -1651,7 +1780,9 @@
  },
  {
   "name": "cividis",
-  "type": "Data-viz",
+  "types": [
+   "Data-viz"
+  ],
   "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0199239",
   "note": "",
   "modes": [
@@ -1675,7 +1806,9 @@
  },
  {
   "name": "viridis",
-  "type": "Data-viz",
+  "types": [
+   "Data-viz"
+  ],
   "url": "https://sjmgarnier.github.io/viridis",
   "note": "",
   "modes": [
@@ -1699,7 +1832,9 @@
  },
  {
   "name": "Petroff 6",
-  "type": "Data-viz",
+  "types": [
+   "Data-viz"
+  ],
   "url": "https://github.com/mpetroff/accessible-color-cycles",
   "note": "",
   "modes": [
@@ -1724,7 +1859,9 @@
  },
  {
   "name": "Petroff 10",
-  "type": "Data-viz",
+  "types": [
+   "Data-viz"
+  ],
   "url": "https://github.com/mpetroff/accessible-color-cycles",
   "note": "",
   "modes": [
@@ -1753,7 +1890,9 @@
  },
  {
   "name": "Plotly Safe (CARTO)",
-  "type": "Data-viz",
+  "types": [
+   "Data-viz"
+  ],
   "url": "https://github.com/CartoDB/CartoColor/blob/master/src/carto.ts",
   "note": "",
   "modes": [
@@ -1783,7 +1922,9 @@
  },
  {
   "name": "Bokeh Colorblind",
-  "type": "Data-viz",
+  "types": [
+   "Data-viz"
+  ],
   "url": "https://github.com/bokeh/bokeh/blob/main/src/bokeh/palettes.py",
   "note": "",
   "modes": [
@@ -1810,7 +1951,9 @@
  },
  {
   "name": "ggpubfigs zesty_four",
-  "type": "Data-viz",
+  "types": [
+   "Data-viz"
+  ],
   "url": "https://github.com/JLSteenwyk/ggpubfigs",
   "note": "",
   "modes": [
@@ -1833,7 +1976,9 @@
  },
  {
   "name": "ggpubfigs retro_four",
-  "type": "Data-viz",
+  "types": [
+   "Data-viz"
+  ],
   "url": "https://github.com/JLSteenwyk/ggpubfigs",
   "note": "",
   "modes": [

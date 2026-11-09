@@ -1,9 +1,9 @@
 ---
 title: "Terminals"
-lane: "03"
+lane: "02"
 laneName: "Terminals"
 slug: "terminals"
-weight: 3
+weight: 2
 ---
 
 {{< themetable type="Terminal" >}}

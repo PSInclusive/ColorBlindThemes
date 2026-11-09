@@ -1,9 +1,9 @@
 ---
 title: "Data-viz"
-lane: "05"
+lane: "04"
 laneName: "Data-viz"
 slug: "dataviz"
-weight: 5
+weight: 4
 ---
 
 {{< themetable type="Data-viz" >}}

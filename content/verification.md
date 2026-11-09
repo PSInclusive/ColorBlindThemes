@@ -1,9 +1,9 @@
 ---
 title: "Verification"
-lane: "10"
+lane: "09"
 laneName: "Verification"
 slug: "verification"
-weight: 10
+weight: 9
 ---
 
 Each theme's signal colors (success, error, warning, diff add/delete, syntax roles) are simulated
