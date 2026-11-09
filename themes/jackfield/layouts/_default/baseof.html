@@ -56,7 +56,7 @@
 <label for="navtoggle" class="scrim" aria-hidden="true"></label>
 <nav class="lanes" aria-label="Sections">
   <div class="brand">CVD/REF<br><span class="sub">colorblind themes</span></div>
-  <a href="{{ "/" | relURL }}" class="lane {{ if .IsHome }}cur{{ end }}">
+  <a href="{{ .Site.Home.Permalink }}" class="lane {{ if .IsHome }}cur{{ end }}">
     <span class="ln">00</span><span class="rail"></span><span class="lbl">Overview</span>
   </a>
   {{ $cur := . }}
