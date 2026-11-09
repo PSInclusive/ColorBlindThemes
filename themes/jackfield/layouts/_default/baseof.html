@@ -69,7 +69,7 @@
   {{ end }}
 </nav>
 <main class="field">
-  <div class="crumb">LANE {{ .Params.lane | default "00" }} / {{ upper (.Params.laneName | default "OVERVIEW") }} · NORMALLED</div>
+  <div class="crumb">LANE {{ .Params.lane | default "00" }} / {{ upper (.Params.laneName | default "OVERVIEW") }}</div>
   {{ block "main" . }}{{ end }}
 </main>
 </body>

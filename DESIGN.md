@@ -45,7 +45,7 @@ Current also colors the label amber — redundant with the doubled rail, never t
 
 ## Component conventions
 
-- **Breadcrumb** (`.crumb`, baseof): `LANE {{lane}} / {{LANENAME}} · NORMALLED` — 11px mono, muted, 0.14em tracking. Rendered on every page; defaults to `00 / OVERVIEW`.
+- **Breadcrumb** (`.crumb`, baseof): `LANE {{lane}} / {{LANENAME}}` — 11px mono, muted, 0.14em tracking. Rendered on every page; defaults to `00 / OVERVIEW`.
 - **H1 + rule:** every article opens with H1 followed by `.rule` — a 3px amber **ticked** rule (`repeating-linear-gradient`, 14px on / 6px off). Same dash grammar as the hover rail.
 - **Swatch image wells** (`.article img`): white background, `--edge2` border, 6px radius, 8px padding. The white well is deliberate: the SVG swatches are drawn on transparent/light plates; the well keeps swatch colors true against the dark field. Never drop the white bg to "match" the theme.
 - **Code:** inline = amber-ish `#ffd28a` text in a `--panel2` well with `--edge2` border; `pre` = same well, larger, radius 6px, code inside reverts to `--text`. Amber paired with the well shape, never hue-only.
