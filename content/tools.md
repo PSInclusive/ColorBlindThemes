@@ -1,9 +1,9 @@
 ---
 title: "Simulation & validation tools"
-lane: "05b"
-laneName: "Data-viz"
+lane: "05"
+laneName: "Tools"
 slug: "tools"
-weight: 9
+weight: 5
 ---
 
 | Tool | What it does | Link |

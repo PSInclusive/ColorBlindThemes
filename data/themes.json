@@ -1,0 +1,2002 @@
+[
+ {
+  "name": "GitHub Colorblind",
+  "types": [
+   "App",
+   "Editor",
+   "Terminal"
+  ],
+  "url": "https://github.com/primer/primitives",
+  "note": "Primer tokens; keyword orange and warning amber collapse under deuteranopia",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 1.1,
+    "verdict": "WEAK",
+    "colors": [
+     "#ec8e2c",
+     "#58a6ff",
+     "#d2a8ff",
+     "#a5d6ff",
+     "#79c0ff",
+     "#d29922",
+     "#39c5cf",
+     "#be8fff"
+    ],
+    "plate": "github-dark-strip.png",
+    "editor": "github-dark-editor.png",
+    "terminal": "github-dark-terminal.png"
+   },
+   {
+    "mode": "light",
+    "score": 1.7,
+    "verdict": "WEAK",
+    "colors": [
+     "#b35900",
+     "#0969da",
+     "#6639ba",
+     "#0a3069",
+     "#0550ae",
+     "#9a6700",
+     "#1b7c83",
+     "#8250df"
+    ],
+    "plate": "github-light-strip.png",
+    "editor": "github-light-editor.png",
+    "terminal": "github-light-terminal.png"
+   }
+  ],
+  "best": 1.7,
+  "defaultMode": "light"
+ },
+ {
+  "name": "Modus (deuteranopia)",
+  "types": [
+   "Editor",
+   "Terminal"
+  ],
+  "url": "https://protesilaos.com/emacs/modus-themes",
+  "note": "Emacs; weakest pair is a red/green the variant deliberately stops using as a signal",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 1.1,
+    "verdict": "WEAK",
+    "colors": [
+     "#ff5f59",
+     "#44bc44",
+     "#cabf00",
+     "#2fafff",
+     "#feacd0",
+     "#00d3d0"
+    ],
+    "plate": "modus-dark-strip.png",
+    "editor": "modus-dark-editor.png",
+    "terminal": "modus-dark-terminal.png"
+   },
+   {
+    "mode": "light",
+    "score": 1.5,
+    "verdict": "WEAK",
+    "colors": [
+     "#a60000",
+     "#006800",
+     "#695500",
+     "#0031a9",
+     "#721045",
+     "#005e8b"
+    ],
+    "plate": "modus-light-strip.png",
+    "editor": "modus-light-editor.png",
+    "terminal": "modus-light-terminal.png"
+   }
+  ],
+  "best": 1.5,
+  "defaultMode": "light"
+ },
+ {
+  "name": "ef-themes",
+  "types": [
+   "Editor",
+   "Terminal"
+  ],
+  "url": "https://github.com/protesilaos/ef-themes",
+  "note": "Emacs; errors remapped to yellow",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 1.7,
+    "verdict": "WEAK",
+    "colors": [
+     "#cf8560",
+     "#3faa26",
+     "#aa9f32",
+     "#3f90f0",
+     "#b379bf",
+     "#5faaef"
+    ],
+    "plate": "ef-deuteranopia-dark-strip.png",
+    "editor": "ef-deuteranopia-dark-editor.png",
+    "terminal": "ef-deuteranopia-dark-terminal.png"
+   },
+   {
+    "mode": "light",
+    "score": 4.0,
+    "verdict": "OK",
+    "colors": [
+     "#d3303a",
+     "#217a3c",
+     "#805d00",
+     "#375cd8",
+     "#ba35af",
+     "#1a8a9f"
+    ],
+    "plate": "ef-deuteranopia-light-strip.png",
+    "editor": "ef-deuteranopia-light-editor.png",
+    "terminal": "ef-deuteranopia-light-terminal.png"
+   }
+  ],
+  "best": 4.0,
+  "defaultMode": "light"
+ },
+ {
+  "name": "Pierre",
+  "types": [
+   "Editor"
+  ],
+  "url": "https://github.com/pierrecomputer/pierre",
+  "note": "Ships a build-time simulation gate",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 1.5,
+    "verdict": "WEAK",
+    "colors": [
+     "#009fff",
+     "#97c4ff",
+     "#fe8c2c",
+     "#ffde80",
+     "#68cdf2",
+     "#b969f3",
+     "#ffa359",
+     "#69b1ff"
+    ],
+    "plate": "pierre-dark-strip.png",
+    "editor": "pierre-dark-editor.png"
+   },
+   {
+    "mode": "light",
+    "score": 6.5,
+    "verdict": "OK",
+    "colors": [
+     "#009fff",
+     "#216cab",
+     "#ac6023",
+     "#ffca00",
+     "#2182a1",
+     "#58287c"
+    ],
+    "plate": "pierre-light-strip.png",
+    "editor": "pierre-light-editor.png"
+   }
+  ],
+  "best": 6.5,
+  "defaultMode": "light"
+ },
+ {
+  "name": "datum",
+  "types": [
+   "Editor",
+   "Terminal"
+  ],
+  "url": "https://datum.w0zro.com",
+  "note": "Okabe-Ito hues rebuilt in OKLCH",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 4.0,
+    "verdict": "OK",
+    "colors": [
+     "#69b9f7",
+     "#54dcaa",
+     "#6ae5ec",
+     "#e8df69",
+     "#f8bd5f",
+     "#fa94cd"
+    ],
+    "plate": "datum-dark-strip.png",
+    "editor": "datum-dark-editor.png",
+    "terminal": "datum-dark-terminal.png"
+   },
+   {
+    "mode": "light",
+    "score": 4.3,
+    "verdict": "OK",
+    "colors": [
+     "#0176b8",
+     "#007553",
+     "#0d7a7f",
+     "#976700",
+     "#a24500",
+     "#973070"
+    ],
+    "plate": "datum-light-strip.png",
+    "editor": "datum-light-editor.png",
+    "terminal": "datum-light-terminal.png"
+   }
+  ],
+  "best": 4.3,
+  "defaultMode": "light"
+ },
+ {
+  "name": "Cindervale Accessible",
+  "types": [
+   "Editor"
+  ],
+  "url": "https://github.com/erenthedeveloper0/cindervale",
+  "note": "CVD-measured dark and light pair",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 9.6,
+    "verdict": "STRONG",
+    "colors": [
+     "#AF8CE0",
+     "#B0CDF1",
+     "#BB901F",
+     "#71A3A9",
+     "#9E8379"
+    ],
+    "plate": "cindervale-dark-strip.png",
+    "editor": "cindervale-dark-editor.png"
+   }
+  ],
+  "best": 9.6,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Blinds",
+  "types": [
+   "Editor"
+  ],
+  "url": "https://github.com/orbulant/blinds-theme",
+  "note": "VS Code, deuteranopia",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 8.7,
+    "verdict": "STRONG",
+    "colors": [
+     "#4477AA",
+     "#EE6677",
+     "#228833",
+     "#CCBB44",
+     "#66CCEE",
+     "#AA3377"
+    ],
+    "plate": "blinds-dark-strip.png",
+    "editor": "blinds-dark-editor.png"
+   },
+   {
+    "mode": "light",
+    "score": 5.3,
+    "verdict": "OK",
+    "colors": [
+     "#4477AA",
+     "#CC3311",
+     "#228833",
+     "#9a8600",
+     "#0099bb",
+     "#AA3377"
+    ],
+    "plate": "blinds-light-strip.png",
+    "editor": "blinds-light-editor.png"
+   }
+  ],
+  "best": 8.7,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Opo",
+  "types": [
+   "Editor",
+   "Terminal"
+  ],
+  "url": "https://github.com/IschaGast/opo-theme",
+  "note": "OKLCH-based, heavily engineered",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 5.4,
+    "verdict": "OK",
+    "colors": [
+     "#e08440",
+     "#33a397",
+     "#dca331",
+     "#498beb",
+     "#cd718f",
+     "#74acff"
+    ],
+    "plate": "opo-dark-strip.png",
+    "editor": "opo-dark-editor.png",
+    "terminal": "opo-dark-terminal.png"
+   },
+   {
+    "mode": "light",
+    "score": 8.2,
+    "verdict": "STRONG",
+    "colors": [
+     "#002c85",
+     "#007570",
+     "#a75000",
+     "#005ccc",
+     "#75254e",
+     "#583500"
+    ],
+    "plate": "opo-light-strip.png",
+    "editor": "opo-light-editor.png",
+    "terminal": "opo-light-terminal.png"
+   }
+  ],
+  "best": 8.2,
+  "defaultMode": "light"
+ },
+ {
+  "name": "Color Blind Themes",
+  "types": [
+   "Editor"
+  ],
+  "url": "https://github.com/goofygoobers/color-blind-vscode-theme",
+  "note": "VS Code; author has CVD",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 7.3,
+    "verdict": "OK",
+    "colors": [
+     "#ffbc58",
+     "#9aedfe",
+     "#5af78e",
+     "#b76aff",
+     "#ff5c57",
+     "#ff6ac1",
+     "#57c7ff"
+    ],
+    "plate": "goofygoobers-dark-strip.png",
+    "editor": "goofygoobers-dark-editor.png"
+   }
+  ],
+  "best": 7.3,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "vim-dichromatic",
+  "types": [
+   "Editor"
+  ],
+  "url": "https://github.com/romainl/vim-dichromatic",
+  "note": "Vim and Neovim",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 4.8,
+    "verdict": "OK",
+    "colors": [
+     "#D75F87",
+     "#AF5FAF",
+     "#AFAF00",
+     "#87D7D7",
+     "#5FAF87",
+     "#DFDF87"
+    ],
+    "plate": "dichromatic-dark-strip.png",
+    "editor": "dichromatic-dark-editor.png"
+   }
+  ],
+  "best": 4.8,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Monokai Deuteranopia",
+  "types": [
+   "Editor"
+  ],
+  "url": "https://github.com/felipezarco/monokai-deuteranopia-colorblind",
+  "note": "VS Code",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 4.1,
+    "verdict": "OK",
+    "colors": [
+     "#56B4E9",
+     "#B28BFF",
+     "#DCDCAA",
+     "#E6C07B",
+     "#CC79A7",
+     "#D4A0FF",
+     "#F0E442"
+    ],
+    "plate": "monokai-deuteranopia-dark-strip.png",
+    "editor": "monokai-deuteranopia-dark-editor.png"
+   }
+  ],
+  "best": 4.1,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Gentle",
+  "types": [
+   "Editor"
+  ],
+  "url": "https://marketplace.visualstudio.com/items?itemName=carlossalguero.gentle-theme",
+  "note": "VS Code; teal and orange, WCAG AA",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 4.0,
+    "verdict": "OK",
+    "colors": [
+     "#5FB49C",
+     "#B794D4",
+     "#6AAFE6",
+     "#56C4C8",
+     "#E8A854",
+     "#70D8DC"
+    ],
+    "plate": "gentle-dark-strip.png",
+    "editor": "gentle-dark-editor.png"
+   },
+   {
+    "mode": "light",
+    "score": 1.6,
+    "verdict": "WEAK",
+    "colors": [
+     "#1A7A6C",
+     "#7B5EA7",
+     "#2A6DB0",
+     "#0D7377",
+     "#B35D00",
+     "#0D9488"
+    ],
+    "plate": "gentle-light-strip.png",
+    "editor": "gentle-light-editor.png"
+   }
+  ],
+  "best": 4.0,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Hakimi Deuteranopia Safe",
+  "types": [
+   "Editor"
+  ],
+  "url": "https://github.com/zogwosh/hakimi-theme",
+  "note": "Zed, VS Code, Obsidian",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 3.5,
+    "verdict": "OK",
+    "colors": [
+     "#7ab2ff",
+     "#8bdcff",
+     "#50c0b6",
+     "#ff9536",
+     "#e1be6a",
+     "#ff8585",
+     "#e878cf"
+    ],
+    "plate": "hakimi-dark-strip.png",
+    "editor": "hakimi-dark-editor.png"
+   },
+   {
+    "mode": "light",
+    "score": 0.9,
+    "verdict": "WEAK",
+    "colors": [
+     "#336fd6",
+     "#005b9f",
+     "#00543f",
+     "#7a3f00",
+     "#684100",
+     "#6f1f65",
+     "#7a255d"
+    ],
+    "plate": "hakimi-light-strip.png",
+    "editor": "hakimi-light-editor.png"
+   }
+  ],
+  "best": 3.5,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "One Dark Pro Colorblind",
+  "types": [
+   "Editor"
+  ],
+  "url": "https://github.com/suhaybu/OneDarkPro-Colorblind",
+  "note": "VS Code, deuteranopia",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 3.4,
+    "verdict": "OK",
+    "colors": [
+     "#dae36d",
+     "#c678dd",
+     "#61afef",
+     "#7DF9FF",
+     "#90e9ff",
+     "#e06c75"
+    ],
+    "plate": "onedarkpro-cb-dark-strip.png",
+    "editor": "onedarkpro-cb-dark-editor.png"
+   }
+  ],
+  "best": 3.4,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Shroom Space",
+  "types": [
+   "Editor"
+  ],
+  "url": "https://github.com/WyattAu/shroom-theme",
+  "note": "CI-enforced, yet one pair still collapses under tritanopia",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 2.7,
+    "verdict": "WEAK",
+    "colors": [
+     "#BE9AF7",
+     "#FFCB6B",
+     "#E794D2",
+     "#E8C990",
+     "#E68484"
+    ],
+    "plate": "shroom-dark-strip.png",
+    "editor": "shroom-dark-editor.png"
+   }
+  ],
+  "best": 2.7,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "ColorSafe Themes",
+  "types": [
+   "Editor"
+  ],
+  "url": "https://github.com/clementsehan/color-safe-themes-jetbrains",
+  "note": "JetBrains",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 2.6,
+    "verdict": "WEAK",
+    "colors": [
+     "#5BB8F5",
+     "#E6A020",
+     "#F0D060",
+     "#9CA3C8",
+     "#FF5F87",
+     "#FFAB40"
+    ],
+    "plate": "colorsafe-dark-strip.png",
+    "editor": "colorsafe-dark-editor.png"
+   }
+  ],
+  "best": 2.6,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "morimo",
+  "types": [
+   "Editor"
+  ],
+  "url": "https://github.com/ttak0422/morimo",
+  "note": "Neovim",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 1.4,
+    "verdict": "WEAK",
+    "colors": [
+     "#ff6e6e",
+     "#98c593",
+     "#d3c785",
+     "#9bb9d4",
+     "#b384b1",
+     "#a0c8cc",
+     "#d99872"
+    ],
+    "plate": "morimo-dark-strip.png",
+    "editor": "morimo-dark-editor.png"
+   }
+  ],
+  "best": 1.4,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "vision.nvim",
+  "types": [
+   "Editor"
+  ],
+  "url": "https://github.com/shrik3/vision.nvim",
+  "note": "Neovim; archived",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 0.9,
+    "verdict": "WEAK",
+    "colors": [
+     "#7aa2ee",
+     "#7dcfff",
+     "#bb9af7",
+     "#ff9e64",
+     "#e0af68",
+     "#9ece6a",
+     "#f7768e",
+     "#1abc9c"
+    ],
+    "plate": "vision-dark-strip.png",
+    "editor": "vision-dark-editor.png"
+   }
+  ],
+  "best": 0.9,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Dalton",
+  "types": [
+   "Terminal"
+  ],
+  "url": "https://github.com/gerchowl/dalton-colorscheme",
+  "note": "Ghostty, iTerm2, lazygit",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 3.8,
+    "verdict": "OK",
+    "colors": [
+     "#d85050",
+     "#5b914e",
+     "#c4c40c",
+     "#7aa2f7",
+     "#a050d0",
+     "#56717f"
+    ],
+    "plate": "dalton-dark-strip.png",
+    "editor": "dalton-dark-editor.png",
+    "terminal": "dalton-dark-terminal.png"
+   },
+   {
+    "mode": "light",
+    "score": 3.8,
+    "verdict": "OK",
+    "colors": [
+     "#b83030",
+     "#3a7530",
+     "#7a6d00",
+     "#3060c8",
+     "#7830a8",
+     "#3a5565"
+    ],
+    "plate": "dalton-light-strip.png",
+    "editor": "dalton-light-editor.png",
+    "terminal": "dalton-light-terminal.png"
+   }
+  ],
+  "best": 3.8,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "dracula-colorblind",
+  "types": [
+   "Terminal"
+  ],
+  "url": "https://github.com/hakarune/colorblind-terminal-themes",
+  "note": "From the hakarune terminal collection",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 3.6,
+    "verdict": "OK",
+    "colors": [
+     "#FF7155",
+     "#BF6CFF",
+     "#f1fa8c",
+     "#bd93f9",
+     "#8be9fd",
+     "#50fa7b"
+    ],
+    "plate": "hakarune-dracula-dark-strip.png",
+    "editor": "hakarune-dracula-dark-editor.png",
+    "terminal": "hakarune-dracula-dark-terminal.png"
+   }
+  ],
+  "best": 3.6,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "GitButler",
+  "types": [
+   "App"
+  ],
+  "url": "https://github.com/gitbutlerapp/gitbutler/pull/10146",
+  "note": "Strongest palette in the catalog",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 42.3,
+    "verdict": "STRONG",
+    "colors": [
+     "#99d9ff",
+     "#ffbf66"
+    ],
+    "plate": "gitbutler-dark-strip.png",
+    "editor": null
+   },
+   {
+    "mode": "light",
+    "score": 55.2,
+    "verdict": "STRONG",
+    "colors": [
+     "#0d59bf",
+     "#bf590d"
+    ],
+    "plate": "gitbutler-light-strip.png",
+    "editor": null
+   }
+  ],
+  "best": 55.2,
+  "defaultMode": "light"
+ },
+ {
+  "name": "Cura Colorblind Assist",
+  "types": [
+   "App"
+  ],
+  "url": "https://github.com/Ultimaker/Cura/pull/5928",
+  "note": "Layer-view colors; oldest first-party entry besides Jenkins",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 15.4,
+    "verdict": "STRONG",
+    "colors": [
+     "#ff4000",
+     "#009c80",
+     "#ffff56",
+     "#00ffff",
+     "#0064ff"
+    ],
+    "plate": "cura-dark-strip.png",
+    "editor": null
+   }
+  ],
+  "best": 15.4,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Kiro",
+  "types": [
+   "App"
+  ],
+  "url": "https://github.com/kirodotdev/KiroCrew/pull/24480",
+  "note": "Built-in theme pair with a simulation test",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 14.1,
+    "verdict": "STRONG",
+    "colors": [
+     "#56B4E9",
+     "#F0E442",
+     "#DB5A00",
+     "#CC79A7"
+    ],
+    "plate": "kiro-dark-strip.png",
+    "editor": "kiro-dark-editor.png"
+   },
+   {
+    "mode": "light",
+    "score": 12.7,
+    "verdict": "STRONG",
+    "colors": [
+     "#0072B2",
+     "#AB9100",
+     "#A43000",
+     "#8f4a78"
+    ],
+    "plate": "kiro-light-strip.png",
+    "editor": "kiro-light-editor.png"
+   }
+  ],
+  "best": 14.1,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "SimpleCov",
+  "types": [
+   "App"
+  ],
+  "url": "https://github.com/simplecov-ruby/simplecov/pull/1257",
+  "note": "Light mode inherits GitHub's orange/amber weakness",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 13.4,
+    "verdict": "STRONG",
+    "colors": [
+     "#6cb6ff",
+     "#f0883e",
+     "#f0e05a"
+    ],
+    "plate": "simplecov-dark-strip.png",
+    "editor": null
+   },
+   {
+    "mode": "light",
+    "score": 1.0,
+    "verdict": "WEAK",
+    "colors": [
+     "#0060a8",
+     "#c2410c",
+     "#9a6700"
+    ],
+    "plate": "simplecov-light-strip.png",
+    "editor": null
+   }
+  ],
+  "best": 13.4,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "plannotator",
+  "types": [
+   "App"
+  ],
+  "url": "https://github.com/backnotprop/plannotator/pull/1192",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 11.9,
+    "verdict": "STRONG",
+    "colors": [
+     "#4f83d1",
+     "#c96e12",
+     "#d9a839",
+     "#35b6d9"
+    ],
+    "plate": "plannotator-dark-strip.png",
+    "editor": null
+   },
+   {
+    "mode": "light",
+    "score": 2.1,
+    "verdict": "WEAK",
+    "colors": [
+     "#216cab",
+     "#a55c1e",
+     "#8f6400",
+     "#0e7d9e"
+    ],
+    "plate": "plannotator-light-strip.png",
+    "editor": null
+   }
+  ],
+  "best": 11.9,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "iamb",
+  "types": [
+   "App"
+  ],
+  "url": "https://github.com/ulyssa/iamb/pull/822",
+  "note": "Okabe-Ito; encrypted indicator is blue, not green",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 11.1,
+    "verdict": "STRONG",
+    "colors": [
+     "#D55E00",
+     "#E69F00",
+     "#F0E442",
+     "#0072B2",
+     "#56B4E9",
+     "#009E73",
+     "#CC79A7"
+    ],
+    "plate": "iamb-dark-strip.png",
+    "editor": null
+   }
+  ],
+  "best": 11.1,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "OpenFront.io",
+  "types": [
+   "App"
+  ],
+  "url": "https://github.com/openfrontio/OpenFrontIO/pull/4150",
+  "note": "Okabe-Ito team colors",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 11.1,
+    "verdict": "STRONG",
+    "colors": [
+     "#0072b2",
+     "#56b4e9",
+     "#d55e00",
+     "#009e73",
+     "#cc79a7",
+     "#f0e442",
+     "#e69f00"
+    ],
+    "plate": "openfront-dark-strip.png",
+    "editor": null
+   }
+  ],
+  "best": 11.1,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Jenkins Wall Display",
+  "types": [
+   "App"
+  ],
+  "url": "https://github.com/jenkinsci/walldisplay-plugin/pull/3",
+  "note": "Oldest app-level CVD theme found (2012)",
+  "modes": [
+   {
+    "mode": "light",
+    "score": 9.4,
+    "verdict": "STRONG",
+    "colors": [
+     "#BFD4FF",
+     "#FF9180",
+     "#FFF780",
+     "#EEEEEE"
+    ],
+    "plate": "jenkins-light-strip.png",
+    "editor": null
+   }
+  ],
+  "best": 9.4,
+  "defaultMode": "light"
+ },
+ {
+  "name": "deepinv",
+  "types": [
+   "App"
+  ],
+  "url": "https://github.com/deepinv/deepinv/pull/1420",
+  "note": "Seaborn colorblind palette",
+  "modes": [
+   {
+    "mode": "light",
+    "score": 9.0,
+    "verdict": "STRONG",
+    "colors": [
+     "#0173B2",
+     "#DE8F05",
+     "#029E73",
+     "#D55E00",
+     "#CC78BC"
+    ],
+    "plate": "deepinv-light-strip.png",
+    "editor": null
+   }
+  ],
+  "best": 9.0,
+  "defaultMode": "light"
+ },
+ {
+  "name": "narmi",
+  "types": [
+   "App"
+  ],
+  "url": "https://github.com/narmi/design_system/pull/2246",
+  "note": "Design-token CVD modes",
+  "modes": [
+   {
+    "mode": "light",
+    "score": 8.9,
+    "verdict": "STRONG",
+    "colors": [
+     "#6F6BAD",
+     "#1A56B0",
+     "#6F004F",
+     "#4B0200"
+    ],
+    "plate": "narmi-light-strip.png",
+    "editor": null
+   }
+  ],
+  "best": 8.9,
+  "defaultMode": "light"
+ },
+ {
+  "name": "Wireshark",
+  "types": [
+   "App"
+  ],
+  "url": "https://github.com/wireshark/wireshark/tree/main/resources/themes",
+  "note": "Gated by a test that checks every token under each deficiency",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 8.3,
+    "verdict": "STRONG",
+    "colors": [
+     "#56b4e9",
+     "#f0e442",
+     "#ff8a50",
+     "#d995bf"
+    ],
+    "plate": "wireshark-dark-strip.png",
+    "editor": "wireshark-dark-editor.png"
+   },
+   {
+    "mode": "light",
+    "score": 12.7,
+    "verdict": "STRONG",
+    "colors": [
+     "#0072b2",
+     "#c27a00",
+     "#a33a00",
+     "#8f4a78"
+    ],
+    "plate": "wireshark-light-strip.png",
+    "editor": "wireshark-light-editor.png"
+   }
+  ],
+  "best": 12.7,
+  "defaultMode": "light"
+ },
+ {
+  "name": "Insomnia",
+  "types": [
+   "App"
+  ],
+  "url": "https://github.com/Kong/insomnia/pull/4081",
+  "note": "Blue/orange HTTP method colors",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 8.7,
+    "verdict": "STRONG",
+    "colors": [
+     "#0080FF",
+     "#E8F086",
+     "#A691AE",
+     "#CC5500",
+     "#FFC20A",
+     "#58A6FF"
+    ],
+    "plate": "insomnia-dark-strip.png",
+    "editor": "insomnia-dark-editor.png"
+   }
+  ],
+  "best": 8.7,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Lx Deep Sea",
+  "types": [
+   "App"
+  ],
+  "url": "https://store.kde.org/p/1711107",
+  "note": "KDE Plasma color scheme",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 7.2,
+    "verdict": "OK",
+    "colors": [
+     "#FF1B13",
+     "#57CF1F",
+     "#55AAFF",
+     "#508ED8",
+     "#96BFF0",
+     "#8E79A5"
+    ],
+    "plate": "lxdeepsea-dark-strip.png",
+    "editor": "lxdeepsea-dark-editor.png"
+   }
+  ],
+  "best": 7.2,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Pitaya Smoothie",
+  "types": [
+   "App"
+  ],
+  "url": "https://github.com/trallard/pitaya_smoothie",
+  "note": "JupyterLab",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 4.9,
+    "verdict": "OK",
+    "colors": [
+     "#1abec2",
+     "#f25a92",
+     "#fad000",
+     "#7998f2",
+     "#a56cf5",
+     "#f38672"
+    ],
+    "plate": "pitaya-dark-strip.png",
+    "editor": "pitaya-dark-editor.png"
+   }
+  ],
+  "best": 4.9,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Moira",
+  "types": [
+   "App"
+  ],
+  "url": "https://github.com/moira-alert/web2.0/pull/668",
+  "note": "Icons back up the hue",
+  "modes": [
+   {
+    "mode": "light",
+    "score": 5.7,
+    "verdict": "OK",
+    "colors": [
+     "#00771e",
+     "#ffc107",
+     "#ff5722",
+     "#9e9e9e"
+    ],
+    "plate": "moira-light-strip.png",
+    "editor": null
+   }
+  ],
+  "best": 5.7,
+  "defaultMode": "light"
+ },
+ {
+  "name": "Talishar (deuteranopia palette)",
+  "types": [
+   "App"
+  ],
+  "url": "",
+  "note": "One palette per dichromacy; each is strongest under its own target",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 7.2,
+    "verdict": "OK",
+    "colors": [
+     "#33aaee",
+     "#cc5599",
+     "#eeaa11",
+     "#cc5522",
+     "#55bb88",
+     "#8855aa",
+     "#aa2244"
+    ],
+    "plate": "talishar-deuteranopia-dark-strip.png",
+    "editor": null
+   }
+  ],
+  "best": 7.2,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Talishar (protanopia palette)",
+  "types": [
+   "App"
+  ],
+  "url": "",
+  "note": "One palette per dichromacy; each is strongest under its own target",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 5.0,
+    "verdict": "OK",
+    "colors": [
+     "#11bbff",
+     "#ee1100",
+     "#ff8811",
+     "#118899",
+     "#99ff11",
+     "#bb22aa",
+     "#aa1144"
+    ],
+    "plate": "talishar-protanopia-dark-strip.png",
+    "editor": null
+   }
+  ],
+  "best": 5.0,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Talishar (tritanopia palette)",
+  "types": [
+   "App"
+  ],
+  "url": "",
+  "note": "One palette per dichromacy; each is strongest under its own target",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 2.6,
+    "verdict": "WEAK",
+    "colors": [
+     "#22eeff",
+     "#ee2200",
+     "#eeaa44",
+     "#aa88ff",
+     "#22aa00",
+     "#6666cc",
+     "#992255"
+    ],
+    "plate": "talishar-tritanopia-dark-strip.png",
+    "editor": null
+   }
+  ],
+  "best": 2.6,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Gitea",
+  "types": [
+   "App"
+  ],
+  "url": "https://github.com/go-gitea/gitea/pull/30625",
+  "note": "Inherits GitHub's orange/amber pair",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 2.0,
+    "verdict": "WEAK",
+    "colors": [
+     "#58a6ff",
+     "#f0883e",
+     "#d29922",
+     "#ab7df8"
+    ],
+    "plate": "gitea-dark-strip.png",
+    "editor": null
+   },
+   {
+    "mode": "light",
+    "score": 2.6,
+    "verdict": "WEAK",
+    "colors": [
+     "#0860cc",
+     "#a84400",
+     "#9a6700",
+     "#8250df"
+    ],
+    "plate": "gitea-light-strip.png",
+    "editor": null
+   }
+  ],
+  "best": 2.6,
+  "defaultMode": "light"
+ },
+ {
+  "name": "Gemini CLI",
+  "types": [
+   "App"
+  ],
+  "url": "https://github.com/google-gemini/gemini-cli/pull/15504",
+  "note": "Primer tokens verbatim",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 1.1,
+    "verdict": "WEAK",
+    "colors": [
+     "#ec8e2c",
+     "#58a6ff",
+     "#d2a8ff",
+     "#a5d6ff",
+     "#d29922"
+    ],
+    "plate": "gemini-cli-dark-strip.png",
+    "editor": "gemini-cli-dark-editor.png"
+   },
+   {
+    "mode": "light",
+    "score": 1.7,
+    "verdict": "WEAK",
+    "colors": [
+     "#b35900",
+     "#0969da",
+     "#6639ba",
+     "#0a3069",
+     "#9a6700"
+    ],
+    "plate": "gemini-cli-light-strip.png",
+    "editor": "gemini-cli-light-editor.png"
+   }
+  ],
+  "best": 1.7,
+  "defaultMode": "light"
+ },
+ {
+  "name": "Grafana Colorblind",
+  "types": [
+   "App"
+  ],
+  "url": "https://github.com/grafana/grafana/pull/116953",
+  "note": "Four UI themes plus a Wong-palette chart option",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 2.3,
+    "verdict": "WEAK",
+    "colors": [
+     "#2EC4B6",
+     "#FF7A18",
+     "#FFF899",
+     "#0072B2",
+     "#E69F00",
+     "#009E73",
+     "#CC79A7",
+     "#D55E00"
+    ],
+    "plate": "grafana-dark-strip.png",
+    "editor": "grafana-dark-editor.png"
+   },
+   {
+    "mode": "light",
+    "score": 0.4,
+    "verdict": "WEAK",
+    "colors": [
+     "#006F7A",
+     "#FF9900",
+     "#FFEE52",
+     "#0072B2",
+     "#E69F00",
+     "#009E73",
+     "#CC79A7",
+     "#D55E00"
+    ],
+    "plate": "grafana-light-strip.png",
+    "editor": "grafana-light-editor.png"
+   }
+  ],
+  "best": 2.3,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "coder",
+  "types": [
+   "App"
+  ],
+  "url": "https://github.com/coder/coder/pull/24672",
+  "note": "Cites Okabe-Ito; weak pair is under protanopia and deuteranopia",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 0.4,
+    "verdict": "WEAK",
+    "colors": [
+     "#f97583",
+     "#38bdf8",
+     "#e879f9",
+     "#a78bfa"
+    ],
+    "plate": "coder-dark-strip.png",
+    "editor": "coder-dark-editor.png"
+   }
+  ],
+  "best": 0.4,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Okabe-Ito",
+  "types": [
+   "Data-viz"
+  ],
+  "url": "https://cudo.jp/?page_id=1936",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 11.1,
+    "verdict": "STRONG",
+    "colors": [
+     "#E69F00",
+     "#56B4E9",
+     "#009E73",
+     "#F0E442",
+     "#0072B2",
+     "#D55E00",
+     "#CC79A7",
+     "#000000"
+    ],
+    "plate": "dataviz-okabe-ito.png",
+    "editor": null
+   }
+  ],
+  "best": 11.1,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Tol Bright",
+  "types": [
+   "Data-viz"
+  ],
+  "url": "https://sronpersonalpages.nl/~pault",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 8.7,
+    "verdict": "STRONG",
+    "colors": [
+     "#4477AA",
+     "#EE6677",
+     "#228833",
+     "#CCBB44",
+     "#66CCEE",
+     "#AA3377",
+     "#BBBBBB"
+    ],
+    "plate": "dataviz-tol-bright.png",
+    "editor": null
+   }
+  ],
+  "best": 8.7,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Tol Vibrant",
+  "types": [
+   "Data-viz"
+  ],
+  "url": "https://sronpersonalpages.nl/~pault",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 8.6,
+    "verdict": "STRONG",
+    "colors": [
+     "#EE7733",
+     "#0077BB",
+     "#33BBEE",
+     "#EE3377",
+     "#CC3311",
+     "#009988",
+     "#BBBBBB"
+    ],
+    "plate": "dataviz-tol-vibrant.png",
+    "editor": null
+   }
+  ],
+  "best": 8.6,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Tol Muted",
+  "types": [
+   "Data-viz"
+  ],
+  "url": "https://sronpersonalpages.nl/~pault",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 11.6,
+    "verdict": "STRONG",
+    "colors": [
+     "#CC6677",
+     "#332288",
+     "#DDCC77",
+     "#117733",
+     "#88CCEE",
+     "#882255",
+     "#44AA99",
+     "#999933",
+     "#AA4499"
+    ],
+    "plate": "dataviz-tol-muted.png",
+    "editor": null
+   }
+  ],
+  "best": 11.6,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Tol High Contrast",
+  "types": [
+   "Data-viz"
+  ],
+  "url": "https://sronpersonalpages.nl/~pault",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 21.4,
+    "verdict": "STRONG",
+    "colors": [
+     "#004488",
+     "#DDAA33",
+     "#BB5566"
+    ],
+    "plate": "dataviz-tol-high-contrast.png",
+    "editor": null
+   }
+  ],
+  "best": 21.4,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "IBM v1",
+  "types": [
+   "Data-viz"
+  ],
+  "url": "https://www.carbondesignsystem.com/data-visualization/color-palettes",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 6.5,
+    "verdict": "OK",
+    "colors": [
+     "#648FFF",
+     "#785EF0",
+     "#DC267F",
+     "#FE6100",
+     "#FFB000"
+    ],
+    "plate": "dataviz-ibm-v1.png",
+    "editor": null
+   }
+  ],
+  "best": 6.5,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Carbon categorical",
+  "types": [
+   "Data-viz"
+  ],
+  "url": "https://www.carbondesignsystem.com/data-visualization/color-palettes",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 3.0,
+    "verdict": "WEAK",
+    "colors": [
+     "#6929C4",
+     "#1192E8",
+     "#005D5D",
+     "#9F1853",
+     "#FA4D56",
+     "#570408",
+     "#198038",
+     "#002D9C",
+     "#EE538B",
+     "#B28600",
+     "#009D9A",
+     "#012749",
+     "#8A3800",
+     "#A56EFF"
+    ],
+    "plate": "dataviz-carbon-categorical.png",
+    "editor": null
+   }
+  ],
+  "best": 3.0,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "seaborn colorblind",
+  "types": [
+   "Data-viz"
+  ],
+  "url": "https://github.com/mwaskom/seaborn/blob/master/seaborn/palettes.py",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 5.4,
+    "verdict": "OK",
+    "colors": [
+     "#0173B2",
+     "#DE8F05",
+     "#029E73",
+     "#D55E00",
+     "#CC78BC",
+     "#CA9161",
+     "#FBAFE4",
+     "#949494",
+     "#ECE133",
+     "#56B4E9"
+    ],
+    "plate": "dataviz-seaborn-colorblind.png",
+    "editor": null
+   }
+  ],
+  "best": 5.4,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "tableau-colorblind10",
+  "types": [
+   "Data-viz"
+  ],
+  "url": "https://github.com/matplotlib/matplotlib/blob/main/lib/matplotlib/mpl-data/stylelib/tableau-colorblind10.mplstyle",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 9.4,
+    "verdict": "STRONG",
+    "colors": [
+     "#006BA4",
+     "#FF800E",
+     "#ABABAB",
+     "#595959",
+     "#5F9ED1",
+     "#C85200",
+     "#898989",
+     "#A2C8EC",
+     "#FFBC79",
+     "#CFCFCF"
+    ],
+    "plate": "dataviz-tableau-colorblind10.png",
+    "editor": null
+   }
+  ],
+  "best": 9.4,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Nichols default",
+  "types": [
+   "Data-viz"
+  ],
+  "url": "https://davidmathlogic.com/colorblind",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 11.3,
+    "verdict": "STRONG",
+    "colors": [
+     "#D81B60",
+     "#1E88E5",
+     "#FFC107",
+     "#004D40"
+    ],
+    "plate": "dataviz-nichols-default.png",
+    "editor": null
+   }
+  ],
+  "best": 11.3,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "ColorBrewer Set2",
+  "types": [
+   "Data-viz"
+  ],
+  "url": "https://colorbrewer2.org/",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 1.6,
+    "verdict": "WEAK",
+    "colors": [
+     "#66C2A5",
+     "#FC8D62",
+     "#8DA0CB",
+     "#E78AC3",
+     "#A6D854",
+     "#FFD92F",
+     "#E5C494",
+     "#B3B3B3"
+    ],
+    "plate": "dataviz-colorbrewer-set2.png",
+    "editor": null
+   }
+  ],
+  "best": 1.6,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Krzywinski 15",
+  "types": [
+   "Data-viz"
+  ],
+  "url": "http://mkweb.bcgsc.ca/biovis2012/",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 6.0,
+    "verdict": "OK",
+    "colors": [
+     "#000000",
+     "#004949",
+     "#009292",
+     "#FF6DB6",
+     "#FFB6DB",
+     "#490092",
+     "#006DDB",
+     "#B66DFF",
+     "#6DB6FF",
+     "#B6DBFF",
+     "#920000",
+     "#924900",
+     "#DB6D00",
+     "#24FF24",
+     "#FFFF6D"
+    ],
+    "plate": "dataviz-krzywinski-15.png",
+    "editor": null
+   }
+  ],
+  "best": 6.0,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Crameri batlow",
+  "types": [
+   "Data-viz"
+  ],
+  "url": "https://www.fabiocrameri.ch/colourmaps",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 14.6,
+    "verdict": "STRONG",
+    "colors": [
+     "#011959",
+     "#226061",
+     "#828231",
+     "#F29D6D",
+     "#FACCFA"
+    ],
+    "plate": "dataviz-crameri-batlow.png",
+    "editor": null
+   }
+  ],
+  "best": 14.6,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "cividis",
+  "types": [
+   "Data-viz"
+  ],
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0199239",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 13.0,
+    "verdict": "STRONG",
+    "colors": [
+     "#00224E",
+     "#434E6C",
+     "#7D7C78",
+     "#BCAE6C",
+     "#FEE838"
+    ],
+    "plate": "dataviz-cividis.png",
+    "editor": null
+   }
+  ],
+  "best": 13.0,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "viridis",
+  "types": [
+   "Data-viz"
+  ],
+  "url": "https://sjmgarnier.github.io/viridis",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 13.3,
+    "verdict": "STRONG",
+    "colors": [
+     "#440154",
+     "#3B528B",
+     "#21918C",
+     "#5EC962",
+     "#FDE725"
+    ],
+    "plate": "dataviz-viridis.png",
+    "editor": null
+   }
+  ],
+  "best": 13.3,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Petroff 6",
+  "types": [
+   "Data-viz"
+  ],
+  "url": "https://github.com/mpetroff/accessible-color-cycles",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 10.5,
+    "verdict": "STRONG",
+    "colors": [
+     "#5790FC",
+     "#F89C20",
+     "#E42536",
+     "#964A8B",
+     "#9C9CA1",
+     "#7A21DD"
+    ],
+    "plate": "dataviz-petroff6.png",
+    "editor": null
+   }
+  ],
+  "best": 10.5,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Petroff 10",
+  "types": [
+   "Data-viz"
+  ],
+  "url": "https://github.com/mpetroff/accessible-color-cycles",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 12.0,
+    "verdict": "STRONG",
+    "colors": [
+     "#3F90DA",
+     "#FFA90E",
+     "#BD1F01",
+     "#94A4A2",
+     "#832DB6",
+     "#A96B59",
+     "#E76300",
+     "#B9AC70",
+     "#717581",
+     "#92DADD"
+    ],
+    "plate": "dataviz-petroff10.png",
+    "editor": null
+   }
+  ],
+  "best": 12.0,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Plotly Safe (CARTO)",
+  "types": [
+   "Data-viz"
+  ],
+  "url": "https://github.com/CartoDB/CartoColor/blob/master/src/carto.ts",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 5.3,
+    "verdict": "OK",
+    "colors": [
+     "#88CCEE",
+     "#CC6677",
+     "#DDCC77",
+     "#117733",
+     "#332288",
+     "#AA4499",
+     "#44AA99",
+     "#999933",
+     "#882255",
+     "#661100",
+     "#888888"
+    ],
+    "plate": "dataviz-plotly-safe.png",
+    "editor": null
+   }
+  ],
+  "best": 5.3,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Bokeh Colorblind",
+  "types": [
+   "Data-viz"
+  ],
+  "url": "https://github.com/bokeh/bokeh/blob/main/src/bokeh/palettes.py",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 11.1,
+    "verdict": "STRONG",
+    "colors": [
+     "#0072B2",
+     "#E69F00",
+     "#F0E442",
+     "#009E73",
+     "#56B4E9",
+     "#D55E00",
+     "#CC79A7",
+     "#000000"
+    ],
+    "plate": "dataviz-bokeh-colorblind.png",
+    "editor": null
+   }
+  ],
+  "best": 11.1,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "ggpubfigs zesty_four",
+  "types": [
+   "Data-viz"
+  ],
+  "url": "https://github.com/JLSteenwyk/ggpubfigs",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 17.0,
+    "verdict": "STRONG",
+    "colors": [
+     "#F5793A",
+     "#A95AA1",
+     "#85C0F9",
+     "#0F2080"
+    ],
+    "plate": "dataviz-zesty-four.png",
+    "editor": null
+   }
+  ],
+  "best": 17.0,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "ggpubfigs retro_four",
+  "types": [
+   "Data-viz"
+  ],
+  "url": "https://github.com/JLSteenwyk/ggpubfigs",
+  "note": "",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 23.5,
+    "verdict": "STRONG",
+    "colors": [
+     "#601A4A",
+     "#EE442F",
+     "#63ACBE",
+     "#F9F4EC"
+    ],
+    "plate": "dataviz-retro-four.png",
+    "editor": null
+   }
+  ],
+  "best": 23.5,
+  "defaultMode": "dark"
+ }
+]

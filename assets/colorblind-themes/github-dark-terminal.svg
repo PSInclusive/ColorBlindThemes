@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="terminal" width="900" height="424" viewBox="0 0 900 424" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace">
+<rect x="1" y="1" width="898" height="422" rx="10" fill="#0d1117" stroke="#c9d1d9" stroke-opacity="0.3" stroke-width="1.5"/>
+<path d="M1 11 a10 10 0 0 1 10-10 h878 a10 10 0 0 1 10 10 v20 h-898 z" fill="#12171F"/>
+<line x1="1" y1="31" x2="899" y2="31" stroke="#c9d1d9" stroke-opacity="0.2" stroke-width="1"/>
+<circle cx="24" cy="16.0" r="5" fill="#FF5F57"/>
+<circle cx="40" cy="16.0" r="5" fill="#FEBC2E"/>
+<circle cx="56" cy="16.0" r="5" fill="#28C840"/>
+<text x="450" y="19.0" font-size="11.5" fill="#c9d1d9" opacity="0.75" text-anchor="middle">GitHub Colorblind &#8212; Dark Colorblind</text>
+<text x="20.0" y="54" font-size="12.5" fill="#6e7681"># check the palette before shipping</text>
+<text x="20.0" y="74" font-size="12.5" fill="#58a6ff">~/palette</text>
+<text x="95.5" y="74" font-size="12.5" fill="#bc8cff">main*</text>
+<text x="140.8" y="74" font-size="12.5" fill="#58a6ff">&gt;</text>
+<text x="155.90000000000003" y="74" font-size="12.5" fill="#c9d1d9">git diff --stat</text>
+<text x="27.55" y="94" font-size="12.5" fill="#c9d1d9">scripts/New-Examples.ps1 | 38</text>
+<text x="254.04999999999998" y="94" font-size="12.5" fill="#58a6ff">+++++++++++++</text>
+<text x="352.2" y="94" font-size="12.5" fill="#ec8e2c">-----</text>
+<text x="27.55" y="114" font-size="12.5" fill="#c9d1d9">1 file changed, 31 insertions</text>
+<text x="246.5" y="114" font-size="12.5" fill="#58a6ff">(+)</text>
+<text x="269.15" y="114" font-size="12.5" fill="#c9d1d9">, 7 deletions</text>
+<text x="367.29999999999995" y="114" font-size="12.5" fill="#ec8e2c">(-)</text>
+<text x="20.0" y="154" font-size="12.5" fill="#58a6ff">~/palette</text>
+<text x="95.5" y="154" font-size="12.5" fill="#bc8cff">main*</text>
+<text x="140.8" y="154" font-size="12.5" fill="#58a6ff">&gt;</text>
+<text x="155.90000000000003" y="154" font-size="12.5" fill="#c9d1d9">Invoke-Pester</text>
+<text x="20.0" y="174" font-size="12.5" fill="#58a6ff">[+]</text>
+<text x="50.199999999999996" y="174" font-size="12.5" fill="#c9d1d9">42 passed</text>
+<text x="20.0" y="194" font-size="12.5" fill="#ec8e2c">[-]</text>
+<text x="57.75" y="194" font-size="12.5" fill="#c9d1d9">3 failed</text>
+<text x="20.0" y="214" font-size="12.5" fill="#d29922">[!]</text>
+<text x="57.75" y="214" font-size="12.5" fill="#c9d1d9">1 skipped</text>
+<text x="20.0" y="234" font-size="12.5" fill="#39c5cf">[i]</text>
+<text x="50.199999999999996" y="234" font-size="12.5" fill="#c9d1d9">CVD gate: closest pair dE00 8.2</text>
+<text x="20.0" y="274" font-size="12.5" fill="#58a6ff">~/palette</text>
+<text x="95.5" y="274" font-size="12.5" fill="#bc8cff">main*</text>
+<text x="140.8" y="274" font-size="12.5" fill="#58a6ff">&gt;</text>
+<text x="155.90000000000003" y="274" font-size="12.5" fill="#c9d1d9">ls -F</text>
+<text x="20.0" y="294" font-size="12.5" fill="#58a6ff">assets/</text>
+<text x="87.94999999999999" y="294" font-size="12.5" fill="#58a6ff">build.sh*</text>
+<text x="170.99999999999997" y="294" font-size="12.5" fill="#39c5cf">docs@</text>
+<text x="223.84999999999997" y="294" font-size="12.5" fill="#c9d1d9">README.md</text>
+<text x="20.0" y="314" font-size="12.5" fill="#58a6ff">~/palette</text>
+<text x="95.5" y="314" font-size="12.5" fill="#bc8cff">main*</text>
+<text x="140.8" y="314" font-size="12.5" fill="#58a6ff">&gt;</text>
+<rect x="155.90000000000003" y="303" width="7.55" height="15" fill="#58a6ff"/>
+<text x="20" y="344" font-size="10.5" fill="#c9d1d9" opacity="0.6">ANSI slots 0-7 (normal) and 8-15 (bright)</text>
+<rect x="20.0" y="354" width="102.25" height="24" rx="4" fill="#484f58" stroke="#c9d1d9" stroke-opacity="0.3"/>
+<text x="28.0" y="370" font-size="11" fill="#FFFFFF">0  #484f58</text>
+<rect x="128.25" y="354" width="102.25" height="24" rx="4" fill="#ec8e2c" stroke="#c9d1d9" stroke-opacity="0.3"/>
+<text x="136.25" y="370" font-size="11" fill="#000000">1  #ec8e2c</text>
+<rect x="236.5" y="354" width="102.25" height="24" rx="4" fill="#58a6ff" stroke="#c9d1d9" stroke-opacity="0.3"/>
+<text x="244.5" y="370" font-size="11" fill="#000000">2  #58a6ff</text>
+<rect x="344.75" y="354" width="102.25" height="24" rx="4" fill="#d29922" stroke="#c9d1d9" stroke-opacity="0.3"/>
+<text x="352.75" y="370" font-size="11" fill="#000000">3  #d29922</text>
+<rect x="453.0" y="354" width="102.25" height="24" rx="4" fill="#58a6ff" stroke="#c9d1d9" stroke-opacity="0.3"/>
+<text x="461.0" y="370" font-size="11" fill="#000000">4  #58a6ff</text>
+<rect x="561.25" y="354" width="102.25" height="24" rx="4" fill="#bc8cff" stroke="#c9d1d9" stroke-opacity="0.3"/>
+<text x="569.25" y="370" font-size="11" fill="#000000">5  #bc8cff</text>
+<rect x="669.5" y="354" width="102.25" height="24" rx="4" fill="#39c5cf" stroke="#c9d1d9" stroke-opacity="0.3"/>
+<text x="677.5" y="370" font-size="11" fill="#000000">6  #39c5cf</text>
+<rect x="777.75" y="354" width="102.25" height="24" rx="4" fill="#b1bac4" stroke="#c9d1d9" stroke-opacity="0.3"/>
+<text x="785.75" y="370" font-size="11" fill="#000000">7  #b1bac4</text>
+<rect x="20.0" y="384" width="102.25" height="24" rx="4" fill="#6e7681" stroke="#c9d1d9" stroke-opacity="0.3"/>
+<text x="28.0" y="400" font-size="11" fill="#FFFFFF">8  #6e7681</text>
+<rect x="128.25" y="384" width="102.25" height="24" rx="4" fill="#fdac54" stroke="#c9d1d9" stroke-opacity="0.3"/>
+<text x="136.25" y="400" font-size="11" fill="#000000">9  #fdac54</text>
+<rect x="236.5" y="384" width="102.25" height="24" rx="4" fill="#79c0ff" stroke="#c9d1d9" stroke-opacity="0.3"/>
+<text x="244.5" y="400" font-size="11" fill="#000000">10  #79c0ff</text>
+<rect x="344.75" y="384" width="102.25" height="24" rx="4" fill="#e3b341" stroke="#c9d1d9" stroke-opacity="0.3"/>
+<text x="352.75" y="400" font-size="11" fill="#000000">11  #e3b341</text>
+<rect x="453.0" y="384" width="102.25" height="24" rx="4" fill="#79c0ff" stroke="#c9d1d9" stroke-opacity="0.3"/>
+<text x="461.0" y="400" font-size="11" fill="#000000">12  #79c0ff</text>
+<rect x="561.25" y="384" width="102.25" height="24" rx="4" fill="#d2a8ff" stroke="#c9d1d9" stroke-opacity="0.3"/>
+<text x="569.25" y="400" font-size="11" fill="#000000">13  #d2a8ff</text>
+<rect x="669.5" y="384" width="102.25" height="24" rx="4" fill="#56d4dd" stroke="#c9d1d9" stroke-opacity="0.3"/>
+<text x="677.5" y="400" font-size="11" fill="#000000">14  #56d4dd</text>
+<rect x="777.75" y="384" width="102.25" height="24" rx="4" fill="#ffffff" stroke="#c9d1d9" stroke-opacity="0.3"/>
+<text x="785.75" y="400" font-size="11" fill="#000000">15  #ffffff</text>
+</svg>

@@ -294,9 +294,9 @@ function Get-MinPairDistance {
 function Get-Verdict {
     <#
     .SYNOPSIS
-        Maps the worst per-deficiency ΔE00 to a STRONG/ok/WEAK verdict.
+        Maps the worst per-deficiency ΔE00 to a STRONG/OK/WEAK verdict.
     .DESCRIPTION
-        STRONG when worst >= 8, ok when >= 3, otherwise WEAK.
+        STRONG when worst >= 8, OK when >= 3, otherwise WEAK.
     .EXAMPLE
         Get-Verdict -Results $res
     #>
@@ -305,7 +305,7 @@ function Get-Verdict {
     param([Parameter(Mandatory)][hashtable]$Results)
     $worst = ($Results.Values | ForEach-Object { $_.Distance } | Measure-Object -Minimum).Minimum
     if ($worst -ge 8) { return 'STRONG' }
-    if ($worst -ge 3) { return 'ok' }
+    if ($worst -ge 3) { return 'OK' }
     return 'WEAK'
 }
 
@@ -408,7 +408,7 @@ foreach ($key in $themes.Keys) {
     }
 }
 
-$order = @{ STRONG = 0; ok = 1; WEAK = 2 }
+$order = @{ STRONG = 0; OK = 1; WEAK = 2 }
 $sorted = $recs | Sort-Object { $order[$_.Verdict] }, { -($_.Results.Values | ForEach-Object Distance | Measure-Object -Minimum).Minimum }, { $_.Idx }
 
 Write-Output ('{0,-28} {1,-6} {2,6} {3,6} {4,6}  verdict' -f 'theme', 'mode', 'deut', 'prot', 'trit')
@@ -419,10 +419,10 @@ foreach ($r in $sorted) {
         $r.Results['deuteranopia'].Distance, $r.Results['protanopia'].Distance, $r.Results['tritanopia'].Distance, $r.Verdict)
 }
 $s = @($recs | Where-Object Verdict -eq 'STRONG').Count
-$o = @($recs | Where-Object Verdict -eq 'ok').Count
+$o = @($recs | Where-Object Verdict -eq 'OK').Count
 $w = @($recs | Where-Object Verdict -eq 'WEAK').Count
 Write-Output ''
-Write-Output "STRONG=$s  ok=$o  WEAK=$w   (thresholds: >=8 strong, >=3 ok, <3 weak)"
+Write-Output "STRONG=$s  OK=$o  WEAK=$w   (thresholds: >=8 strong, >=3 OK, <3 weak)"
 
 # --- app/platform-level themes ---
 Write-Output ''
@@ -451,7 +451,32 @@ foreach ($r in $asorted) {
         $r.Results['deuteranopia'].Distance, $r.Results['protanopia'].Distance, $r.Results['tritanopia'].Distance, $r.Verdict)
 }
 $sa = @($arecs | Where-Object Verdict -eq 'STRONG').Count
-$oa = @($arecs | Where-Object Verdict -eq 'ok').Count
+$oa = @($arecs | Where-Object Verdict -eq 'OK').Count
 $wa = @($arecs | Where-Object Verdict -eq 'WEAK').Count
 Write-Output ''
-Write-Output "app-level: STRONG=$sa  ok=$oa  WEAK=$wa"
+Write-Output "app-level: STRONG=$sa  OK=$oa  WEAK=$wa"
+
+# --- data-viz palettes ---
+function Get-DataVizTable {
+    [CmdletBinding()]
+    [OutputType([object[]])]
+    param()
+    $genPath = Join-Path $PSScriptRoot 'New-ColorblindThemeExamples.ps1'
+    $src = [System.IO.File]::ReadAllText($genPath)
+    $m = [regex]::Match($src, '(?s)\$script:DataViz = (@\(.*?\n\))')
+    if (-not $m.Success) { throw "Could not locate `$script:DataViz table in $genPath" }
+    return [ScriptBlock]::Create($m.Groups[1].Value).Invoke()
+}
+
+Write-Output ''
+Write-Output '--- data-viz palettes ---'
+Write-Output ('{0,-28} {1,-6} {2,6} {3,6} {4,6}  verdict' -f 'palette', 'mode', 'deut', 'prot', 'trit')
+foreach ($dv in (Get-DataVizTable)) {
+    [string[]]$colors = $dv[1]
+    $res = @{}
+    foreach ($c in @('deuteranopia', 'protanopia', 'tritanopia')) {
+        $res[$c] = Get-MinPairDistance -Colors $colors -Cvd $c
+    }
+    Write-Output ('{0,-28} {1,-6} {2,6:F1} {3,6:F1} {4,6:F1}  {5}' -f $dv[0], 'dark',
+        $res['deuteranopia'].Distance, $res['protanopia'].Distance, $res['tritanopia'].Distance, (Get-Verdict -Results $res))
+}

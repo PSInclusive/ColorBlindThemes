@@ -16,7 +16,7 @@
 
 .EXAMPLE
     pwsh scripts/New-ColorblindThemeExamples.ps1
-    Writes docs/reports/assets/colorblind-themes/*.svg
+    Writes assets/colorblind-themes/*.svg
 #>
 [CmdletBinding()]
 param()
@@ -24,7 +24,7 @@ param()
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
-$script:OutDir = Join-Path $PSScriptRoot '..' 'docs' 'reports' 'assets' 'colorblind-themes'
+$script:OutDir = Join-Path $PSScriptRoot '..' 'assets' 'colorblind-themes'
 $null = New-Item -ItemType Directory -Force -Path $script:OutDir
 
 # ---------------------------------------------------------------- simulation
@@ -448,6 +448,116 @@ function New-EditorMock {
     $sfg = Get-ForegroundFor $status
     $p.Add("<text x=`"14`" y=`"$($sy + 16)`" font-size=`"10.5`" fill=`"$sfg`">&#9095; main*    New-SwatchPlate.ps1    pwsh 7.5    UTF-8    Ln 8, Col 24    spaces: 4</text>")
     $p.Add("<text x=`"$($w - 14)`" y=`"$($sy + 16)`" font-size=`"10.5`" fill=`"$sfg`" text-anchor=`"end`">LF  &#10003; prettier  CVD-safe</text>")
+    $p.Add('</svg>')
+    return ($p -join "`n")
+}
+
+function New-TerminalMock {
+    <#
+    .SYNOPSIS
+        Builds a terminal-window SVG mock for one terminal color scheme.
+    .DESCRIPTION
+        $Pal is a hashtable with keys name, variant, bg, fg, ansi (16 hex
+        strings: slots 0-7 normal, then 8-15 bright) and optional cursor.
+        The mock shows a shell session that leans on the red/green slots
+        (diff, test results), then lists all 16 slots with index and hex
+        printed as text so no slot is carried by color alone.
+    .EXAMPLE
+        New-TerminalMock -Pal $pal
+    #>
+    [CmdletBinding()]
+    [OutputType([string])]
+    param(
+        [Parameter(Mandatory)][hashtable]$Pal,
+        [Parameter()][int]$Width = 900
+    )
+    $bg = $Pal['bg']
+    $fg = $Pal['fg']
+    $ansi = [string[]]$Pal['ansi']
+    $cursor = if ($Pal.Contains('cursor') -and $Pal['cursor']) { $Pal['cursor'] } else { $fg }
+    $dark = (Get-RelativeLuminance $bg) -lt 0.2
+    $chrome = Get-ShadedColor $bg $(if ($dark) { 1.35 } else { 0.93 })
+    $titleH = 30
+    $lh = 20
+    $w = $Width
+
+    # {N:text} paints text with ANSI slot N; everything else uses the foreground.
+    $lines = @(
+        '{8:# check the palette before shipping}',
+        '{4:~/palette} {5:main*} {2:>} git diff --stat',
+        ' scripts/New-Examples.ps1 | 38 {2:+++++++++++++}{1:-----}',
+        ' 1 file changed, 31 insertions{2:(+)}, 7 deletions{1:(-)}',
+        '',
+        '{4:~/palette} {5:main*} {2:>} Invoke-Pester',
+        '{2:[+]} 42 passed',
+        '{1:[-]}  3 failed',
+        '{3:[!]}  1 skipped',
+        '{6:[i]} CVD gate: closest pair dE00 8.2',
+        '',
+        '{4:~/palette} {5:main*} {2:>} ls -F',
+        '{4:assets/}  {2:build.sh*}  {6:docs@}  README.md',
+        '{4:~/palette} {5:main*} {2:>} '
+    )
+    $matcher = [regex]'\{(\d+):([^}]*)\}'
+    $firstY = $titleH + 24
+    $stripLabelY = $firstY + ($lines.Count - 1) * $lh + 30
+    $stripY = $stripLabelY + 10
+    $chipH = 24
+    $chipGap = 6
+    $winH = $stripY + 2 * $chipH + $chipGap + 16
+
+    $p = [System.Collections.Generic.List[string]]::new()
+    $p.Add("<svg xmlns=`"http://www.w3.org/2000/svg`" class=`"terminal`" width=`"$w`" height=`"$winH`" viewBox=`"0 0 $w $winH`" font-family=`"$($script:Font)`">")
+    $p.Add("<rect x=`"1`" y=`"1`" width=`"$($w - 2)`" height=`"$($winH - 2)`" rx=`"10`" fill=`"$bg`" stroke=`"$fg`" stroke-opacity=`"0.3`" stroke-width=`"1.5`"/>")
+    $p.Add("<path d=`"M1 11 a10 10 0 0 1 10-10 h$($w - 22) a10 10 0 0 1 10 10 v$($titleH - 10) h-$($w - 2) z`" fill=`"$chrome`"/>")
+    $p.Add("<line x1=`"1`" y1=`"$($titleH + 1)`" x2=`"$($w - 1)`" y2=`"$($titleH + 1)`" stroke=`"$fg`" stroke-opacity=`"0.2`" stroke-width=`"1`"/>")
+    $dots = @('#FF5F57', '#FEBC2E', '#28C840')
+    for ($i = 0; $i -lt $dots.Count; $i++) {
+        $p.Add("<circle cx=`"$(24 + $i * 16)`" cy=`"$(Format-PyFloat ($titleH / 2 + 1))`" r=`"5`" fill=`"$($dots[$i])`"/>")
+    }
+    $title = "$(Protect-SvgText $Pal['name']) &#8212; $(Protect-SvgText $Pal['variant'])"
+    $p.Add(('<text x="{0:F0}" y="{1}" font-size="11.5" fill="{2}" opacity="0.75" text-anchor="middle">{3}</text>' -f ($w / 2), (Format-PyFloat ($titleH / 2 + 4)), $fg, $title))
+
+    # shell session
+    $ly = $firstY
+    [double]$endX = 20
+    foreach ($line in $lines) {
+        $segs = [System.Collections.Generic.List[object]]::new()
+        $pos = 0
+        foreach ($m in $matcher.Matches($line)) {
+            if ($m.Index -gt $pos) { $segs.Add(@($line.Substring($pos, $m.Index - $pos), $fg)) }
+            $segs.Add(@($m.Groups[2].Value, $ansi[[int]$m.Groups[1].Value]))
+            $pos = $m.Index + $m.Length
+        }
+        if ($pos -lt $line.Length) { $segs.Add(@($line.Substring($pos), $fg)) }
+        [double]$x = 20
+        foreach ($seg in $segs) {
+            [string]$text = $seg[0]
+            $trimmed = $text.Trim()
+            if ($trimmed.Length -gt 0) {
+                $lead = $text.Length - $text.TrimStart().Length
+                $p.Add("<text x=`"$(Format-PyFloat ($x + $lead * 7.55))`" y=`"$ly`" font-size=`"12.5`" fill=`"$($seg[1])`">$(Protect-SvgText $trimmed)</text>")
+            }
+            $x += $text.Length * 7.55
+        }
+        $endX = $x
+        $ly += $lh
+    }
+    # block cursor after the last prompt
+    $p.Add("<rect x=`"$(Format-PyFloat $endX)`" y=`"$($ly - $lh - 11)`" width=`"7.55`" height=`"15`" fill=`"$cursor`"/>")
+
+    # all 16 ANSI slots, index and hex as text
+    $p.Add("<text x=`"20`" y=`"$stripLabelY`" font-size=`"10.5`" fill=`"$fg`" opacity=`"0.6`">ANSI slots 0-7 (normal) and 8-15 (bright)</text>")
+    $chipW = ($w - 40 - 7 * $chipGap) / 8
+    for ($i = 0; $i -lt 16; $i++) {
+        $col = $i % 8
+        $row = [Math]::Floor($i / 8)
+        $cx = 20 + $col * ($chipW + $chipGap)
+        $cy = $stripY + $row * ($chipH + $chipGap)
+        $chip = $ansi[$i]
+        $p.Add("<rect x=`"$(Format-PyFloat $cx)`" y=`"$cy`" width=`"$(Format-PyFloat $chipW)`" height=`"$chipH`" rx=`"4`" fill=`"$chip`" stroke=`"$fg`" stroke-opacity=`"0.3`"/>")
+        $p.Add("<text x=`"$(Format-PyFloat ($cx + 8))`" y=`"$($cy + 16)`" font-size=`"11`" fill=`"$(Get-ForegroundFor $chip)`">$i  $chip</text>")
+    }
     $p.Add('</svg>')
     return ($p -join "`n")
 }
@@ -883,6 +993,27 @@ $script:DataViz = @(
     @('retro-four', [string[]]@('#601A4A', '#EE442F', '#63ACBE', '#F9F4EC'), [string[]]@('plum', 'vermilion', 'teal', 'paper'))
 )
 
+$script:AppPlates = @(
+    @('gitea', 'dark', [string[]]@('#58a6ff', '#f0883e', '#d29922', '#ab7df8'), [string[]]@('1', '2', '3', '4')),
+    @('gitea', 'light', [string[]]@('#0860cc', '#a84400', '#9a6700', '#8250df'), [string[]]@('1', '2', '3', '4')),
+    @('simplecov', 'dark', [string[]]@('#6cb6ff', '#f0883e', '#f0e05a'), [string[]]@('1', '2', '3')),
+    @('simplecov', 'light', [string[]]@('#0060a8', '#c2410c', '#9a6700'), [string[]]@('1', '2', '3')),
+    @('plannotator', 'dark', [string[]]@('#4f83d1', '#c96e12', '#d9a839', '#35b6d9'), [string[]]@('1', '2', '3', '4')),
+    @('plannotator', 'light', [string[]]@('#216cab', '#a55c1e', '#8f6400', '#0e7d9e'), [string[]]@('1', '2', '3', '4')),
+    @('gitbutler', 'dark', [string[]]@('#99d9ff', '#ffbf66'), [string[]]@('addition', 'deletion')),
+    @('gitbutler', 'light', [string[]]@('#0d59bf', '#bf590d'), [string[]]@('addition', 'deletion')),
+    @('iamb', 'dark', [string[]]@('#D55E00', '#E69F00', '#F0E442', '#0072B2', '#56B4E9', '#009E73', '#CC79A7'), [string[]]@('1', '2', '3', '4', '5', '6', '7')),
+    @('cura', 'dark', [string[]]@('#ff4000', '#009c80', '#ffff56', '#00ffff', '#0064ff'), [string[]]@('1', '2', '3', '4', '5')),
+    @('openfront', 'dark', [string[]]@('#0072b2', '#56b4e9', '#d55e00', '#009e73', '#cc79a7', '#f0e442', '#e69f00'), [string[]]@('1', '2', '3', '4', '5', '6', '7')),
+    @('talishar-deuteranopia', 'dark', [string[]]@('#33aaee', '#cc5599', '#eeaa11', '#cc5522', '#55bb88', '#8855aa', '#aa2244'), [string[]]@('1', '2', '3', '4', '5', '6', '7')),
+    @('talishar-protanopia', 'dark', [string[]]@('#11bbff', '#ee1100', '#ff8811', '#118899', '#99ff11', '#bb22aa', '#aa1144'), [string[]]@('1', '2', '3', '4', '5', '6', '7')),
+    @('talishar-tritanopia', 'dark', [string[]]@('#22eeff', '#ee2200', '#eeaa44', '#aa88ff', '#22aa00', '#6666cc', '#992255'), [string[]]@('1', '2', '3', '4', '5', '6', '7')),
+    @('narmi', 'light', [string[]]@('#6F6BAD', '#1A56B0', '#6F004F', '#4B0200'), [string[]]@('1', '2', '3', '4')),
+    @('moira', 'light', [string[]]@('#00771e', '#ffc107', '#ff5722', '#9e9e9e'), [string[]]@('1', '2', '3', '4')),
+    @('jenkins', 'light', [string[]]@('#BFD4FF', '#FF9180', '#FFF780', '#EEEEEE'), [string[]]@('blue', 'red', 'yellow', 'grey')),
+    @('deepinv', 'light', [string[]]@('#0173B2', '#DE8F05', '#029E73', '#D55E00', '#CC78BC'), [string[]]@('1', '2', '3', '4', '5'))
+)
+
 $script:Comparisons = @(
     @('compare-deuteranopia', 'deuteranopia',
      'GitButler (STRONG)', [string[]]@('#99d9ff', '#ffbf66'), [string[]]@('addition', 'deletion'),
@@ -939,9 +1070,41 @@ foreach ($key in $script:Themes.Keys) {
     }
 }
 
+# Terminal mocks: schemes come from each theme's own terminal files (sources in
+# terminal-palettes.json), not from the editor palettes above.
+$terminalData = Get-Content -LiteralPath (Join-Path $PSScriptRoot 'terminal-palettes.json') -Raw | ConvertFrom-Json -AsHashtable
+foreach ($key in $terminalData['themes'].Keys) {
+    $t = $script:Themes[$key]
+    foreach ($mode in @('dark', 'light')) {
+        if (-not $terminalData['themes'][$key].Contains($mode)) { continue }
+        $scheme = $terminalData['themes'][$key][$mode]
+        $pal = @{
+            name    = $t['name']
+            variant = if ($mode -eq 'dark') { $t['variant_dark'] } elseif ($null -ne $t['variant_light']) { $t['variant_light'] } else { '' }
+            bg      = $scheme['bg']
+            fg      = $scheme['fg']
+            cursor  = $scheme['cursor']
+            ansi    = [string[]]$scheme['ansi']
+        }
+        $svg = New-TerminalMock -Pal $pal
+        $fn = "$(ConvertTo-Slug $key)-$mode-terminal.svg"
+        Write-Verbose "writing $fn"
+        [System.IO.File]::WriteAllText((Join-Path $script:OutDir $fn), $svg, $utf8NoBom)
+        $built.Add($fn)
+    }
+}
+
 foreach ($dv in $script:DataViz) {
     $svg = New-SwatchPlate -Colors $dv[1] -Labels $dv[2] -Mode 'dark'
     $fn = "dataviz-$($dv[0]).svg"
+    Write-Verbose "writing $fn"
+    [System.IO.File]::WriteAllText((Join-Path $script:OutDir $fn), $svg, $utf8NoBom)
+    $built.Add($fn)
+}
+
+foreach ($ap in $script:AppPlates) {
+    $svg = New-SwatchPlate -Colors $ap[2] -Labels $ap[3] -Mode $ap[1]
+    $fn = "$($ap[0])-$($ap[1])-strip.svg"
     Write-Verbose "writing $fn"
     [System.IO.File]::WriteAllText((Join-Path $script:OutDir $fn), $svg, $utf8NoBom)
     $built.Add($fn)

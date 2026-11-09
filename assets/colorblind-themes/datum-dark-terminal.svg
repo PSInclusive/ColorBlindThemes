@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="terminal" width="900" height="424" viewBox="0 0 900 424" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace">
+<rect x="1" y="1" width="898" height="422" rx="10" fill="#0f1318" stroke="#dbe0e8" stroke-opacity="0.3" stroke-width="1.5"/>
+<path d="M1 11 a10 10 0 0 1 10-10 h878 a10 10 0 0 1 10 10 v20 h-898 z" fill="#141A20"/>
+<line x1="1" y1="31" x2="899" y2="31" stroke="#dbe0e8" stroke-opacity="0.2" stroke-width="1"/>
+<circle cx="24" cy="16.0" r="5" fill="#FF5F57"/>
+<circle cx="40" cy="16.0" r="5" fill="#FEBC2E"/>
+<circle cx="56" cy="16.0" r="5" fill="#28C840"/>
+<text x="450" y="19.0" font-size="11.5" fill="#dbe0e8" opacity="0.75" text-anchor="middle">datum &#8212; datum (dark)</text>
+<text x="20.0" y="54" font-size="12.5" fill="#8f98a3"># check the palette before shipping</text>
+<text x="20.0" y="74" font-size="12.5" fill="#69b9f7">~/palette</text>
+<text x="95.5" y="74" font-size="12.5" fill="#fa94cd">main*</text>
+<text x="140.8" y="74" font-size="12.5" fill="#54dcaa">&gt;</text>
+<text x="155.90000000000003" y="74" font-size="12.5" fill="#dbe0e8">git diff --stat</text>
+<text x="27.55" y="94" font-size="12.5" fill="#dbe0e8">scripts/New-Examples.ps1 | 38</text>
+<text x="254.04999999999998" y="94" font-size="12.5" fill="#54dcaa">+++++++++++++</text>
+<text x="352.2" y="94" font-size="12.5" fill="#fe9864">-----</text>
+<text x="27.55" y="114" font-size="12.5" fill="#dbe0e8">1 file changed, 31 insertions</text>
+<text x="246.5" y="114" font-size="12.5" fill="#54dcaa">(+)</text>
+<text x="269.15" y="114" font-size="12.5" fill="#dbe0e8">, 7 deletions</text>
+<text x="367.29999999999995" y="114" font-size="12.5" fill="#fe9864">(-)</text>
+<text x="20.0" y="154" font-size="12.5" fill="#69b9f7">~/palette</text>
+<text x="95.5" y="154" font-size="12.5" fill="#fa94cd">main*</text>
+<text x="140.8" y="154" font-size="12.5" fill="#54dcaa">&gt;</text>
+<text x="155.90000000000003" y="154" font-size="12.5" fill="#dbe0e8">Invoke-Pester</text>
+<text x="20.0" y="174" font-size="12.5" fill="#54dcaa">[+]</text>
+<text x="50.199999999999996" y="174" font-size="12.5" fill="#dbe0e8">42 passed</text>
+<text x="20.0" y="194" font-size="12.5" fill="#fe9864">[-]</text>
+<text x="57.75" y="194" font-size="12.5" fill="#dbe0e8">3 failed</text>
+<text x="20.0" y="214" font-size="12.5" fill="#e8df69">[!]</text>
+<text x="57.75" y="214" font-size="12.5" fill="#dbe0e8">1 skipped</text>
+<text x="20.0" y="234" font-size="12.5" fill="#6ae5ec">[i]</text>
+<text x="50.199999999999996" y="234" font-size="12.5" fill="#dbe0e8">CVD gate: closest pair dE00 8.2</text>
+<text x="20.0" y="274" font-size="12.5" fill="#69b9f7">~/palette</text>
+<text x="95.5" y="274" font-size="12.5" fill="#fa94cd">main*</text>
+<text x="140.8" y="274" font-size="12.5" fill="#54dcaa">&gt;</text>
+<text x="155.90000000000003" y="274" font-size="12.5" fill="#dbe0e8">ls -F</text>
+<text x="20.0" y="294" font-size="12.5" fill="#69b9f7">assets/</text>
+<text x="87.94999999999999" y="294" font-size="12.5" fill="#54dcaa">build.sh*</text>
+<text x="170.99999999999997" y="294" font-size="12.5" fill="#6ae5ec">docs@</text>
+<text x="223.84999999999997" y="294" font-size="12.5" fill="#dbe0e8">README.md</text>
+<text x="20.0" y="314" font-size="12.5" fill="#69b9f7">~/palette</text>
+<text x="95.5" y="314" font-size="12.5" fill="#fa94cd">main*</text>
+<text x="140.8" y="314" font-size="12.5" fill="#54dcaa">&gt;</text>
+<rect x="155.90000000000003" y="303" width="7.55" height="15" fill="#fa94cd"/>
+<text x="20" y="344" font-size="10.5" fill="#dbe0e8" opacity="0.6">ANSI slots 0-7 (normal) and 8-15 (bright)</text>
+<rect x="20.0" y="354" width="102.25" height="24" rx="4" fill="#2b2f35" stroke="#dbe0e8" stroke-opacity="0.3"/>
+<text x="28.0" y="370" font-size="11" fill="#FFFFFF">0  #2b2f35</text>
+<rect x="128.25" y="354" width="102.25" height="24" rx="4" fill="#fe9864" stroke="#dbe0e8" stroke-opacity="0.3"/>
+<text x="136.25" y="370" font-size="11" fill="#000000">1  #fe9864</text>
+<rect x="236.5" y="354" width="102.25" height="24" rx="4" fill="#54dcaa" stroke="#dbe0e8" stroke-opacity="0.3"/>
+<text x="244.5" y="370" font-size="11" fill="#000000">2  #54dcaa</text>
+<rect x="344.75" y="354" width="102.25" height="24" rx="4" fill="#e8df69" stroke="#dbe0e8" stroke-opacity="0.3"/>
+<text x="352.75" y="370" font-size="11" fill="#000000">3  #e8df69</text>
+<rect x="453.0" y="354" width="102.25" height="24" rx="4" fill="#69b9f7" stroke="#dbe0e8" stroke-opacity="0.3"/>
+<text x="461.0" y="370" font-size="11" fill="#000000">4  #69b9f7</text>
+<rect x="561.25" y="354" width="102.25" height="24" rx="4" fill="#fa94cd" stroke="#dbe0e8" stroke-opacity="0.3"/>
+<text x="569.25" y="370" font-size="11" fill="#000000">5  #fa94cd</text>
+<rect x="669.5" y="354" width="102.25" height="24" rx="4" fill="#6ae5ec" stroke="#dbe0e8" stroke-opacity="0.3"/>
+<text x="677.5" y="370" font-size="11" fill="#000000">6  #6ae5ec</text>
+<rect x="777.75" y="354" width="102.25" height="24" rx="4" fill="#dbe0e8" stroke="#dbe0e8" stroke-opacity="0.3"/>
+<text x="785.75" y="370" font-size="11" fill="#000000">7  #dbe0e8</text>
+<rect x="20.0" y="384" width="102.25" height="24" rx="4" fill="#8f98a3" stroke="#dbe0e8" stroke-opacity="0.3"/>
+<text x="28.0" y="400" font-size="11" fill="#FFFFFF">8  #8f98a3</text>
+<rect x="128.25" y="384" width="102.25" height="24" rx="4" fill="#f8bd5f" stroke="#dbe0e8" stroke-opacity="0.3"/>
+<text x="136.25" y="400" font-size="11" fill="#000000">9  #f8bd5f</text>
+<rect x="236.5" y="384" width="102.25" height="24" rx="4" fill="#54dcaa" stroke="#dbe0e8" stroke-opacity="0.3"/>
+<text x="244.5" y="400" font-size="11" fill="#000000">10  #54dcaa</text>
+<rect x="344.75" y="384" width="102.25" height="24" rx="4" fill="#fcdcad" stroke="#dbe0e8" stroke-opacity="0.3"/>
+<text x="352.75" y="400" font-size="11" fill="#000000">11  #fcdcad</text>
+<rect x="453.0" y="384" width="102.25" height="24" rx="4" fill="#b2dafb" stroke="#dbe0e8" stroke-opacity="0.3"/>
+<text x="461.0" y="400" font-size="11" fill="#000000">12  #b2dafb</text>
+<rect x="561.25" y="384" width="102.25" height="24" rx="4" fill="#f5b9d9" stroke="#dbe0e8" stroke-opacity="0.3"/>
+<text x="569.25" y="400" font-size="11" fill="#000000">13  #f5b9d9</text>
+<rect x="669.5" y="384" width="102.25" height="24" rx="4" fill="#a5f5f9" stroke="#dbe0e8" stroke-opacity="0.3"/>
+<text x="677.5" y="400" font-size="11" fill="#000000">14  #a5f5f9</text>
+<rect x="777.75" y="384" width="102.25" height="24" rx="4" fill="#eef2f7" stroke="#dbe0e8" stroke-opacity="0.3"/>
+<text x="785.75" y="400" font-size="11" fill="#000000">15  #eef2f7</text>
+</svg>

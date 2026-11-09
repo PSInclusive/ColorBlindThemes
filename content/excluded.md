@@ -1,9 +1,9 @@
 ---
 title: "Not included, and why"
-lane: "07a"
-laneName: "Verification"
+lane: "08"
+laneName: "Excluded"
 slug: "excluded"
-weight: 12
+weight: 8
 ---
 
 | Excluded | Reason |

@@ -1,0 +1,346 @@
+{
+ "_sources": {
+  "github": {
+   "dark": "https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/HEAD/ghostty/GitHub%20Dark%20Colorblind",
+   "light": "https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/HEAD/ghostty/GitHub%20Light%20Colorblind"
+  },
+  "modus": {
+   "dark": "https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/HEAD/ghostty/Modus%20Vivendi%20Deuteranopia",
+   "light": "https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/HEAD/ghostty/Modus%20Operandi%20Deuteranopia"
+  },
+  "datum": {
+   "dark": "https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/HEAD/ghostty/datum%20%28dark%29",
+   "light": "https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/HEAD/ghostty/datum%20%28light%29"
+  },
+  "opo": {
+   "dark": "https://raw.githubusercontent.com/IschaGast/opo-theme/HEAD/dist/ghostty/opo-dark",
+   "light": "https://raw.githubusercontent.com/IschaGast/opo-theme/HEAD/dist/ghostty/opo-light"
+  },
+  "dalton": {
+   "dark": "https://raw.githubusercontent.com/gerchowl/dalton-colorscheme/HEAD/ghostty/dalton-dark.conf",
+   "light": "https://raw.githubusercontent.com/gerchowl/dalton-colorscheme/HEAD/dalton-bright.css"
+  },
+  "hakarune_dracula": {
+   "dark": "https://raw.githubusercontent.com/hakarune/colorblind-terminal-themes/HEAD/themes/alacritty/dracula-colorblind.toml"
+  },
+  "ef-deuteranopia": {
+   "dark": "https://wezterm.org/colorschemes/data.json#Ef-Deuteranopia-Dark",
+   "light": "https://wezterm.org/colorschemes/data.json#Ef-Deuteranopia-Light"
+  }
+ },
+ "themes": {
+  "github": {
+   "dark": {
+    "bg": "#0d1117",
+    "fg": "#c9d1d9",
+    "cursor": "#58a6ff",
+    "ansi": [
+     "#484f58",
+     "#ec8e2c",
+     "#58a6ff",
+     "#d29922",
+     "#58a6ff",
+     "#bc8cff",
+     "#39c5cf",
+     "#b1bac4",
+     "#6e7681",
+     "#fdac54",
+     "#79c0ff",
+     "#e3b341",
+     "#79c0ff",
+     "#d2a8ff",
+     "#56d4dd",
+     "#ffffff"
+    ]
+   },
+   "light": {
+    "bg": "#ffffff",
+    "fg": "#24292f",
+    "cursor": "#0969da",
+    "ansi": [
+     "#24292f",
+     "#b35900",
+     "#0550ae",
+     "#4d2d00",
+     "#0969da",
+     "#8250df",
+     "#1b7c83",
+     "#6e7781",
+     "#57606a",
+     "#8a4600",
+     "#0969da",
+     "#633c01",
+     "#218bff",
+     "#a475f9",
+     "#3192aa",
+     "#8c959f"
+    ]
+   }
+  },
+  "modus": {
+   "dark": {
+    "bg": "#000000",
+    "fg": "#ffffff",
+    "cursor": "#ffffff",
+    "ansi": [
+     "#000000",
+     "#ff5f59",
+     "#44bc44",
+     "#cabf00",
+     "#2fafff",
+     "#feacd0",
+     "#00d3d0",
+     "#a6a6a6",
+     "#595959",
+     "#ff7f9f",
+     "#00c06f",
+     "#ffa00f",
+     "#79a8ff",
+     "#b6a0ff",
+     "#6ae4b9",
+     "#ffffff"
+    ]
+   },
+   "light": {
+    "bg": "#ffffff",
+    "fg": "#000000",
+    "cursor": "#000000",
+    "ansi": [
+     "#000000",
+     "#a60000",
+     "#006800",
+     "#695500",
+     "#0031a9",
+     "#721045",
+     "#005e8b",
+     "#a6a6a6",
+     "#595959",
+     "#972500",
+     "#00663f",
+     "#973300",
+     "#3548cf",
+     "#531ab6",
+     "#005f5f",
+     "#595959"
+    ]
+   }
+  },
+  "datum": {
+   "dark": {
+    "bg": "#0f1318",
+    "fg": "#dbe0e8",
+    "cursor": "#fa94cd",
+    "ansi": [
+     "#2b2f35",
+     "#fe9864",
+     "#54dcaa",
+     "#e8df69",
+     "#69b9f7",
+     "#fa94cd",
+     "#6ae5ec",
+     "#dbe0e8",
+     "#8f98a3",
+     "#f8bd5f",
+     "#54dcaa",
+     "#fcdcad",
+     "#b2dafb",
+     "#f5b9d9",
+     "#a5f5f9",
+     "#eef2f7"
+    ]
+   },
+   "light": {
+    "bg": "#f1f6fd",
+    "fg": "#292e35",
+    "cursor": "#973070",
+    "ansi": [
+     "#292e35",
+     "#a24500",
+     "#007553",
+     "#656023",
+     "#0176b8",
+     "#973070",
+     "#0d7a7f",
+     "#b4b9bf",
+     "#616a76",
+     "#976700",
+     "#007553",
+     "#4d3919",
+     "#2f516c",
+     "#633750",
+     "#154b4e",
+     "#e7ecf2"
+    ]
+   }
+  },
+  "opo": {
+   "dark": {
+    "bg": "#161410",
+    "fg": "#d1d7df",
+    "cursor": "#79afff",
+    "ansi": [
+     "#1c1a14",
+     "#e08440",
+     "#33a397",
+     "#dca331",
+     "#498beb",
+     "#cd718f",
+     "#74acff",
+     "#ffffff",
+     "#96a0ab",
+     "#ffaf7a",
+     "#5fc9bc",
+     "#ffcb70",
+     "#7fb3ff",
+     "#f696b4",
+     "#b5d3ff",
+     "#ffffff"
+    ]
+   },
+   "light": {
+    "bg": "#fbf8f2",
+    "fg": "#24292f",
+    "cursor": "#005ccc",
+    "ansi": [
+     "#24292f",
+     "#a75000",
+     "#00756b",
+     "#6d3a00",
+     "#002c85",
+     "#782445",
+     "#005ccc",
+     "#eeeae2",
+     "#11161d",
+     "#844000",
+     "#005a52",
+     "#442e00",
+     "#001f4d",
+     "#610030",
+     "#00489f",
+     "#d4d0c6"
+    ]
+   }
+  },
+  "dalton": {
+   "dark": {
+    "bg": "#1b1b1b",
+    "fg": "#c8c9cc",
+    "cursor": "#9a9a9a",
+    "ansi": [
+     "#282828",
+     "#d85050",
+     "#5b914e",
+     "#c4c40c",
+     "#7aa2f7",
+     "#a050d0",
+     "#56717f",
+     "#b8b8b8",
+     "#3c3c3c",
+     "#f07068",
+     "#88b97d",
+     "#eded02",
+     "#97b1f1",
+     "#c070f0",
+     "#6691a7",
+     "#d8d8d8"
+    ]
+   },
+   "light": {
+    "bg": "#f4f1eb",
+    "fg": "#2e3038",
+    "cursor": null,
+    "ansi": [
+     "#353840",
+     "#b83030",
+     "#3a7530",
+     "#7a6d00",
+     "#3060c8",
+     "#7830a8",
+     "#3a5565",
+     "#c8c5be",
+     "#70707a",
+     "#c83838",
+     "#2d8528",
+     "#8a7d00",
+     "#4070d8",
+     "#8838c0",
+     "#2a6880",
+     "#e8e5df"
+    ]
+   }
+  },
+  "hakarune_dracula": {
+   "dark": {
+    "bg": "#282a36",
+    "fg": "#f8f8f2",
+    "cursor": null,
+    "ansi": [
+     "#21222c",
+     "#ff7155",
+     "#bf6cff",
+     "#f1fa8c",
+     "#bd93f9",
+     "#ff79c6",
+     "#8be9fd",
+     "#f8f8f2",
+     "#6272a4",
+     "#ff5e3d",
+     "#1fa2ad",
+     "#ffffa5",
+     "#d6acff",
+     "#ff92df",
+     "#a4ffff",
+     "#ffffff"
+    ]
+   }
+  },
+  "ef-deuteranopia": {
+   "dark": {
+    "bg": "#000a1f",
+    "fg": "#ddddee",
+    "cursor": "#ffff00",
+    "ansi": [
+     "#121f34",
+     "#cf8560",
+     "#3faa26",
+     "#aa9f32",
+     "#3f90f0",
+     "#b379bf",
+     "#5faaef",
+     "#ddddee",
+     "#445165",
+     "#cf7a7a",
+     "#3fa672",
+     "#bfaf7a",
+     "#009fff",
+     "#9f95ff",
+     "#0db0ff",
+     "#7f8797"
+    ]
+   },
+   "light": {
+    "bg": "#f5f5ff",
+    "fg": "#1a1a2f",
+    "cursor": "#0000bb",
+    "ansi": [
+     "#e8e8ea",
+     "#d3303a",
+     "#217a3c",
+     "#805d00",
+     "#375cd8",
+     "#ba35af",
+     "#1f6fbf",
+     "#1a1a2f",
+     "#b3b3c0",
+     "#d50f7f",
+     "#008058",
+     "#765040",
+     "#065fff",
+     "#6052cf",
+     "#1f77bb",
+     "#70627f"
+    ]
+   }
+  }
+ }
+}
