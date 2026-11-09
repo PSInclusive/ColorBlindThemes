@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="swatch" width="900" height="346" viewBox="0 0 900 346" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace">
+<rect x="0" y="0" width="900" height="346" rx="6" fill="#0B0D10"/>
+<rect x="294.0" y="26" width="117.0" height="46" rx="4" fill="#6cb6ff"/>
+<text x="300.0" y="65" font-size="9.5" fill="#000000" opacity="0.92">#6CB6FF</text>
+<text x="352.5" y="86" font-size="9" fill="#9aa3ab" text-anchor="middle">1</text>
+<rect x="418.0" y="26" width="117.0" height="46" rx="4" fill="#f0883e"/>
+<text x="424.0" y="65" font-size="9.5" fill="#000000" opacity="0.92">#F0883E</text>
+<text x="476.5" y="86" font-size="9" fill="#9aa3ab" text-anchor="middle">2</text>
+<rect x="542.0" y="26" width="117.0" height="46" rx="4" fill="#f0e05a"/>
+<text x="548.0" y="65" font-size="9.5" fill="#000000" opacity="0.92">#F0E05A</text>
+<text x="600.5" y="86" font-size="9" fill="#9aa3ab" text-anchor="middle">3</text>
+<text x="8" y="127.0" font-size="11" fill="#9aa3ab">Normal</text>
+<rect x="294.0" y="100" width="117.0" height="46" rx="4" fill="#6cb6ff"/>
+<rect x="418.0" y="100" width="117.0" height="46" rx="4" fill="#f0883e"/>
+<rect x="542.0" y="100" width="117.0" height="46" rx="4" fill="#f0e05a"/>
+<text x="8" y="181.0" font-size="11" fill="#9aa3ab">Deuteranopia</text>
+<rect x="294.0" y="154" width="117.0" height="46" rx="4" fill="#84AAFE"/>
+<rect x="418.0" y="154" width="117.0" height="46" rx="4" fill="#BFAC3D"/>
+<rect x="542.0" y="154" width="117.0" height="46" rx="4" fill="#F8E161"/>
+<text x="8" y="235.0" font-size="11" fill="#9aa3ab">Protanopia</text>
+<rect x="294.0" y="208" width="117.0" height="46" rx="4" fill="#97B9FF"/>
+<rect x="418.0" y="208" width="117.0" height="46" rx="4" fill="#A69435"/>
+<rect x="542.0" y="208" width="117.0" height="46" rx="4" fill="#F3D94A"/>
+<text x="8" y="289.0" font-size="11" fill="#9aa3ab">Tritanopia</text>
+<rect x="294.0" y="262" width="117.0" height="46" rx="4" fill="#00C7D0"/>
+<rect x="418.0" y="262" width="117.0" height="46" rx="4" fill="#FF7278"/>
+<rect x="542.0" y="262" width="117.0" height="46" rx="4" fill="#FFD1C4"/>
+<text x="8" y="334" font-size="9" fill="#a8a8a8">Simulated: Machado, Oliveira &amp; Fernandes (2009), severity 100% &#183; doi:10.1109/TVCG.2009.113</text>
+</svg>

@@ -6,10 +6,10 @@ A catalog of color themes and palettes built for color-vision-deficient (CVD) us
 
 ## What's here
 
-- `content/` — the site's articles (one per category: editors, terminals, apps, data-viz, verification, …)
+- `content/` — the site pages (one per theme type, plus an all-themes table)
 - `themes/jackfield/` — the Hugo theme (a dark, CVD-legible instrument; state by pattern, never hue)
 - `static/assets/colorblind-themes/` — the generated example SVGs (editor mocks + CVD-simulation swatch plates)
-- `report/colorblind-themes.md` — the full single-document report the articles are split from
+- `data/themes.json`, the table data (scores, hexes, links, demo images)
 - `scripts/` — the two deterministic generators (examples + verification)
 
 ## Develop

@@ -16,7 +16,7 @@
 
 .EXAMPLE
     pwsh scripts/New-ColorblindThemeExamples.ps1
-    Writes docs/reports/assets/colorblind-themes/*.svg
+    Writes assets/colorblind-themes/*.svg
 #>
 [CmdletBinding()]
 param()
@@ -24,7 +24,7 @@ param()
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
-$script:OutDir = Join-Path $PSScriptRoot '..' 'docs' 'reports' 'assets' 'colorblind-themes'
+$script:OutDir = Join-Path $PSScriptRoot '..' 'assets' 'colorblind-themes'
 $null = New-Item -ItemType Directory -Force -Path $script:OutDir
 
 # ---------------------------------------------------------------- simulation
@@ -883,6 +883,27 @@ $script:DataViz = @(
     @('retro-four', [string[]]@('#601A4A', '#EE442F', '#63ACBE', '#F9F4EC'), [string[]]@('plum', 'vermilion', 'teal', 'paper'))
 )
 
+$script:AppPlates = @(
+    @('gitea', 'dark', [string[]]@('#58a6ff', '#f0883e', '#d29922', '#ab7df8'), [string[]]@('1', '2', '3', '4')),
+    @('gitea', 'light', [string[]]@('#0860cc', '#a84400', '#9a6700', '#8250df'), [string[]]@('1', '2', '3', '4')),
+    @('simplecov', 'dark', [string[]]@('#6cb6ff', '#f0883e', '#f0e05a'), [string[]]@('1', '2', '3')),
+    @('simplecov', 'light', [string[]]@('#0060a8', '#c2410c', '#9a6700'), [string[]]@('1', '2', '3')),
+    @('plannotator', 'dark', [string[]]@('#4f83d1', '#c96e12', '#d9a839', '#35b6d9'), [string[]]@('1', '2', '3', '4')),
+    @('plannotator', 'light', [string[]]@('#216cab', '#a55c1e', '#8f6400', '#0e7d9e'), [string[]]@('1', '2', '3', '4')),
+    @('gitbutler', 'dark', [string[]]@('#99d9ff', '#ffbf66'), [string[]]@('addition', 'deletion')),
+    @('gitbutler', 'light', [string[]]@('#0d59bf', '#bf590d'), [string[]]@('addition', 'deletion')),
+    @('iamb', 'dark', [string[]]@('#D55E00', '#E69F00', '#F0E442', '#0072B2', '#56B4E9', '#009E73', '#CC79A7'), [string[]]@('1', '2', '3', '4', '5', '6', '7')),
+    @('cura', 'dark', [string[]]@('#ff4000', '#009c80', '#ffff56', '#00ffff', '#0064ff'), [string[]]@('1', '2', '3', '4', '5')),
+    @('openfront', 'dark', [string[]]@('#0072b2', '#56b4e9', '#d55e00', '#009e73', '#cc79a7', '#f0e442', '#e69f00'), [string[]]@('1', '2', '3', '4', '5', '6', '7')),
+    @('talishar-deuteranopia', 'dark', [string[]]@('#33aaee', '#cc5599', '#eeaa11', '#cc5522', '#55bb88', '#8855aa', '#aa2244'), [string[]]@('1', '2', '3', '4', '5', '6', '7')),
+    @('talishar-protanopia', 'dark', [string[]]@('#11bbff', '#ee1100', '#ff8811', '#118899', '#99ff11', '#bb22aa', '#aa1144'), [string[]]@('1', '2', '3', '4', '5', '6', '7')),
+    @('talishar-tritanopia', 'dark', [string[]]@('#22eeff', '#ee2200', '#eeaa44', '#aa88ff', '#22aa00', '#6666cc', '#992255'), [string[]]@('1', '2', '3', '4', '5', '6', '7')),
+    @('narmi', 'light', [string[]]@('#6F6BAD', '#1A56B0', '#6F004F', '#4B0200'), [string[]]@('1', '2', '3', '4')),
+    @('moira', 'light', [string[]]@('#00771e', '#ffc107', '#ff5722', '#9e9e9e'), [string[]]@('1', '2', '3', '4')),
+    @('jenkins', 'light', [string[]]@('#BFD4FF', '#FF9180', '#FFF780', '#EEEEEE'), [string[]]@('blue', 'red', 'yellow', 'grey')),
+    @('deepinv', 'light', [string[]]@('#0173B2', '#DE8F05', '#029E73', '#D55E00', '#CC78BC'), [string[]]@('1', '2', '3', '4', '5'))
+)
+
 $script:Comparisons = @(
     @('compare-deuteranopia', 'deuteranopia',
      'GitButler (STRONG)', [string[]]@('#99d9ff', '#ffbf66'), [string[]]@('addition', 'deletion'),
@@ -942,6 +963,14 @@ foreach ($key in $script:Themes.Keys) {
 foreach ($dv in $script:DataViz) {
     $svg = New-SwatchPlate -Colors $dv[1] -Labels $dv[2] -Mode 'dark'
     $fn = "dataviz-$($dv[0]).svg"
+    Write-Verbose "writing $fn"
+    [System.IO.File]::WriteAllText((Join-Path $script:OutDir $fn), $svg, $utf8NoBom)
+    $built.Add($fn)
+}
+
+foreach ($ap in $script:AppPlates) {
+    $svg = New-SwatchPlate -Colors $ap[2] -Labels $ap[3] -Mode $ap[1]
+    $fn = "$($ap[0])-$($ap[1])-strip.svg"
     Write-Verbose "writing $fn"
     [System.IO.File]::WriteAllText((Join-Path $script:OutDir $fn), $svg, $utf8NoBom)
     $built.Add($fn)

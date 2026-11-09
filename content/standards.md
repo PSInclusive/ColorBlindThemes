@@ -1,9 +1,9 @@
 ---
 title: "Standards & guidance"
-lane: "05c"
-laneName: "Data-viz"
+lane: "07"
+laneName: "Standards"
 slug: "standards"
-weight: 10
+weight: 7
 ---
 
 - **WCAG 2.x**: no CVD-specific criterion; SC 1.4.1 (color not sole carrier) and contrast minimums
