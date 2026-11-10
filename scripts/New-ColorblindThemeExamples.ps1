@@ -396,23 +396,25 @@ function New-EditorMock {
 
     # code lines (PowerShell): list of (lineno, segments, indent_px). segments = (text, colorkey)
     $lines = @(
-        @(1, (, @('# render a palette as an SVG swatch plate', 'comment')), 0),
-        @(2, @(@('function ', 'keyword'), @('New-SwatchPlate', 'func'), @(' {', 'fg')), 0),
-        @(3, @(@('    param(', 'fg'), @('[string[]]', 'type'), @('$Colors', 'variable'), @(', ', 'fg'), @('[string[]]', 'type'), @('$Labels', 'variable'), @(')', 'fg')), 0),
-        @(4, @(@('    ', 'fg'), @('$Width', 'fg'), @(' = ', 'keyword'), @('900', 'number'), @('  ', 'fg'), @('# px', 'comment')), 0),
+        @(1, (, @('# List the largest files under a path', 'comment')), 0),
+        @(2, @(@('function ', 'keyword'), @('Get-LargeFile', 'func'), @(' {', 'fg')), 0),
+        @(3, @(@('    param(', 'fg'), @('[string]', 'type'), @('$Path', 'variable'), @(' = ', 'keyword'), @("'.'", 'string'), @(', ', 'fg'), @('[int]', 'type'), @('$Top', 'variable'), @(' = ', 'keyword'), @('10', 'number'), @(')', 'fg')), 0),
+        @(4, @(@('    ', 'fg'), @('$cutoff', 'variable'), @(' = ', 'keyword'), @('100MB', 'number')), 0),
         @(5, @(), 0),
-        @(6, @(@('    foreach ', 'keyword'), @('(', 'fg'), @('$Color', 'variable'), @(' in ', 'keyword'), @('$Colors', 'variable'), @(') {', 'fg')), 0),
-        @(7, @(@('        ', 'fg'), @('$Chip', 'variable'), @(' = ', 'keyword'), @('[Chip]::', 'type'), @('new(', 'func'), @('$Color', 'variable'), @(')', 'fg')), 0),
-        @(8, @(@('        ', 'fg'), @('if ', 'keyword'), @('(', 'fg'), @('$Chip', 'variable'), @('.WcagRatio ', 'constant'), @('-lt ', 'keyword'), @('4.5', 'number'), @(') { ', 'fg'), @('throw ', 'keyword'), @('}', 'fg')), 0),
-        @(9, @(), 0),
-        @(10, @(@('        ', 'fg'), @('[Plate]::', 'type'), @('Add(', 'func'), @('$Chip', 'variable'), @(')', 'fg')), 0),
+        @(6, @(@('    try ', 'keyword'), @('{', 'fg')), 0),
+        @(7, @(@('        ', 'fg'), @('$files', 'variable'), @(' = ', 'keyword'), @('Get-ChildItem ', 'func'), @('-Path ', 'constant'), @('$Path ', 'variable'), @('-Recurse ', 'constant'), @('-File', 'constant')), 0),
+        @(8, @(@('        ', 'fg'), @('$files ', 'variable'), @('| ', 'keyword'), @('Sort-Object ', 'func'), @('Length ', 'fg'), @('-Descending ', 'constant'), @('| ', 'keyword'), @('Select-Objct ', 'func'), @('-First ', 'constant'), @('$Top', 'variable')), 0),
+        @(9, @(@('    } ', 'fg'), @('catch ', 'keyword'), @('{', 'fg')), 0),
+        @(10, @(@('        ', 'fg'), @('Write-Error ', 'func'), @('"Cannot read ', 'string'), @('$Path', 'variable'), @('"', 'string')), 0),
         @(11, (, @('    }', 'fg')), 0),
         @(12, (, @('}', 'fg')), 0),
-        @(13, @(@('class ', 'keyword'), @('Chip', 'type'), @(' {', 'fg')), 0),
-        @(14, @(@('    ', 'fg'), @('[bool]', 'type'), @('$Border', 'variable'), @(' = ', 'keyword'), @('$true', 'constant'), @('  ', 'fg'), @('# always visible', 'comment')), 0)
+        @(13, @(), 0),
+        @(14, @(@('Get-LargeFile ', 'func'), @('-Path ', 'constant'), @('$HOME ', 'variable'), @('-Top ', 'constant'), @('5', 'number')), 0)
     )
     # one line gets a squiggly error underline, one a warn underline
     $errorLine = 8; $warnLine = 4
+    # squiggles sit under the token that earns them, not at the line start
+    $squiggleTargets = @{ 4 = '$cutoff'; 8 = 'Select-Objct' }
     $ly = $bodyY + 26
     $lh = 24
     foreach ($line in $lines) {
@@ -424,20 +426,31 @@ function New-EditorMock {
         $p.Add("<text x=`"38`" y=`"$ly`" font-size=`"11`" fill=`"$fg`" opacity=`"0.45`" text-anchor=`"end`">$ln</text>")
         [double]$x = 66 + $ind
         $xIsInt = $true   # Python: x is int until the first += len(text) * 7.55
+        $squiggleX = $null; $squiggleW = 0
         foreach ($seg in $segs) {
             [string]$text = $seg[0]
             [string]$key = [string]$seg[1]
             $color = if ($key -eq 'fg') { $fg } else { $c[$key] }
-            $xStr = if ($xIsInt) { "$([int]$x)" } else { Format-PyFloat $x }
-            $p.Add("<text x=`"$xStr`" y=`"$ly`" font-size=`"12.5`" fill=`"$color`">$(Protect-SvgText $text)</text>")
+            # SVG collapses leading/trailing spaces inside <text>, so indentation and
+            # gaps are carried by x: emit the trimmed text at the offset the spaces earn.
+            $trimmed = $text.Trim()
+            if ($trimmed.Length -gt 0) {
+                $lead = $text.Length - $text.TrimStart().Length
+                $sx = $x + $lead * 7.55
+                $xStr = if ($xIsInt -and $lead -eq 0) { "$([int]$x)" } else { Format-PyFloat $sx }
+                $p.Add("<text x=`"$xStr`" y=`"$ly`" font-size=`"12.5`" fill=`"$color`">$(Protect-SvgText $trimmed)</text>")
+                if ($squiggleTargets.Contains($ln) -and $trimmed -eq $squiggleTargets[$ln]) {
+                    $squiggleX = $sx; $squiggleW = $trimmed.Length * 7.55
+                }
+            }
             $x += $text.Length * 7.55
             $xIsInt = $false
         }
-        if ($ln -eq $errorLine) {
-            $p.Add("<path d=`"M66 $($ly + 4) q 4 -4 8 0 t 8 0 t 8 0 t 8 0 t 8 0 t 8 0`" fill=`"none`" stroke=`"$($c['error'])`" stroke-width=`"1.5`"/>")
-        }
-        if ($ln -eq $warnLine) {
-            $p.Add("<path d=`"M66 $($ly + 4) q 4 -4 8 0 t 8 0 t 8 0`" fill=`"none`" stroke=`"$($c['warn'])`" stroke-width=`"1.5`"/>")
+        if ($null -ne $squiggleX) {
+            $squiggleColor = if ($ln -eq $errorLine) { $c['error'] } else { $c['warn'] }
+            # editor-style squiggle: 4px period, 1px amplitude, 1px stroke, hugging the baseline
+            $wave = 'q 1 -2 2 0' + (' t 2 0' * ([Math]::Max(1, [int][Math]::Round($squiggleW / 2)) - 1))
+            $p.Add("<path d=`"M$(Format-PyFloat $squiggleX) $($ly + 3) $wave`" fill=`"none`" stroke=`"$squiggleColor`" stroke-width=`"1`"/>")
         }
         $ly += $lh
     }
@@ -446,8 +459,8 @@ function New-EditorMock {
     $sy = $winH - $statusH - 1
     $p.Add("<path d=`"M1 $sy h$($w - 2) v$($statusH - 9) a10 10 0 0 1 -10 10 h-$($w - 22) a10 10 0 0 1 -10-10 z`" fill=`"$status`"/>")
     $sfg = Get-ForegroundFor $status
-    $p.Add("<text x=`"14`" y=`"$($sy + 16)`" font-size=`"10.5`" fill=`"$sfg`">&#9095; main*    New-SwatchPlate.ps1    pwsh 7.5    UTF-8    Ln 8, Col 24    spaces: 4</text>")
-    $p.Add("<text x=`"$($w - 14)`" y=`"$($sy + 16)`" font-size=`"10.5`" fill=`"$sfg`" text-anchor=`"end`">LF  &#10003; prettier  CVD-safe</text>")
+    $p.Add("<text x=`"14`" y=`"$($sy + 16)`" font-size=`"10.5`" fill=`"$sfg`" xml:space=`"preserve`">&#9095; main*    Get-LargeFile.ps1    pwsh 7.5    UTF-8    Ln 8, Col 51    spaces: 4</text>")
+    $p.Add("<text x=`"$($w - 14)`" y=`"$($sy + 16)`" font-size=`"10.5`" fill=`"$sfg`" text-anchor=`"end`" xml:space=`"preserve`">LF  &#10003; PSScriptAnalyzer  CVD-safe</text>")
     $p.Add('</svg>')
     return ($p -join "`n")
 }

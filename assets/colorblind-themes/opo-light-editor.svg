@@ -8,80 +8,73 @@
 <rect x="1" y="31" width="52" height="349" fill="#F4F3F0"/>
 <line x1="53" y1="31" x2="53" y2="380" stroke="#EBEAE8" stroke-width="1"/>
 <text x="38" y="57" font-size="11" fill="#24292f" opacity="0.45" text-anchor="end">1</text>
-<text x="66" y="57" font-size="12.5" fill="#5e5a55"># render a palette as an SVG swatch plate</text>
+<text x="66" y="57" font-size="12.5" fill="#5e5a55"># List the largest files under a path</text>
 <text x="38" y="81" font-size="11" fill="#24292f" opacity="0.45" text-anchor="end">2</text>
-<text x="66" y="81" font-size="12.5" fill="#002c85">function </text>
-<text x="133.95" y="81" font-size="12.5" fill="#007570">New-SwatchPlate</text>
-<text x="247.2" y="81" font-size="12.5" fill="#24292f"> {</text>
+<text x="66" y="81" font-size="12.5" fill="#002c85">function</text>
+<text x="133.95" y="81" font-size="12.5" fill="#007570">Get-LargeFile</text>
+<text x="239.64999999999998" y="81" font-size="12.5" fill="#24292f">{</text>
 <text x="38" y="105" font-size="11" fill="#24292f" opacity="0.45" text-anchor="end">3</text>
-<text x="66" y="105" font-size="12.5" fill="#24292f">    param(</text>
-<text x="141.5" y="105" font-size="12.5" fill="#75254e">[string[]]</text>
-<text x="217.0" y="105" font-size="12.5" fill="#24292f">$Colors</text>
-<text x="269.85" y="105" font-size="12.5" fill="#24292f">, </text>
-<text x="284.95000000000005" y="105" font-size="12.5" fill="#75254e">[string[]]</text>
-<text x="360.45000000000005" y="105" font-size="12.5" fill="#24292f">$Labels</text>
-<text x="413.30000000000007" y="105" font-size="12.5" fill="#24292f">)</text>
+<text x="96.2" y="105" font-size="12.5" fill="#24292f">param(</text>
+<text x="141.5" y="105" font-size="12.5" fill="#75254e">[string]</text>
+<text x="201.9" y="105" font-size="12.5" fill="#24292f">$Path</text>
+<text x="247.20000000000002" y="105" font-size="12.5" fill="#002c85">=</text>
+<text x="262.3" y="105" font-size="12.5" fill="#a75000">'.'</text>
+<text x="284.95" y="105" font-size="12.5" fill="#24292f">,</text>
+<text x="300.05" y="105" font-size="12.5" fill="#75254e">[int]</text>
+<text x="337.8" y="105" font-size="12.5" fill="#24292f">$Top</text>
+<text x="375.55" y="105" font-size="12.5" fill="#002c85">=</text>
+<text x="390.65" y="105" font-size="12.5" fill="#583500">10</text>
+<text x="405.75" y="105" font-size="12.5" fill="#24292f">)</text>
 <rect x="53" y="114" width="844" height="22" fill="#007570" opacity="0.28"/>
 <text x="38" y="129" font-size="11" fill="#24292f" opacity="0.45" text-anchor="end">4</text>
-<text x="66" y="129" font-size="12.5" fill="#24292f">    </text>
-<text x="96.2" y="129" font-size="12.5" fill="#24292f">$Width</text>
-<text x="141.5" y="129" font-size="12.5" fill="#002c85"> = </text>
-<text x="164.15" y="129" font-size="12.5" fill="#583500">900</text>
-<text x="186.8" y="129" font-size="12.5" fill="#24292f">  </text>
-<text x="201.9" y="129" font-size="12.5" fill="#5e5a55"># px</text>
-<path d="M66 133 q 4 -4 8 0 t 8 0 t 8 0" fill="none" stroke="#583500" stroke-width="1.5"/>
+<text x="96.2" y="129" font-size="12.5" fill="#24292f">$cutoff</text>
+<text x="156.60000000000002" y="129" font-size="12.5" fill="#002c85">=</text>
+<text x="171.70000000000002" y="129" font-size="12.5" fill="#583500">100MB</text>
+<path d="M96.2 132 q 1 -2 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0" fill="none" stroke="#583500" stroke-width="1"/>
 <text x="38" y="153" font-size="11" fill="#24292f" opacity="0.45" text-anchor="end">5</text>
 <text x="38" y="177" font-size="11" fill="#24292f" opacity="0.45" text-anchor="end">6</text>
-<text x="66" y="177" font-size="12.5" fill="#002c85">    foreach </text>
-<text x="156.6" y="177" font-size="12.5" fill="#24292f">(</text>
-<text x="164.15" y="177" font-size="12.5" fill="#24292f">$Color</text>
-<text x="209.45" y="177" font-size="12.5" fill="#002c85"> in </text>
-<text x="239.64999999999998" y="177" font-size="12.5" fill="#24292f">$Colors</text>
-<text x="292.5" y="177" font-size="12.5" fill="#24292f">) {</text>
+<text x="96.2" y="177" font-size="12.5" fill="#002c85">try</text>
+<text x="126.4" y="177" font-size="12.5" fill="#24292f">{</text>
 <text x="38" y="201" font-size="11" fill="#24292f" opacity="0.45" text-anchor="end">7</text>
-<text x="66" y="201" font-size="12.5" fill="#24292f">        </text>
-<text x="126.4" y="201" font-size="12.5" fill="#24292f">$Chip</text>
-<text x="164.15" y="201" font-size="12.5" fill="#002c85"> = </text>
-<text x="186.8" y="201" font-size="12.5" fill="#75254e">[Chip]::</text>
-<text x="247.20000000000002" y="201" font-size="12.5" fill="#007570">new(</text>
-<text x="277.40000000000003" y="201" font-size="12.5" fill="#24292f">$Color</text>
-<text x="322.70000000000005" y="201" font-size="12.5" fill="#24292f">)</text>
+<text x="126.4" y="201" font-size="12.5" fill="#24292f">$files</text>
+<text x="179.25" y="201" font-size="12.5" fill="#002c85">=</text>
+<text x="194.35" y="201" font-size="12.5" fill="#007570">Get-ChildItem</text>
+<text x="300.05" y="201" font-size="12.5" fill="#002c85">-Path</text>
+<text x="345.35" y="201" font-size="12.5" fill="#24292f">$Path</text>
+<text x="390.65000000000003" y="201" font-size="12.5" fill="#002c85">-Recurse</text>
+<text x="458.6" y="201" font-size="12.5" fill="#002c85">-File</text>
 <text x="38" y="225" font-size="11" fill="#24292f" opacity="0.45" text-anchor="end">8</text>
-<text x="66" y="225" font-size="12.5" fill="#24292f">        </text>
-<text x="126.4" y="225" font-size="12.5" fill="#002c85">if </text>
-<text x="149.05" y="225" font-size="12.5" fill="#24292f">(</text>
-<text x="156.60000000000002" y="225" font-size="12.5" fill="#24292f">$Chip</text>
-<text x="194.35000000000002" y="225" font-size="12.5" fill="#002c85">.WcagRatio </text>
-<text x="277.40000000000003" y="225" font-size="12.5" fill="#002c85">-lt </text>
-<text x="307.6" y="225" font-size="12.5" fill="#583500">4.5</text>
-<text x="330.25" y="225" font-size="12.5" fill="#24292f">) { </text>
-<text x="360.45" y="225" font-size="12.5" fill="#002c85">throw </text>
-<text x="405.75" y="225" font-size="12.5" fill="#24292f">}</text>
-<path d="M66 229 q 4 -4 8 0 t 8 0 t 8 0 t 8 0 t 8 0 t 8 0" fill="none" stroke="#a75000" stroke-width="1.5"/>
+<text x="126.4" y="225" font-size="12.5" fill="#24292f">$files</text>
+<text x="179.25" y="225" font-size="12.5" fill="#002c85">|</text>
+<text x="194.35" y="225" font-size="12.5" fill="#007570">Sort-Object</text>
+<text x="284.95" y="225" font-size="12.5" fill="#24292f">Length</text>
+<text x="337.8" y="225" font-size="12.5" fill="#002c85">-Descending</text>
+<text x="428.4" y="225" font-size="12.5" fill="#002c85">|</text>
+<text x="443.5" y="225" font-size="12.5" fill="#007570">Select-Objct</text>
+<text x="541.65" y="225" font-size="12.5" fill="#002c85">-First</text>
+<text x="594.5" y="225" font-size="12.5" fill="#24292f">$Top</text>
+<path d="M443.5 228 q 1 -2 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0 t 2 0" fill="none" stroke="#a75000" stroke-width="1"/>
 <text x="38" y="249" font-size="11" fill="#24292f" opacity="0.45" text-anchor="end">9</text>
+<text x="96.2" y="249" font-size="12.5" fill="#24292f">}</text>
+<text x="111.3" y="249" font-size="12.5" fill="#002c85">catch</text>
+<text x="156.6" y="249" font-size="12.5" fill="#24292f">{</text>
 <text x="38" y="273" font-size="11" fill="#24292f" opacity="0.45" text-anchor="end">10</text>
-<text x="66" y="273" font-size="12.5" fill="#24292f">        </text>
-<text x="126.4" y="273" font-size="12.5" fill="#75254e">[Plate]::</text>
-<text x="194.35000000000002" y="273" font-size="12.5" fill="#007570">Add(</text>
-<text x="224.55" y="273" font-size="12.5" fill="#24292f">$Chip</text>
-<text x="262.3" y="273" font-size="12.5" fill="#24292f">)</text>
+<text x="126.4" y="273" font-size="12.5" fill="#007570">Write-Error</text>
+<text x="217.0" y="273" font-size="12.5" fill="#a75000">&quot;Cannot read</text>
+<text x="315.15" y="273" font-size="12.5" fill="#24292f">$Path</text>
+<text x="352.9" y="273" font-size="12.5" fill="#a75000">&quot;</text>
 <text x="38" y="297" font-size="11" fill="#24292f" opacity="0.45" text-anchor="end">11</text>
-<text x="66" y="297" font-size="12.5" fill="#24292f">    }</text>
+<text x="96.2" y="297" font-size="12.5" fill="#24292f">}</text>
 <text x="38" y="321" font-size="11" fill="#24292f" opacity="0.45" text-anchor="end">12</text>
 <text x="66" y="321" font-size="12.5" fill="#24292f">}</text>
 <text x="38" y="345" font-size="11" fill="#24292f" opacity="0.45" text-anchor="end">13</text>
-<text x="66" y="345" font-size="12.5" fill="#002c85">class </text>
-<text x="111.3" y="345" font-size="12.5" fill="#75254e">Chip</text>
-<text x="141.5" y="345" font-size="12.5" fill="#24292f"> {</text>
 <text x="38" y="369" font-size="11" fill="#24292f" opacity="0.45" text-anchor="end">14</text>
-<text x="66" y="369" font-size="12.5" fill="#24292f">    </text>
-<text x="96.2" y="369" font-size="12.5" fill="#75254e">[bool]</text>
-<text x="141.5" y="369" font-size="12.5" fill="#24292f">$Border</text>
-<text x="194.35" y="369" font-size="12.5" fill="#002c85"> = </text>
-<text x="217.0" y="369" font-size="12.5" fill="#002c85">$true</text>
-<text x="254.75" y="369" font-size="12.5" fill="#24292f">  </text>
-<text x="269.85" y="369" font-size="12.5" fill="#5e5a55"># always visible</text>
+<text x="66" y="369" font-size="12.5" fill="#007570">Get-LargeFile</text>
+<text x="171.7" y="369" font-size="12.5" fill="#002c85">-Path</text>
+<text x="217.0" y="369" font-size="12.5" fill="#24292f">$HOME</text>
+<text x="262.3" y="369" font-size="12.5" fill="#002c85">-Top</text>
+<text x="300.05" y="369" font-size="12.5" fill="#583500">5</text>
 <path d="M1 379 h898 v15 a10 10 0 0 1 -10 10 h-878 a10 10 0 0 1 -10-10 z" fill="#005ccc"/>
-<text x="14" y="395" font-size="10.5" fill="#FFFFFF">&#9095; main*    New-SwatchPlate.ps1    pwsh 7.5    UTF-8    Ln 8, Col 24    spaces: 4</text>
-<text x="886" y="395" font-size="10.5" fill="#FFFFFF" text-anchor="end">LF  &#10003; prettier  CVD-safe</text>
+<text x="14" y="395" font-size="10.5" fill="#FFFFFF" xml:space="preserve">&#9095; main*    Get-LargeFile.ps1    pwsh 7.5    UTF-8    Ln 8, Col 51    spaces: 4</text>
+<text x="886" y="395" font-size="10.5" fill="#FFFFFF" text-anchor="end" xml:space="preserve">LF  &#10003; PSScriptAnalyzer  CVD-safe</text>
 </svg>
