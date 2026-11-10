@@ -12,6 +12,9 @@
    {
     "mode": "dark",
     "score": 1.1,
+    "deut": 1.1,
+    "prot": 1.9,
+    "trit": 4.5,
     "verdict": "WEAK",
     "colors": [
      "#ec8e2c",
@@ -30,6 +33,9 @@
    {
     "mode": "light",
     "score": 1.7,
+    "deut": 1.7,
+    "prot": 1.9,
+    "trit": 6.8,
     "verdict": "WEAK",
     "colors": [
      "#b35900",
@@ -61,6 +67,9 @@
    {
     "mode": "dark",
     "score": 1.1,
+    "deut": 1.1,
+    "prot": 5.5,
+    "trit": 7.8,
     "verdict": "WEAK",
     "colors": [
      "#ff5f59",
@@ -77,6 +86,9 @@
    {
     "mode": "light",
     "score": 1.5,
+    "deut": 1.5,
+    "prot": 3.5,
+    "trit": 8.7,
     "verdict": "WEAK",
     "colors": [
      "#a60000",
@@ -106,6 +118,9 @@
    {
     "mode": "dark",
     "score": 1.7,
+    "deut": 4.6,
+    "prot": 1.7,
+    "trit": 5.7,
     "verdict": "WEAK",
     "colors": [
      "#cf8560",
@@ -122,6 +137,9 @@
    {
     "mode": "light",
     "score": 4.0,
+    "deut": 4.0,
+    "prot": 5.6,
+    "trit": 11.1,
     "verdict": "OK",
     "colors": [
      "#d3303a",
@@ -150,6 +168,9 @@
    {
     "mode": "dark",
     "score": 1.5,
+    "deut": 1.5,
+    "prot": 3.4,
+    "trit": 3.7,
     "verdict": "WEAK",
     "colors": [
      "#009fff",
@@ -167,6 +188,9 @@
    {
     "mode": "light",
     "score": 6.5,
+    "deut": 8.2,
+    "prot": 9.3,
+    "trit": 6.5,
     "verdict": "OK",
     "colors": [
      "#009fff",
@@ -195,6 +219,9 @@
    {
     "mode": "dark",
     "score": 4.0,
+    "deut": 4.0,
+    "prot": 6.4,
+    "trit": 4.8,
     "verdict": "OK",
     "colors": [
      "#69b9f7",
@@ -211,6 +238,9 @@
    {
     "mode": "light",
     "score": 4.3,
+    "deut": 4.6,
+    "prot": 8.1,
+    "trit": 4.3,
     "verdict": "OK",
     "colors": [
      "#0176b8",
@@ -239,6 +269,9 @@
    {
     "mode": "dark",
     "score": 9.6,
+    "deut": 13.3,
+    "prot": 15.2,
+    "trit": 9.6,
     "verdict": "STRONG",
     "colors": [
      "#AF8CE0",
@@ -249,10 +282,27 @@
     ],
     "plate": "cindervale-dark-strip.png",
     "editor": "cindervale-dark-editor.png"
+   },
+   {
+    "mode": "light",
+    "score": 12.3,
+    "deut": 12.3,
+    "prot": 12.6,
+    "trit": 13.2,
+    "verdict": "STRONG",
+    "colors": [
+     "#503987",
+     "#1973B4",
+     "#93661D",
+     "#00595E",
+     "#7A6B68"
+    ],
+    "plate": "cindervale-light-strip.png",
+    "editor": "cindervale-light-editor.png"
    }
   ],
-  "best": 9.6,
-  "defaultMode": "dark"
+  "best": 12.3,
+  "defaultMode": "light"
  },
  {
   "name": "Blinds",
@@ -265,6 +315,9 @@
    {
     "mode": "dark",
     "score": 8.7,
+    "deut": 14.7,
+    "prot": 14.0,
+    "trit": 8.7,
     "verdict": "STRONG",
     "colors": [
      "#4477AA",
@@ -280,6 +333,9 @@
    {
     "mode": "light",
     "score": 5.3,
+    "deut": 6.0,
+    "prot": 5.3,
+    "trit": 8.7,
     "verdict": "OK",
     "colors": [
      "#4477AA",
@@ -308,6 +364,9 @@
    {
     "mode": "dark",
     "score": 5.4,
+    "deut": 5.4,
+    "prot": 8.8,
+    "trit": 7.2,
     "verdict": "OK",
     "colors": [
      "#e08440",
@@ -324,6 +383,9 @@
    {
     "mode": "light",
     "score": 8.2,
+    "deut": 10.9,
+    "prot": 12.3,
+    "trit": 8.2,
     "verdict": "STRONG",
     "colors": [
      "#002c85",
@@ -352,6 +414,9 @@
    {
     "mode": "dark",
     "score": 7.3,
+    "deut": 8.4,
+    "prot": 9.2,
+    "trit": 7.3,
     "verdict": "OK",
     "colors": [
      "#ffbc58",
@@ -380,6 +445,9 @@
    {
     "mode": "dark",
     "score": 4.8,
+    "deut": 4.8,
+    "prot": 13.3,
+    "trit": 11.6,
     "verdict": "OK",
     "colors": [
      "#D75F87",
@@ -407,6 +475,9 @@
    {
     "mode": "dark",
     "score": 4.1,
+    "deut": 4.5,
+    "prot": 4.1,
+    "trit": 9.5,
     "verdict": "OK",
     "colors": [
      "#56B4E9",
@@ -435,6 +506,9 @@
    {
     "mode": "dark",
     "score": 4.0,
+    "deut": 4.0,
+    "prot": 4.6,
+    "trit": 4.9,
     "verdict": "OK",
     "colors": [
      "#5FB49C",
@@ -450,6 +524,9 @@
    {
     "mode": "light",
     "score": 1.6,
+    "deut": 4.0,
+    "prot": 2.1,
+    "trit": 1.6,
     "verdict": "WEAK",
     "colors": [
      "#1A7A6C",
@@ -477,6 +554,9 @@
    {
     "mode": "dark",
     "score": 3.5,
+    "deut": 6.3,
+    "prot": 8.7,
+    "trit": 3.5,
     "verdict": "OK",
     "colors": [
      "#7ab2ff",
@@ -493,6 +573,9 @@
    {
     "mode": "light",
     "score": 0.9,
+    "deut": 2.7,
+    "prot": 0.9,
+    "trit": 3.8,
     "verdict": "WEAK",
     "colors": [
      "#336fd6",
@@ -521,6 +604,9 @@
    {
     "mode": "dark",
     "score": 3.4,
+    "deut": 3.4,
+    "prot": 5.4,
+    "trit": 3.8,
     "verdict": "OK",
     "colors": [
      "#dae36d",
@@ -538,7 +624,7 @@
   "defaultMode": "dark"
  },
  {
-  "name": "Shroom Space",
+  "name": "Shroom Space Deuteranopia",
   "types": [
    "Editor"
   ],
@@ -548,6 +634,9 @@
    {
     "mode": "dark",
     "score": 2.7,
+    "deut": 7.5,
+    "prot": 7.4,
+    "trit": 2.7,
     "verdict": "WEAK",
     "colors": [
      "#BE9AF7",
@@ -564,6 +653,63 @@
   "defaultMode": "dark"
  },
  {
+  "name": "Shroom Space Protanopia",
+  "types": [
+   "Editor"
+  ],
+  "url": "https://github.com/WyattAu/shroom-theme",
+  "note": "Protanopia variant; same CI gate as the deuteranopia one",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 2.7,
+    "deut": 7.5,
+    "prot": 7.4,
+    "trit": 2.7,
+    "verdict": "WEAK",
+    "colors": [
+     "#BE9AF7",
+     "#FFCB6B",
+     "#E794D2",
+     "#E8C990",
+     "#F07178"
+    ],
+    "plate": "shroom-prot-dark-strip.png",
+    "editor": "shroom-prot-dark-editor.png"
+   }
+  ],
+  "best": 2.7,
+  "defaultMode": "dark"
+ },
+ {
+  "name": "Shroom Space Tritanopia",
+  "types": [
+   "Editor"
+  ],
+  "url": "https://github.com/WyattAu/shroom-theme",
+  "note": "Tritanopia variant; keyword, function and number share one hue by design",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 5.1,
+    "deut": 11.5,
+    "prot": 15.5,
+    "trit": 5.1,
+    "verdict": "OK",
+    "colors": [
+     "#FF79C6",
+     "#C3E88D",
+     "#CACEFF",
+     "#E68484"
+    ],
+    "plate": "shroom-trit-dark-strip.png",
+    "editor": "shroom-trit-dark-editor.png"
+   }
+  ],
+  "best": 5.1,
+  "defaultMode": "dark"
+ },
+ {
   "name": "ColorSafe Themes",
   "types": [
    "Editor"
@@ -574,6 +720,9 @@
    {
     "mode": "dark",
     "score": 2.6,
+    "deut": 4.5,
+    "prot": 4.3,
+    "trit": 2.6,
     "verdict": "WEAK",
     "colors": [
      "#5BB8F5",
@@ -601,6 +750,9 @@
    {
     "mode": "dark",
     "score": 1.4,
+    "deut": 1.4,
+    "prot": 5.4,
+    "trit": 3.8,
     "verdict": "WEAK",
     "colors": [
      "#ff6e6e",
@@ -629,6 +781,9 @@
    {
     "mode": "dark",
     "score": 0.9,
+    "deut": 0.9,
+    "prot": 1.3,
+    "trit": 6.5,
     "verdict": "WEAK",
     "colors": [
      "#7aa2ee",
@@ -658,6 +813,9 @@
    {
     "mode": "dark",
     "score": 3.8,
+    "deut": 3.8,
+    "prot": 13.5,
+    "trit": 10.3,
     "verdict": "OK",
     "colors": [
      "#d85050",
@@ -674,6 +832,9 @@
    {
     "mode": "light",
     "score": 3.8,
+    "deut": 3.8,
+    "prot": 4.5,
+    "trit": 9.9,
     "verdict": "OK",
     "colors": [
      "#b83030",
@@ -702,6 +863,9 @@
    {
     "mode": "dark",
     "score": 3.6,
+    "deut": 6.7,
+    "prot": 3.6,
+    "trit": 7.3,
     "verdict": "OK",
     "colors": [
      "#FF7155",
@@ -730,6 +894,9 @@
    {
     "mode": "dark",
     "score": 42.3,
+    "deut": 45.6,
+    "prot": 42.3,
+    "trit": 46.0,
     "verdict": "STRONG",
     "colors": [
      "#99d9ff",
@@ -741,6 +908,9 @@
    {
     "mode": "light",
     "score": 55.2,
+    "deut": 61.3,
+    "prot": 55.2,
+    "trit": 58.9,
     "verdict": "STRONG",
     "colors": [
      "#0d59bf",
@@ -764,6 +934,9 @@
    {
     "mode": "dark",
     "score": 15.4,
+    "deut": 24.0,
+    "prot": 22.1,
+    "trit": 15.4,
     "verdict": "STRONG",
     "colors": [
      "#ff4000",
@@ -773,6 +946,23 @@
      "#0064ff"
     ],
     "plate": "cura-dark-strip.png",
+    "editor": null
+   },
+   {
+    "mode": "light",
+    "score": 15.4,
+    "deut": 24.0,
+    "prot": 22.1,
+    "trit": 15.4,
+    "verdict": "STRONG",
+    "colors": [
+     "#ff4000",
+     "#009c80",
+     "#ffff56",
+     "#00ffff",
+     "#0064ff"
+    ],
+    "plate": "cura-light-strip.png",
     "editor": null
    }
   ],
@@ -790,6 +980,9 @@
    {
     "mode": "dark",
     "score": 14.1,
+    "deut": 15.5,
+    "prot": 14.1,
+    "trit": 14.7,
     "verdict": "STRONG",
     "colors": [
      "#56B4E9",
@@ -803,6 +996,9 @@
    {
     "mode": "light",
     "score": 12.7,
+    "deut": 14.9,
+    "prot": 12.7,
+    "trit": 14.5,
     "verdict": "STRONG",
     "colors": [
      "#0072B2",
@@ -828,6 +1024,9 @@
    {
     "mode": "dark",
     "score": 13.4,
+    "deut": 13.4,
+    "prot": 19.5,
+    "trit": 22.7,
     "verdict": "STRONG",
     "colors": [
      "#6cb6ff",
@@ -840,6 +1039,9 @@
    {
     "mode": "light",
     "score": 1.0,
+    "deut": 1.0,
+    "prot": 5.8,
+    "trit": 11.6,
     "verdict": "WEAK",
     "colors": [
      "#0060a8",
@@ -864,6 +1066,9 @@
    {
     "mode": "dark",
     "score": 11.9,
+    "deut": 11.9,
+    "prot": 14.6,
+    "trit": 13.6,
     "verdict": "STRONG",
     "colors": [
      "#4f83d1",
@@ -877,6 +1082,9 @@
    {
     "mode": "light",
     "score": 2.1,
+    "deut": 2.5,
+    "prot": 2.1,
+    "trit": 5.3,
     "verdict": "WEAK",
     "colors": [
      "#216cab",
@@ -902,6 +1110,9 @@
    {
     "mode": "dark",
     "score": 11.1,
+    "deut": 11.5,
+    "prot": 12.3,
+    "trit": 11.1,
     "verdict": "STRONG",
     "colors": [
      "#D55E00",
@@ -930,6 +1141,9 @@
    {
     "mode": "dark",
     "score": 11.1,
+    "deut": 11.5,
+    "prot": 12.3,
+    "trit": 11.1,
     "verdict": "STRONG",
     "colors": [
      "#0072b2",
@@ -958,6 +1172,9 @@
    {
     "mode": "light",
     "score": 9.4,
+    "deut": 16.0,
+    "prot": 15.5,
+    "trit": 9.4,
     "verdict": "STRONG",
     "colors": [
      "#BFD4FF",
@@ -983,6 +1200,9 @@
    {
     "mode": "light",
     "score": 9.0,
+    "deut": 9.0,
+    "prot": 9.6,
+    "trit": 11.0,
     "verdict": "STRONG",
     "colors": [
      "#0173B2",
@@ -1009,6 +1229,9 @@
    {
     "mode": "light",
     "score": 8.9,
+    "deut": 11.1,
+    "prot": 8.9,
+    "trit": 11.3,
     "verdict": "STRONG",
     "colors": [
      "#6F6BAD",
@@ -1034,6 +1257,9 @@
    {
     "mode": "dark",
     "score": 8.3,
+    "deut": 12.6,
+    "prot": 8.3,
+    "trit": 11.3,
     "verdict": "STRONG",
     "colors": [
      "#56b4e9",
@@ -1047,6 +1273,9 @@
    {
     "mode": "light",
     "score": 12.7,
+    "deut": 14.9,
+    "prot": 12.7,
+    "trit": 13.0,
     "verdict": "STRONG",
     "colors": [
      "#0072b2",
@@ -1072,6 +1301,9 @@
    {
     "mode": "dark",
     "score": 8.7,
+    "deut": 9.8,
+    "prot": 10.4,
+    "trit": 8.7,
     "verdict": "STRONG",
     "colors": [
      "#0080FF",
@@ -1099,6 +1331,9 @@
    {
     "mode": "dark",
     "score": 7.2,
+    "deut": 8.3,
+    "prot": 8.3,
+    "trit": 7.2,
     "verdict": "OK",
     "colors": [
      "#FF1B13",
@@ -1126,6 +1361,9 @@
    {
     "mode": "dark",
     "score": 4.9,
+    "deut": 4.9,
+    "prot": 8.7,
+    "trit": 7.5,
     "verdict": "OK",
     "colors": [
      "#1abec2",
@@ -1153,6 +1391,9 @@
    {
     "mode": "light",
     "score": 5.7,
+    "deut": 13.9,
+    "prot": 5.7,
+    "trit": 24.0,
     "verdict": "OK",
     "colors": [
      "#00771e",
@@ -1178,6 +1419,9 @@
    {
     "mode": "dark",
     "score": 7.2,
+    "deut": 17.3,
+    "prot": 7.8,
+    "trit": 7.2,
     "verdict": "OK",
     "colors": [
      "#33aaee",
@@ -1206,6 +1450,9 @@
    {
     "mode": "dark",
     "score": 5.0,
+    "deut": 5.0,
+    "prot": 20.2,
+    "trit": 14.7,
     "verdict": "OK",
     "colors": [
      "#11bbff",
@@ -1234,6 +1481,9 @@
    {
     "mode": "dark",
     "score": 2.6,
+    "deut": 2.6,
+    "prot": 6.2,
+    "trit": 21.4,
     "verdict": "WEAK",
     "colors": [
      "#22eeff",
@@ -1262,6 +1512,9 @@
    {
     "mode": "dark",
     "score": 2.0,
+    "deut": 2.0,
+    "prot": 5.0,
+    "trit": 6.8,
     "verdict": "WEAK",
     "colors": [
      "#58a6ff",
@@ -1275,6 +1528,9 @@
    {
     "mode": "light",
     "score": 2.6,
+    "deut": 4.0,
+    "prot": 2.6,
+    "trit": 9.8,
     "verdict": "WEAK",
     "colors": [
      "#0860cc",
@@ -1300,6 +1556,9 @@
    {
     "mode": "dark",
     "score": 1.1,
+    "deut": 1.1,
+    "prot": 1.9,
+    "trit": 5.8,
     "verdict": "WEAK",
     "colors": [
      "#ec8e2c",
@@ -1314,6 +1573,9 @@
    {
     "mode": "light",
     "score": 1.7,
+    "deut": 1.7,
+    "prot": 1.9,
+    "trit": 6.8,
     "verdict": "WEAK",
     "colors": [
      "#b35900",
@@ -1340,6 +1602,9 @@
    {
     "mode": "dark",
     "score": 2.3,
+    "deut": 2.3,
+    "prot": 6.8,
+    "trit": 7.0,
     "verdict": "WEAK",
     "colors": [
      "#2EC4B6",
@@ -1357,6 +1622,9 @@
    {
     "mode": "light",
     "score": 0.4,
+    "deut": 2.1,
+    "prot": 0.4,
+    "trit": 2.7,
     "verdict": "WEAK",
     "colors": [
      "#006F7A",
@@ -1376,29 +1644,91 @@
   "defaultMode": "dark"
  },
  {
-  "name": "coder",
+  "name": "coder Protanopia/Deuteranopia",
   "types": [
    "App"
   ],
   "url": "https://github.com/coder/coder/pull/24672",
-  "note": "Cites Okabe-Ito; weak pair is under protanopia and deuteranopia",
+  "note": "Dark and light; colors are the rendered content-* CSS variables for danger, success, warning and modified",
   "modes": [
    {
     "mode": "dark",
-    "score": 0.4,
-    "verdict": "WEAK",
+    "score": 10.3,
+    "deut": 10.7,
+    "prot": 10.8,
+    "trit": 10.3,
+    "verdict": "STRONG",
     "colors": [
-     "#f97583",
-     "#38bdf8",
-     "#e879f9",
-     "#a78bfa"
+     "#fca35a",
+     "#66c4f0",
+     "#ef67bd",
+     "#a855f7"
     ],
-    "plate": "coder-dark-strip.png",
-    "editor": "coder-dark-editor.png"
+    "plate": "coder-protdeut-dark-strip.png",
+    "editor": null
+   },
+   {
+    "mode": "light",
+    "score": 10.8,
+    "deut": 20.4,
+    "prot": 10.8,
+    "trit": 15.1,
+    "verdict": "STRONG",
+    "colors": [
+     "#f97015",
+     "#0da2e7",
+     "#c61585",
+     "#760adb"
+    ],
+    "plate": "coder-protdeut-light-strip.png",
+    "editor": null
    }
   ],
-  "best": 0.4,
-  "defaultMode": "dark"
+  "best": 10.8,
+  "defaultMode": "light"
+ },
+ {
+  "name": "coder Tritanopia",
+  "types": [
+   "App"
+  ],
+  "url": "https://github.com/coder/coder/pull/24672",
+  "note": "Dark and light; warning and modified are near-identical fuchsia by design (identical in light)",
+  "modes": [
+   {
+    "mode": "dark",
+    "score": 3.2,
+    "deut": 3.2,
+    "prot": 5.4,
+    "trit": 4.7,
+    "verdict": "OK",
+    "colors": [
+     "#f87272",
+     "#16a249",
+     "#ef67bd",
+     "#f17ec7"
+    ],
+    "plate": "coder-tritan-dark-strip.png",
+    "editor": null
+   },
+   {
+    "mode": "light",
+    "score": 5.1,
+    "deut": 16.6,
+    "prot": 5.1,
+    "trit": 11.1,
+    "verdict": "OK",
+    "colors": [
+     "#ef4343",
+     "#157f3c",
+     "#c61585"
+    ],
+    "plate": "coder-tritan-light-strip.png",
+    "editor": null
+   }
+  ],
+  "best": 5.1,
+  "defaultMode": "light"
  },
  {
   "name": "Okabe-Ito",
@@ -1411,6 +1741,9 @@
    {
     "mode": "dark",
     "score": 11.1,
+    "deut": 11.5,
+    "prot": 12.3,
+    "trit": 11.1,
     "verdict": "STRONG",
     "colors": [
      "#E69F00",
@@ -1440,6 +1773,9 @@
    {
     "mode": "dark",
     "score": 8.7,
+    "deut": 14.7,
+    "prot": 14.0,
+    "trit": 8.7,
     "verdict": "STRONG",
     "colors": [
      "#4477AA",
@@ -1468,6 +1804,9 @@
    {
     "mode": "dark",
     "score": 8.6,
+    "deut": 14.5,
+    "prot": 13.8,
+    "trit": 8.6,
     "verdict": "STRONG",
     "colors": [
      "#EE7733",
@@ -1496,6 +1835,9 @@
    {
     "mode": "dark",
     "score": 11.6,
+    "deut": 14.0,
+    "prot": 11.8,
+    "trit": 11.6,
     "verdict": "STRONG",
     "colors": [
      "#CC6677",
@@ -1526,6 +1868,9 @@
    {
     "mode": "dark",
     "score": 21.4,
+    "deut": 25.5,
+    "prot": 26.1,
+    "trit": 21.4,
     "verdict": "STRONG",
     "colors": [
      "#004488",
@@ -1550,6 +1895,9 @@
    {
     "mode": "dark",
     "score": 6.5,
+    "deut": 9.4,
+    "prot": 10.8,
+    "trit": 6.5,
     "verdict": "OK",
     "colors": [
      "#648FFF",
@@ -1576,6 +1924,9 @@
    {
     "mode": "dark",
     "score": 3.0,
+    "deut": 3.0,
+    "prot": 5.8,
+    "trit": 4.5,
     "verdict": "WEAK",
     "colors": [
      "#6929C4",
@@ -1611,6 +1962,9 @@
    {
     "mode": "dark",
     "score": 5.4,
+    "deut": 9.0,
+    "prot": 5.7,
+    "trit": 5.4,
     "verdict": "OK",
     "colors": [
      "#0173B2",
@@ -1642,6 +1996,9 @@
    {
     "mode": "dark",
     "score": 9.4,
+    "deut": 9.4,
+    "prot": 9.4,
+    "trit": 9.4,
     "verdict": "STRONG",
     "colors": [
      "#006BA4",
@@ -1673,6 +2030,9 @@
    {
     "mode": "dark",
     "score": 11.3,
+    "deut": 25.8,
+    "prot": 11.3,
+    "trit": 27.8,
     "verdict": "STRONG",
     "colors": [
      "#D81B60",
@@ -1698,6 +2058,9 @@
    {
     "mode": "dark",
     "score": 1.6,
+    "deut": 3.6,
+    "prot": 1.6,
+    "trit": 4.5,
     "verdict": "WEAK",
     "colors": [
      "#66C2A5",
@@ -1727,6 +2090,9 @@
    {
     "mode": "dark",
     "score": 6.0,
+    "deut": 7.1,
+    "prot": 6.0,
+    "trit": 10.0,
     "verdict": "OK",
     "colors": [
      "#000000",
@@ -1763,6 +2129,9 @@
    {
     "mode": "dark",
     "score": 14.6,
+    "deut": 18.0,
+    "prot": 14.6,
+    "trit": 17.9,
     "verdict": "STRONG",
     "colors": [
      "#011959",
@@ -1789,6 +2158,9 @@
    {
     "mode": "dark",
     "score": 13.0,
+    "deut": 15.0,
+    "prot": 14.2,
+    "trit": 13.0,
     "verdict": "STRONG",
     "colors": [
      "#00224E",
@@ -1815,6 +2187,9 @@
    {
     "mode": "dark",
     "score": 13.3,
+    "deut": 13.8,
+    "prot": 13.3,
+    "trit": 14.7,
     "verdict": "STRONG",
     "colors": [
      "#440154",
@@ -1841,6 +2216,9 @@
    {
     "mode": "dark",
     "score": 10.5,
+    "deut": 14.6,
+    "prot": 10.5,
+    "trit": 18.4,
     "verdict": "STRONG",
     "colors": [
      "#5790FC",
@@ -1868,6 +2246,9 @@
    {
     "mode": "dark",
     "score": 12.0,
+    "deut": 12.6,
+    "prot": 12.0,
+    "trit": 13.3,
     "verdict": "STRONG",
     "colors": [
      "#3F90DA",
@@ -1899,6 +2280,9 @@
    {
     "mode": "dark",
     "score": 5.3,
+    "deut": 5.3,
+    "prot": 5.8,
+    "trit": 10.5,
     "verdict": "OK",
     "colors": [
      "#88CCEE",
@@ -1931,6 +2315,9 @@
    {
     "mode": "dark",
     "score": 11.1,
+    "deut": 11.5,
+    "prot": 12.3,
+    "trit": 11.1,
     "verdict": "STRONG",
     "colors": [
      "#0072B2",
@@ -1960,6 +2347,9 @@
    {
     "mode": "dark",
     "score": 17.0,
+    "deut": 20.1,
+    "prot": 20.2,
+    "trit": 17.0,
     "verdict": "STRONG",
     "colors": [
      "#F5793A",
@@ -1985,6 +2375,9 @@
    {
     "mode": "dark",
     "score": 23.5,
+    "deut": 28.5,
+    "prot": 23.5,
+    "trit": 31.2,
     "verdict": "STRONG",
     "colors": [
      "#601A4A",

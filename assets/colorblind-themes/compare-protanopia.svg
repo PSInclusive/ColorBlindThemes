@@ -16,15 +16,15 @@
 <text x="306.0" y="154" font-size="9.5" fill="#000000" opacity="0.9">#F8DC23</text>
 <rect x="450.0" y="106" width="142.0" height="56" rx="5" fill="#AA9A4A"/>
 <text x="456.0" y="154" font-size="9.5" fill="#FFFFFF" opacity="0.9">#AA9A4A</text>
-<text x="10" y="234" font-size="13" font-weight="bold" fill="#bbb">coder (WEAK)</text>
-<text x="221.0" y="170" font-size="9.5" fill="#888" text-anchor="middle">success/sky</text>
-<text x="371.0" y="170" font-size="9.5" fill="#888" text-anchor="middle">warning/fuchsi</text>
-<rect x="150.0" y="178" width="142.0" height="56" rx="5" fill="#38bdf8"/>
-<text x="156.0" y="226" font-size="9.5" fill="#000000" opacity="0.9">#38BDF8</text>
-<rect x="300.0" y="178" width="142.0" height="56" rx="5" fill="#e879f9"/>
-<text x="306.0" y="226" font-size="9.5" fill="#000000" opacity="0.9">#E879F9</text>
-<rect x="150.0" y="234" width="142.0" height="56" rx="5" fill="#A0BBFB"/>
-<text x="156.0" y="282" font-size="9.5" fill="#000000" opacity="0.9">#A0BBFB</text>
-<rect x="300.0" y="234" width="142.0" height="56" rx="5" fill="#659DFD"/>
-<text x="306.0" y="282" font-size="9.5" fill="#FFFFFF" opacity="0.9">#659DFD</text>
+<text x="10" y="234" font-size="13" font-weight="bold" fill="#bbb">Grafana lt (WEAK)</text>
+<text x="221.0" y="170" font-size="9.5" fill="#888" text-anchor="middle">error</text>
+<text x="371.0" y="170" font-size="9.5" fill="#888" text-anchor="middle">viz2</text>
+<rect x="150.0" y="178" width="142.0" height="56" rx="5" fill="#FF9900"/>
+<text x="156.0" y="226" font-size="9.5" fill="#000000" opacity="0.9">#FF9900</text>
+<rect x="300.0" y="178" width="142.0" height="56" rx="5" fill="#E69F00"/>
+<text x="306.0" y="226" font-size="9.5" fill="#000000" opacity="0.9">#E69F00</text>
+<rect x="150.0" y="234" width="142.0" height="56" rx="5" fill="#B9A300"/>
+<text x="156.0" y="282" font-size="9.5" fill="#000000" opacity="0.9">#B9A300</text>
+<rect x="300.0" y="234" width="142.0" height="56" rx="5" fill="#B9A200"/>
+<text x="306.0" y="282" font-size="9.5" fill="#000000" opacity="0.9">#B9A200</text>
 </svg>

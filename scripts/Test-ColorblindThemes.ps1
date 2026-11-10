@@ -30,9 +30,15 @@
 .EXAMPLE
     pwsh scripts/Test-ColorblindThemes.ps1
     Prints the per-theme verification table and verdict tallies.
+
+.EXAMPLE
+    pwsh scripts/Test-ColorblindThemes.ps1 -UpdateData
+    Also rewrites the deut/prot/trit scores stored in data/themes.json.
 #>
 [CmdletBinding()]
-param()
+param(
+    [Parameter()][switch]$UpdateData
+)
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
@@ -333,6 +339,15 @@ $script:AppThemes = [ordered]@{
     }
     'Cura Colorblind Assist' = [ordered]@{
         dark = [string[]]@('#ff4000', '#009c80', '#ffff56', '#00ffff', '#0064ff')
+        light = [string[]]@('#ff4000', '#009c80', '#ffff56', '#00ffff', '#0064ff')
+    }
+    'coder Protanopia/Deuteranopia' = [ordered]@{
+        dark = [string[]]@('#fca35a', '#66c4f0', '#ef67bd', '#a855f7')
+        light = [string[]]@('#f97015', '#0da2e7', '#c61585', '#760adb')
+    }
+    'coder Tritanopia' = [ordered]@{
+        dark = [string[]]@('#f87272', '#16a249', '#ef67bd', '#f17ec7')
+        light = [string[]]@('#ef4343', '#157f3c', '#c61585')
     }
     'OpenFront.io' = [ordered]@{
         dark = [string[]]@('#0072b2', '#56b4e9', '#d55e00', '#009e73', '#cc79a7', '#f0e442', '#e69f00')
@@ -479,4 +494,56 @@ foreach ($dv in (Get-DataVizTable)) {
     }
     Write-Output ('{0,-28} {1,-6} {2,6:F1} {3,6:F1} {4,6:F1}  {5}' -f $dv[0], 'dark',
         $res['deuteranopia'].Distance, $res['protanopia'].Distance, $res['tritanopia'].Distance, (Get-Verdict -Results $res))
+}
+
+# --- data/themes.json: per-deficiency scores ---------------------------------------
+# Each mode stores the three per-deficiency minimum pair distances (deut, prot, trit)
+# next to its overall score, which is the lowest of the three. Without -UpdateData this
+# only reports drift. With it, those lines are rewritten in place so the file's
+# formatting stays untouched.
+$dataPath = Join-Path $PSScriptRoot '..' 'data' 'themes.json'
+$dataThemes = Get-Content -LiteralPath $dataPath -Raw | ConvertFrom-Json
+$modeScores = [System.Collections.Generic.List[object]]::new()
+foreach ($dataTheme in $dataThemes) {
+    foreach ($dataMode in $dataTheme.modes) {
+        $perDeficiency = @{}
+        foreach ($c in @('deuteranopia', 'protanopia', 'tritanopia')) {
+            $perDeficiency[$c] = [Math]::Round((Get-MinPairDistance -Colors ([string[]]$dataMode.colors) -Cvd $c).Distance, 1)
+        }
+        $modeScores.Add([PSCustomObject]@{
+            Name = $dataTheme.name; Mode = $dataMode.mode; Stored = $dataMode
+            Deut = $perDeficiency['deuteranopia']; Prot = $perDeficiency['protanopia']; Trit = $perDeficiency['tritanopia']
+        })
+    }
+}
+$drifted = @($modeScores | Where-Object {
+    $storedProps = $_.Stored.PSObject.Properties
+    $lowest = [Math]::Min($_.Deut, [Math]::Min($_.Prot, $_.Trit))
+    ([Math]::Abs($_.Stored.score - $lowest) -gt 0.001) -or
+    ($storedProps['deut']?.Value -ne $_.Deut) -or ($storedProps['prot']?.Value -ne $_.Prot) -or ($storedProps['trit']?.Value -ne $_.Trit)
+})
+Write-Output ''
+Write-Output "data/themes.json: $($modeScores.Count) modes, $($drifted.Count) with missing or stale per-deficiency scores"
+foreach ($d in $drifted) {
+    Write-Output ('  {0} ({1}): stored score {2}, computed {3:F1}/{4:F1}/{5:F1}' -f $d.Name, $d.Mode, $d.Stored.score, $d.Deut, $d.Prot, $d.Trit)
+}
+
+if ($UpdateData) {
+    $invariant = [System.Globalization.CultureInfo]::InvariantCulture
+    $rewritten = [System.Collections.Generic.List[string]]::new()
+    $modeIndex = 0
+    foreach ($line in (Get-Content -LiteralPath $dataPath)) {
+        if ($line -match '^\s*"(deut|prot|trit)":') { continue }
+        $rewritten.Add($line)
+        if ($line -match '^(\s*)"score":') {
+            $indent = $Matches[1]
+            $s = $modeScores[$modeIndex++]
+            $rewritten.Add(('{0}"deut": {1},' -f $indent, $s.Deut.ToString('0.0', $invariant)))
+            $rewritten.Add(('{0}"prot": {1},' -f $indent, $s.Prot.ToString('0.0', $invariant)))
+            $rewritten.Add(('{0}"trit": {1},' -f $indent, $s.Trit.ToString('0.0', $invariant)))
+        }
+    }
+    if ($modeIndex -ne $modeScores.Count) { throw "Rewrote $modeIndex score blocks but expected $($modeScores.Count)" }
+    [System.IO.File]::WriteAllText($dataPath, ($rewritten -join "`n"), [System.Text.UTF8Encoding]::new($false))
+    Write-Output "data/themes.json updated: $modeIndex modes"
 }

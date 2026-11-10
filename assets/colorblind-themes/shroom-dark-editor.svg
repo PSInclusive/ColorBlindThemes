@@ -4,7 +4,7 @@
 <circle cx="24" cy="16.0" r="5" fill="#FF5F57"/>
 <circle cx="40" cy="16.0" r="5" fill="#FEBC2E"/>
 <circle cx="56" cy="16.0" r="5" fill="#28C840"/>
-<text x="450" y="19.0" font-size="11.5" fill="#CCC8D9" opacity="0.75" text-anchor="middle">Shroom Space &#8212; Shroom Space Deuteranopia</text>
+<text x="450" y="19.0" font-size="11.5" fill="#CCC8D9" opacity="0.75" text-anchor="middle">Shroom Space &#8212; Deuteranopia</text>
 <rect x="1" y="31" width="52" height="349" fill="#2D293A"/>
 <line x1="53" y1="31" x2="53" y2="380" stroke="#312D3E" stroke-width="1"/>
 <text x="38" y="57" font-size="11" fill="#CCC8D9" opacity="0.45" text-anchor="end">1</text>
@@ -15,12 +15,12 @@
 <text x="239.64999999999998" y="81" font-size="12.5" fill="#CCC8D9">{</text>
 <text x="38" y="105" font-size="11" fill="#CCC8D9" opacity="0.45" text-anchor="end">3</text>
 <text x="96.2" y="105" font-size="12.5" fill="#CCC8D9">param(</text>
-<text x="141.5" y="105" font-size="12.5" fill="#E794D2">[string]</text>
+<text x="141.5" y="105" font-size="12.5" fill="#E8C990">[string]</text>
 <text x="201.9" y="105" font-size="12.5" fill="#E794D2">$Path</text>
 <text x="247.20000000000002" y="105" font-size="12.5" fill="#BE9AF7">=</text>
 <text x="262.3" y="105" font-size="12.5" fill="#E8C990">'.'</text>
 <text x="284.95" y="105" font-size="12.5" fill="#CCC8D9">,</text>
-<text x="300.05" y="105" font-size="12.5" fill="#E794D2">[int]</text>
+<text x="300.05" y="105" font-size="12.5" fill="#E8C990">[int]</text>
 <text x="337.8" y="105" font-size="12.5" fill="#E794D2">$Top</text>
 <text x="375.55" y="105" font-size="12.5" fill="#BE9AF7">=</text>
 <text x="390.65" y="105" font-size="12.5" fill="#E8C990">10</text>

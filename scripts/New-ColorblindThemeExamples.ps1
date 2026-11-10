@@ -828,13 +828,31 @@ $script:Themes = [ordered]@{
         note = 'OKLCH; 363 build-time contrast checks + trichromacy CVD-distance gate; 21 export targets'
     }
     shroom = @{
-        name = 'Shroom Space'; variant_dark = 'Shroom Space Deuteranopia'; variant_light = $null
+        name = 'Shroom Space'; variant_dark = 'Deuteranopia'; variant_light = $null
         dark = @{ bg = '#24212E'; fg = '#CCC8D9'; comment = '#726D89'; keyword = '#BE9AF7'; func = '#FFCB6B';
-                  string = '#E8C990'; number = '#E8C990'; type = '#E794D2'; constant = '#E8C990'; variable = '#E794D2';
+                  string = '#E8C990'; number = '#E8C990'; type = '#E8C990'; constant = '#E8C990'; variable = '#E794D2';
                   error = '#E68484'; warn = '#FFCB6B'; status = '#BE9AF7' }
         strip_dark = [string[]]@('#BE9AF7', '#FFCB6B', '#E794D2', '#E8C990', '#E68484')
         strip_dark_labels = [string[]]@('keyword', 'func', 'variable', 'string', 'invalid')
         note = 'APCA + linear-RGB CVD simulation enforced in CI'
+    }
+    shroom_prot = @{
+        name = 'Shroom Space'; variant_dark = 'Protanopia'; variant_light = $null
+        dark = @{ bg = '#24212E'; fg = '#CCC8D9'; comment = '#726D89'; keyword = '#BE9AF7'; func = '#FFCB6B';
+                  string = '#E8C990'; number = '#E8C990'; type = '#E8C990'; constant = '#E8C990'; variable = '#E794D2';
+                  error = '#F07178'; warn = '#FFCB6B'; status = '#BE9AF7' }
+        strip_dark = [string[]]@('#BE9AF7', '#FFCB6B', '#E794D2', '#E8C990', '#F07178')
+        strip_dark_labels = [string[]]@('keyword', 'func', 'variable', 'string', 'invalid')
+        note = 'Same CI gate as the deuteranopia variant; only the invalid color differs'
+    }
+    shroom_trit = @{
+        name = 'Shroom Space'; variant_dark = 'Tritanopia'; variant_light = $null
+        dark = @{ bg = '#24212E'; fg = '#CCC8D9'; comment = '#726D89'; keyword = '#FF79C6'; func = '#FF79C6';
+                  string = '#C3E88D'; number = '#FF79C6'; type = '#C3E88D'; constant = '#FF79C6'; variable = '#CACEFF';
+                  error = '#E68484'; warn = '#89DDFF'; status = '#FF79C6' }
+        strip_dark = [string[]]@('#FF79C6', '#C3E88D', '#CACEFF', '#E68484')
+        strip_dark_labels = [string[]]@('keyword/func/number', 'string/type', 'variable', 'invalid')
+        note = 'Keyword, function and number share one hue by design, so the strip lists distinct colors only'
     }
     colorsafe = @{
         name = 'ColorSafe (JetBrains)'; variant_dark = 'Pro-Deutan Dark'; variant_light = $null
@@ -846,12 +864,17 @@ $script:Themes = [ordered]@{
         note = 'Blue/amber axis; per-color WCAG tables in the .icls source'
     }
     cindervale = @{
-        name = 'Cindervale Accessible'; variant_dark = 'Accessible Dark'; variant_light = $null
+        name = 'Cindervale Accessible'; variant_dark = 'Accessible Dark'; variant_light = 'Accessible Light'
         dark = @{ bg = '#191517'; fg = '#F4E9E2'; comment = '#9E8379'; keyword = '#AF8CE0'; func = '#B0CDF1';
-                  string = '#B0CDF1'; number = '#71A3A9'; type = '#BB901F'; constant = '#71A3A9'; variable = '#F4E9E2';
-                  error = '#AF8CE0'; warn = '#BB901F'; status = '#B0CDF1' }
+                  string = '#FDB786'; number = '#71A3A9'; type = '#BB901F'; constant = '#71A3A9'; variable = '#F4E9E2';
+                  error = '#EA6A9B'; warn = '#E7C16D'; status = '#B0CDF1'; selection = '#493A5F' }
+        light = @{ bg = '#FFF9F5'; fg = '#342C31'; comment = '#7A6B68'; keyword = '#503987'; func = '#1973B4';
+                   string = '#783A15'; number = '#00595E'; type = '#93661D'; constant = '#00595E'; variable = '#342C31';
+                   error = '#8F0242'; warn = '#906319'; status = '#1973B4'; selection = '#DCCAF2' }
         strip_dark = [string[]]@('#AF8CE0', '#B0CDF1', '#BB901F', '#71A3A9', '#9E8379')
         strip_dark_labels = [string[]]@('keyword', 'func', 'type', 'number', 'comment')
+        strip_light = [string[]]@('#503987', '#1973B4', '#93661D', '#00595E', '#7A6B68')
+        strip_light_labels = [string[]]@('keyword', 'func', 'type', 'number', 'comment')
         note = 'Five accents separated by hue AND a full lightness tier'
     }
     'ef-deuteranopia' = @{
@@ -899,15 +922,6 @@ $script:Themes = [ordered]@{
         strip_light = [string[]]@('#006F7A', '#FF9900', '#FFEE52', '#0072B2', '#E69F00', '#009E73', '#CC79A7', '#D55E00')
         strip_light_labels = [string[]]@('success', 'error', 'warn', 'viz1', 'viz2', 'viz3', 'viz4', 'viz6')
         note = 'Merged 2026-03; success→teal, error→orange; viz palette is Wong/Okabe-Ito verbatim'
-    }
-    coder = @{
-        name = 'coder/coder'; variant_dark = 'Dark Protan/Deuter'; variant_light = 'Light Protan/Deuter'
-        dark = @{ bg = '#0d1117'; fg = '#e6edf3'; comment = '#8b949e'; keyword = '#f97583'; func = '#79c0ff';
-                  string = '#a5d6ff'; number = '#79c0ff'; type = '#d2a8ff'; constant = '#79c0ff'; variable = '#e6edf3';
-                  error = '#f97583'; warn = '#e879f9'; status = '#38bdf8' }
-        strip_dark = [string[]]@('#f97583', '#38bdf8', '#e879f9', '#a78bfa')
-        strip_dark_labels = [string[]]@('danger→vermilion', 'success→sky', 'warning→fuchsia', 'preview→violet')
-        note = 'Okabe-Ito cited in source; Tailwind orange/sky/fuchsia/violet axes; 4 themes'
     }
     wireshark = @{
         name = 'Wireshark'; variant_dark = 'Protanopia & Deuteranopia Dark'; variant_light = 'Protanopia & Deuteranopia Light'
@@ -1017,6 +1031,11 @@ $script:AppPlates = @(
     @('gitbutler', 'light', [string[]]@('#0d59bf', '#bf590d'), [string[]]@('addition', 'deletion')),
     @('iamb', 'dark', [string[]]@('#D55E00', '#E69F00', '#F0E442', '#0072B2', '#56B4E9', '#009E73', '#CC79A7'), [string[]]@('1', '2', '3', '4', '5', '6', '7')),
     @('cura', 'dark', [string[]]@('#ff4000', '#009c80', '#ffff56', '#00ffff', '#0064ff'), [string[]]@('1', '2', '3', '4', '5')),
+    @('cura', 'light', [string[]]@('#ff4000', '#009c80', '#ffff56', '#00ffff', '#0064ff'), [string[]]@('1', '2', '3', '4', '5')),
+    @('coder-protdeut', 'dark', [string[]]@('#fca35a', '#66c4f0', '#ef67bd', '#a855f7'), [string[]]@('danger', 'success', 'warning', 'modified')),
+    @('coder-protdeut', 'light', [string[]]@('#f97015', '#0da2e7', '#c61585', '#760adb'), [string[]]@('danger', 'success', 'warning', 'modified')),
+    @('coder-tritan', 'dark', [string[]]@('#f87272', '#16a249', '#ef67bd', '#f17ec7'), [string[]]@('danger', 'success', 'warning', 'modified')),
+    @('coder-tritan', 'light', [string[]]@('#ef4343', '#157f3c', '#c61585'), [string[]]@('danger', 'success', 'warning/modified')),
     @('openfront', 'dark', [string[]]@('#0072b2', '#56b4e9', '#d55e00', '#009e73', '#cc79a7', '#f0e442', '#e69f00'), [string[]]@('1', '2', '3', '4', '5', '6', '7')),
     @('talishar-deuteranopia', 'dark', [string[]]@('#33aaee', '#cc5599', '#eeaa11', '#cc5522', '#55bb88', '#8855aa', '#aa2244'), [string[]]@('1', '2', '3', '4', '5', '6', '7')),
     @('talishar-protanopia', 'dark', [string[]]@('#11bbff', '#ee1100', '#ff8811', '#118899', '#99ff11', '#bb22aa', '#aa1144'), [string[]]@('1', '2', '3', '4', '5', '6', '7')),
@@ -1033,7 +1052,7 @@ $script:Comparisons = @(
      'GitHub (WEAK)', [string[]]@('#ec8e2c', '#d29922'), [string[]]@('keyword', 'warning')),
     @('compare-protanopia', 'protanopia',
      'Wireshark (STRONG)', [string[]]@('#56b4e9', '#f0e442', '#ff8a50'), [string[]]@('success', 'warning', 'error'),
-     'coder (WEAK)', [string[]]@('#38bdf8', '#e879f9'), [string[]]@('success/sky', 'warning/fuchsia')),
+     'Grafana lt (WEAK)', [string[]]@('#FF9900', '#E69F00'), [string[]]@('error', 'viz2')),
     @('compare-tritanopia', 'tritanopia',
      'Kiro (STRONG)', [string[]]@('#56B4E9', '#F0E442', '#DB5A00', '#CC79A7'), [string[]]@('ok', 'warn', 'danger', 'accent'),
      'Gentle light (WEAK)', [string[]]@('#7B5EA7', '#2A6DB0'), [string[]]@('keyword', 'function'))
