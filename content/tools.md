@@ -1,10 +1,12 @@
 ---
 title: "Simulation & validation tools"
-lane: "05"
+lane: "06"
 laneName: "Tools"
 slug: "tools"
-weight: 5
+weight: 6
 ---
+
+Want to see your own work through CVD eyes? Here are the simulators and checkers.
 
 | Tool | What it does | Link |
 |---|---|---|
@@ -18,3 +20,5 @@ weight: 5
 | Adobe PS/AI | View → Proof Setup → Color Blindness (since CS4, 2008, with CUDO) | [jfly colorset §7](https://jfly.uni-koeln.de/colorset/) |
 | DaltonLens | accuracy review of open-source simulation models | [daltonlens.org](https://daltonlens.org/opensource-cvd-simulation) |
 | Colorblindly | Chrome extension simulator (no palettes shipped) | [repo](https://github.com/oftheheadland/Colorblindly) |
+
+Pro tip: use more than one. They model CVD a little differently ([DaltonLens](https://daltonlens.org/opensource-cvd-simulation) reviews how accurate the open-source models are), so a palette that looks fine in one deserves a second opinion.

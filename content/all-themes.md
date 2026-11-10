@@ -1,9 +1,9 @@
 ---
 title: "All themes"
-lane: "07"
+lane: "08"
 laneName: "All themes"
 slug: "all-themes"
-weight: 7
+weight: 8
 ---
 
 {{< themetable type="all" >}}
