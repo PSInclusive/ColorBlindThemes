@@ -5,18 +5,27 @@
   {{- if or $all (in .types $type) -}}
     {{- $t := . -}}
     {{- range .modes -}}
-      {{- $rows = $rows | append (dict "name" $t.name "types" $t.types "url" $t.url "note" $t.note "mode" .mode "score" .score "verdict" .verdict "colors" .colors "plate" .plate "editor" .editor "terminal" .terminal) -}}
+      {{- $rows = $rows | append (dict "name" $t.name "types" $t.types "url" $t.url "note" $t.note "mode" .mode "score" .score "deut" .deut "prot" .prot "trit" .trit "verdict" .verdict "colors" .colors "plate" .plate "editor" .editor "terminal" .terminal) -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
 {{- $rows = sort $rows "score" "desc" -}}
-{{- $cols := 5 -}}{{- if $all -}}{{- $cols = 6 -}}{{- end -}}
+{{- $cols := 8 -}}
+{{- /* CVD types, in column order: key, label, full name */ -}}
+{{- $cvd := slice (dict "k" "d" "label" "Deut" "name" "Deuteranopia (no M cones, red-green)") (dict "k" "p" "label" "Prot" "name" "Protanopia (no L cones, red-green)") (dict "k" "t" "label" "Trit" "name" "Tritanopia (no S cones, blue-yellow)") -}}
 <div class="tt">
 <div class="tt-bar" role="group" aria-label="Filter by verdict">
   <button type="button" data-f="all" aria-pressed="true">All <span class="n"></span></button>
   <button type="button" data-f="STRONG" aria-pressed="false">STRONG <span class="n"></span></button>
   <button type="button" data-f="OK" aria-pressed="false">OK <span class="n"></span></button>
   <button type="button" data-f="WEAK" aria-pressed="false">WEAK <span class="n"></span></button>
+  <span class="tt-by" aria-hidden="true">by</span>
+  <span class="tt-modes" role="group" aria-label="Which score the verdict filter and sort use">
+    <button type="button" data-lens="v" aria-pressed="true" title="Lowest of the three CVD types">Worst</button>
+    {{- range $cvd }}
+    <button type="button" data-lens="{{ .k }}" aria-pressed="false" title="{{ .name }}">{{ .label }}</button>
+    {{- end }}
+  </span>
   <span class="tt-gap" aria-hidden="true"></span>
   <span class="tt-modes" role="group" aria-label="Filter by mode">
     <button type="button" data-mf="all" aria-pressed="true">Any mode <span class="n"></span></button>
@@ -31,25 +40,41 @@
     {{- end }}
   </div>
   {{- end }}
-  <span class="tt-key">Score = closest pair of simulated colors (ΔE00), worst of 3 CVD types. Ticks mark 3 and 8.</span>
+  <span class="tt-key">Score = closest pair of simulated colors (ΔE00) under that CVD type. The Score column is the lowest of Deut, Prot and Trit, underlined. Ticks mark 3 and 8.</span>
 </div>
 <table class="themetable">
 <thead><tr>
-<th>Theme</th>{{ if $all }}<th>Type</th>{{ end }}<th>Mode</th><th>Score</th><th data-nosort>Colors</th>
+<th>Theme</th><th>Mode</th><th data-key="v" data-col="v" title="Lowest of the three CVD types">Score</th>
+{{- range $cvd }}<th data-key="{{ .k }}" data-col="{{ .k }}"><abbr title="{{ .name }}">{{ .label }}</abbr></th>{{ end }}
+<th data-nosort>Colors</th>
 </tr></thead>
 <tbody>
 {{- range $rows }}
 {{- $id := printf "d-%s-%s" (.name | urlize) .mode }}
-<tr class="main" data-types="{{ delimit .types " " }}" data-mode="{{ .mode }}" data-v="{{ .score }}" data-verdict="{{ .verdict }}">
-<td class="name">{{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}{{ if .note }}<small class="note">{{ .note }}</small>{{ end }}</td>
-{{- if $all }}<td>{{ delimit .types ", " }}</td>{{ end }}
+{{- $lowest := math.Min (math.Min .deut .prot) .trit }}
+{{- $row := . }}
+{{- $vd := cond (ge .deut 8.0) "STRONG" (cond (ge .deut 3.0) "OK" "WEAK") }}
+{{- $vp := cond (ge .prot 8.0) "STRONG" (cond (ge .prot 3.0) "OK" "WEAK") }}
+{{- $vt := cond (ge .trit 8.0) "STRONG" (cond (ge .trit 3.0) "OK" "WEAK") }}
+<tr class="main" data-types="{{ delimit .types " " }}" data-mode="{{ .mode }}" data-v="{{ .score }}" data-d="{{ .deut }}" data-p="{{ .prot }}" data-t="{{ .trit }}" data-verdict="{{ .verdict }}" data-vd="{{ $vd }}" data-vp="{{ $vp }}" data-vt="{{ $vt }}">
+<td class="name">{{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}{{ if .note }}<small class="note">{{ .note }}</small>{{ end }}{{ if $all }}<small class="types">{{ delimit .types " · " }}</small>{{ end }}</td>
 <td class="modecell">{{ .mode }}</td>
-<td class="score">
+<td class="score" data-col="v">
 <div class="sc" data-verdict="{{ .verdict }}">
   <span class="bar" style="--w:{{ div (mul (math.Min .score 16.0) 100.0) 16.0 }}%"><i></i></span>
   <span class="num">{{ printf "%.1f" .score }}</span> <span class="verdict v-{{ lower .verdict }}">{{ .verdict }}</span>
 </div>
 </td>
+{{- range $cvd }}
+{{- $val := index $row (cond (eq .k "d") "deut" (cond (eq .k "p") "prot" "trit")) }}
+{{- $verdict := index (dict "d" $vd "p" $vp "t" $vt) .k }}
+<td class="cvdcell" data-col="{{ .k }}">
+<div class="sc mini{{ if eq $val $lowest }} low{{ end }}" data-verdict="{{ $verdict }}">
+  <span class="bar" style="--w:{{ div (mul (math.Min $val 16.0) 100.0) 16.0 }}%"><i></i></span>
+  <span class="num">{{ printf "%.1f" $val }}</span><span class="sr">{{ $verdict }}{{ if eq $val $lowest }}, lowest, sets the score{{ end }}</span>
+</div>
+</td>
+{{- end }}
 <td class="thumbcell">
 <button type="button" class="thumb" aria-expanded="false" aria-controls="{{ $id }}" aria-label="Show colors and demo for {{ .name }}, {{ .mode }}"><span class="chips">{{ range .colors }}<i style="background:{{ . }}" title="{{ . }}"></i>{{ end }}</span><span class="more">Demo</span></button>
 </td>
@@ -58,10 +83,10 @@
 <td colspan="{{ $cols }}">
   <ul class="hexes">{{ range .colors }}<li><i style="background:{{ . }}"></i><code>{{ . }}</code></li>{{ end }}</ul>
   <div class="figs">
-  {{- $plate := resources.Get (printf "colorblind-themes/%s" .plate) }}
-  {{- if $plate }}{{ $plate = $plate | resources.Fingerprint "sha256" }}<a href="{{ $plate.RelPermalink }}" class="imgzoom"><img src="{{ $plate.RelPermalink }}" alt="Colors under each CVD type, {{ .mode }}" width="{{ $plate.Width }}" height="{{ $plate.Height }}" loading="lazy"></a>{{ end }}
   {{- if and .editor (or $all (ne $type "Terminal")) }}{{ $ed := resources.Get (printf "colorblind-themes/%s" .editor) }}{{ if $ed }}{{ $ed = $ed | resources.Fingerprint "sha256" }}<a href="{{ $ed.RelPermalink }}" class="imgzoom"><img src="{{ $ed.RelPermalink }}" alt="Editor mock, {{ .mode }}" width="{{ $ed.Width }}" height="{{ $ed.Height }}" loading="lazy"></a>{{ end }}{{ end }}
   {{- if and .terminal (or $all (eq $type "Terminal")) }}{{ $tm := resources.Get (printf "colorblind-themes/%s" .terminal) }}{{ if $tm }}{{ $tm = $tm | resources.Fingerprint "sha256" }}<a href="{{ $tm.RelPermalink }}" class="imgzoom"><img src="{{ $tm.RelPermalink }}" alt="Terminal mock, {{ .mode }}" width="{{ $tm.Width }}" height="{{ $tm.Height }}" loading="lazy"></a>{{ end }}{{ end }}
+  {{- $plate := resources.Get (printf "colorblind-themes/%s" .plate) }}
+  {{- if $plate }}{{ $plate = $plate | resources.Fingerprint "sha256" }}<a href="{{ $plate.RelPermalink }}" class="imgzoom"><img src="{{ $plate.RelPermalink }}" alt="Colors under each CVD type, {{ .mode }}" width="{{ $plate.Width }}" height="{{ $plate.Height }}" loading="lazy"></a>{{ end }}
   </div>
 </td>
 </tr>
@@ -72,13 +97,15 @@
 <script>
 document.addEventListener("DOMContentLoaded",function(){
   document.querySelectorAll(".tt").forEach(function(box){
-    var table=box.querySelector("table"),body=table.tBodies[0],sel={},tsel={},mfilter="all";
+    var table=box.querySelector("table"),body=table.tBodies[0],sel={},tsel={},mfilter="all",lens="v";
+    var vattr={v:"verdict",d:"vd",p:"vp",t:"vt"};
+    var heads=Array.prototype.slice.call(table.tHead.rows[0].querySelectorAll("th"));
     function pairs(){return Array.prototype.slice.call(body.querySelectorAll("tr.main")).map(function(m){return [m,m.nextElementSibling]})}
     function apply(){
       var vc={STRONG:0,OK:0,WEAK:0},vt=0,mc={dark:0,light:0},mt=0,tc={},tt=0;
       var vOn=Object.keys(sel).length,tOn=Object.keys(tsel).length;
       pairs().forEach(function(p){
-        var d=p[0].dataset,v=d.verdict,m=d.mode,tys=d.types.split(" ");
+        var d=p[0].dataset,v=d[vattr[lens]],m=d.mode,tys=d.types.split(" ");
         var mOk=mfilter==="all"||mfilter===m,vOk=!vOn||sel[v],tOk=!tOn||tys.some(function(x){return tsel[x]});
         if(mOk&&tOk){vc[v]++;vt++}
         if(vOk&&tOk){mc[m]++;mt++}
@@ -91,6 +118,10 @@ document.addEventListener("DOMContentLoaded",function(){
         var f=b.dataset.f;b.querySelector(".n").textContent=f==="all"?vt:vc[f];
         b.setAttribute("aria-pressed",f==="all"?(!vOn?"true":"false"):(sel[f]?"true":"false"));
       });
+      box.querySelectorAll(".tt-bar [data-lens]").forEach(function(b){
+        b.setAttribute("aria-pressed",b.dataset.lens===lens?"true":"false");
+      });
+      table.querySelectorAll("[data-col]").forEach(function(el){el.classList.toggle("lensed",lens!=="v"&&el.dataset.col===lens)});
       box.querySelectorAll(".tt-bar [data-mf]").forEach(function(b){
         var f=b.dataset.mf;b.querySelector(".n").textContent=f==="all"?mt:mc[f];
         b.setAttribute("aria-pressed",f===mfilter?"true":"false");
@@ -100,32 +131,45 @@ document.addEventListener("DOMContentLoaded",function(){
         b.setAttribute("aria-pressed",f==="all"?(!tOn?"true":"false"):(tsel[f]?"true":"false"));
       });
     }
+    function sortBy(th,dir){
+      var col=heads.indexOf(th),key=th.dataset.key;
+      heads.forEach(function(h){if(h.hasAttribute("data-sort")){h.setAttribute("data-sort","none");h.removeAttribute("aria-sort")}});
+      th.setAttribute("data-sort",dir);th.setAttribute("aria-sort",dir==="asc"?"ascending":"descending");
+      var list=pairs();
+      list.sort(function(a,b){
+        var r=key?parseFloat(a[0].dataset[key])-parseFloat(b[0].dataset[key]):a[0].cells[col].textContent.trim().localeCompare(b[0].cells[col].textContent.trim(),undefined,{sensitivity:"base"});
+        return dir==="asc"?r:-r;
+      });
+      list.forEach(function(p){body.appendChild(p[0]);body.appendChild(p[1])});
+    }
     box.querySelector(".tt-bar").addEventListener("click",function(e){
       var b=e.target.closest("button");if(!b)return;
-      if(b.dataset.f){if(b.dataset.f==="all")sel={};else if(sel[b.dataset.f])delete sel[b.dataset.f];else sel[b.dataset.f]=true}else if(b.dataset.t){if(b.dataset.t==="all")tsel={};else if(tsel[b.dataset.t])delete tsel[b.dataset.t];else tsel[b.dataset.t]=true}else if(b.dataset.mf)mfilter=b.dataset.mf;else return;
+      if(b.dataset.f){if(b.dataset.f==="all")sel={};else if(sel[b.dataset.f])delete sel[b.dataset.f];else sel[b.dataset.f]=true}
+      else if(b.dataset.t){if(b.dataset.t==="all")tsel={};else if(tsel[b.dataset.t])delete tsel[b.dataset.t];else tsel[b.dataset.t]=true}
+      else if(b.dataset.mf)mfilter=b.dataset.mf;
+      else if(b.dataset.lens){
+        lens=b.dataset.lens;
+        // picking a CVD type also ranks the table by it, best first
+        sortBy(heads.filter(function(h){return h.dataset.key===lens})[0],"desc");
+      }else return;
       apply();
     });
     body.addEventListener("click",function(e){
       var th=e.target.closest(".thumb");
       if(th){var d=th.closest("tr").nextElementSibling,open=d.hidden;d.hidden=!open;th.setAttribute("aria-expanded",open?"true":"false")}
     });
-    table.tHead.rows[0].querySelectorAll("th").forEach(function(th,col){
+    heads.forEach(function(th){
       if(th.hasAttribute("data-nosort"))return;
-      var numeric=th.textContent.trim()==="Score";
-      th.setAttribute("data-sort",numeric?"desc":"none");th.tabIndex=0;
-      function sort(){
-        var dir=th.getAttribute("data-sort")==="asc"?"desc":"asc";
-        table.querySelectorAll("th[data-sort]").forEach(function(h){h.setAttribute("data-sort","none")});
-        th.setAttribute("data-sort",dir);
-        var list=pairs();
-        list.sort(function(a,b){
-          var r=numeric?parseFloat(a[0].dataset.v)-parseFloat(b[0].dataset.v):a[0].cells[col].textContent.trim().localeCompare(b[0].cells[col].textContent.trim(),undefined,{sensitivity:"base"});
-          return dir==="asc"?r:-r;
-        });
-        list.forEach(function(p){body.appendChild(p[0]);body.appendChild(p[1])});
+      var key=th.dataset.key;
+      th.setAttribute("data-sort",key==="v"?"desc":"none");th.tabIndex=0;
+      if(key==="v")th.setAttribute("aria-sort","descending");
+      function toggle(){
+        var cur=th.getAttribute("data-sort");
+        // score columns rank best first; text columns run A to Z first
+        sortBy(th,key?(cur==="desc"?"asc":"desc"):(cur==="asc"?"desc":"asc"));
       }
-      th.addEventListener("click",sort);
-      th.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();sort()}});
+      th.addEventListener("click",toggle);
+      th.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();toggle()}});
     });
     apply();
   });

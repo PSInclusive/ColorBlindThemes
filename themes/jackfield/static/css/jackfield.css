@@ -63,6 +63,7 @@ html {
   overflow-y: scroll;   /* always show the scrollbar gutter so layout width is constant page-to-page */
 }
 body {
+  --field-w: 1000px;   /* content column width on every page; the nav+content unit is centered on this */
   margin: 0;
   background: var(--glass);
   color: var(--text);
@@ -85,10 +86,10 @@ body {
   left: 0;
 }
 @media (min-width: 861px) {
-  /* Center the nav+content unit. When the window is at least 1004px wide, the unit is
-     centered (block center at 50%). When narrower, the unit is left-pinned at 0 and the
+  /* Center the nav+content unit. When the window is at least (224 + column) px wide, the unit
+     is centered (block center at 50%). When narrower, the unit is left-pinned at 0 and the
      content column shrinks to fit — so the nav never goes off-screen and the seam holds. */
-  .lanes { left: max(0px, calc(50% - 502px)); transform: none; }
+  .lanes { left: max(0px, calc(50% - (224px + var(--field-w)) / 2)); transform: none; }
 }
 .brand {
   font: 700 12px var(--mono);
@@ -149,15 +150,15 @@ body {
   padding: 44px 42px 120px;
 }
 @media (min-width: 861px) {
-  /* Content sits immediately right of the nav (nav is 224 wide at max(0, 50%-502)).
-     Content left edge = nav right edge. Width = 780, but shrink if the window is narrow. */
+  /* Content sits immediately right of the nav (nav is 224 wide at max(0, 50% - unit/2)).
+     Content left edge = nav right edge. Width = --field-w, but shrink if the window is narrow. */
   .field {
     position: relative;
-    left: max(224px, calc(50% - 502px + 224px));
+    left: max(224px, calc(50% - (224px + var(--field-w)) / 2 + 224px));
     transform: none;
     margin: 0;
     width: auto;
-    max-width: min(780px, calc(100vw - max(224px, calc(50% - 502px + 224px)) - 24px));
+    max-width: min(var(--field-w), calc(100vw - max(224px, calc(50% - (224px + var(--field-w)) / 2 + 224px)) - 24px));
   }
 }
 .crumb {
@@ -420,15 +421,37 @@ body {
 
 .themetable tr.detail > td { background: var(--panel); padding: 14px 16px; }
 .themetable .hexes { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 0 0 12px; padding: 0; }
+/* CVD score cells: compact bar + number; the lowest one (which sets Score) is underlined */
+.themetable .sc.mini { gap: 6px; }
+.themetable .sc.mini .bar { width: 44px; }
+.themetable .sc.mini .num { min-width: 2.4em; }
+.themetable .sc.low .num { text-decoration: underline; text-decoration-color: var(--amber); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.themetable th abbr { text-decoration: none; cursor: inherit; }
+.themetable td.lensed { background: var(--panel2); }
+.themetable th.lensed { color: var(--ink); border-bottom: 5px double var(--amber); }
+.tt-by { font: 12px var(--mono); color: var(--muted); }
+.sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .themetable .hexes li { display: flex; align-items: center; gap: 6px; }
 .themetable .hexes i { display: block; width: 18px; height: 18px; border-radius: 3px; border: 1px solid var(--edge2); }
 .themetable .figs { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-start; }
-.themetable .figs a { display: block; }
-.themetable .figs img { max-width: 100%; height: auto; max-height: 340px; width: auto; }
-.themetable td.name { min-width: 170px; }
-.themetable .bar { width: 96px; }
+/* every demo image and the CVD plate fill the detail row; height follows each image's aspect */
+.themetable .figs a { display: block; width: 100%; }
+.themetable .figs img { display: block; width: 100%; height: auto; margin: 0; }
+.themetable td.name { min-width: 170px; overflow-wrap: anywhere; }
+.themetable .bar { width: 72px; }
+.themetable .sc { position: relative; }
+.themetable .sc.mini .bar { width: 40px; }
+.themetable .types { display: block; margin-top: 4px; font: 11px var(--mono); letter-spacing: 0.06em; color: var(--muted); }
+@media (max-width: 860px) {
+  .themetable td.name { min-width: 0; width: 140px; max-width: 140px; }
+}
+.themetable th, .themetable td { padding: 8px 10px; }
+/* the theme name stays put while the score columns scroll under it */
+.themetable td.name, .themetable thead th:first-child { position: sticky; left: 0; z-index: 2; box-shadow: 1px 0 0 var(--edge2); }
+.themetable td.name { background: var(--glass); }
+.article tbody tr:hover td.name { background: var(--panel); }
 .themetable .sc { gap: 8px; }
-.themetable .chips { max-width: none; flex-wrap: nowrap; gap: 2px; }
+.themetable .chips { max-width: 128px; flex-wrap: wrap; gap: 2px; }
 .themetable .chips i { width: 14px; height: 14px; }
 .themetable .thumb { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; text-align: left; }
 .themetable .more { font: 650 11px var(--mono); letter-spacing: 0.06em; color: var(--amber); text-decoration: underline; text-decoration-color: var(--link-under); text-underline-offset: 3px; }
